@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Mokelumne Project Notes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="project-notes_files/libs/clipboard/clipboard.min.js"></script>
+<script src="project-notes_files/libs/quarto-html/quarto.js"></script>
+<script src="project-notes_files/libs/quarto-html/popper.min.js"></script>
+<script src="project-notes_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="project-notes_files/libs/quarto-html/anchor.min.js"></script>
+<link href="project-notes_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="project-notes_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="project-notes_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="project-notes_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="project-notes_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Mokelumne Project Notes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="pumped-storage-hydropower-psh" class="level2">
+<h2 class="anchored" data-anchor-id="pumped-storage-hydropower-psh">Pumped storage hydropower (PSH)</h2>
+<p>The D.O.E.’s Water Power Technologies Office (WPTO) does R&amp;D to understand and assess value of potential benefits of existing and prospective PSH (e.g., the <a href="https://www.energy.gov/eere/water/hydrowires-initiative">HydroWIRES Initiative</a> for grid reliability, resilience, and integration). From <a href="https://www.energy.gov/eere/water/pumped-storage-hydropower">their website</a>:</p>
+<ul>
+<li>PSH is a type of hydroelectric energy storage technology, energy storage is a critical source of grid system <em>flexibility</em>, and most stored energy is PSH</li>
+<li>PSH is the most dominant form of <em>long duration energy storage</em> on the electric grid today, accounting for <strong>93%</strong> of all utility-scale energy storage in the US <span class="citation" data-cites="uría-martínez2021">(<a href="#ref-uría-martínez2021" role="doc-biblioref">Uría-Martínez et al. 2021</a>)</span></li>
+<li>U.S. PSH fleet = 42 plants, 22 GW of generating capacity, 550 GW hours of energy storage</li>
+<li>6% of electricity in the US = hydropower (28.7% of renewables)</li>
+<li>Cited as a key player in creating a clean, flexible, and reliable energy grid
+<ul>
+<li>historically, energy was stored at night (more efficient to keep nuclear or coal running to be released the next day in predictable cycles)</li>
+<li>As more wind and solar become available, PSH can integrate the indeterminacy and seasonality of variable renewable (can’t forecast the sun a wind a year out…)</li>
+<li>without storage, cannot provide power without using gas backups
+<ul>
+<li>&lt;4 hours = batteries</li>
+<li>&gt;4 hours = PSH</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Key benefits of PSH:</p>
+<ul>
+<li>PSH is only commercialized technology for long-duration storage</li>
+<li>support large volume of solar and wind</li>
+<li>provide storage capacity to reduce curtailment during oversupply</li>
+<li>provide inertia to stabilize grids</li>
+<li>reduce need to operating coal/gas reserves</li>
+<li>provide black start capability</li>
+</ul>
+<section id="how-it-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-it-works">How it works</h3>
+<p>Water is pumped from a lower reservoir to an upper reservoir in times of high electricity supply (sun for solar panel / wind for mills) and/or low demand. During times of low supply and/or high demand, water from the upper reservoir is released into the lower reservoir, generating electricity as it moves through a turbine.</p>
+<ul>
+<li>operates like a conventional hydropower plant, but it can reuse water over and over</li>
+<li>at times of low demand when electricity prices tend to be lower, water is pumped from a lower reservoir to an upper reservoir, and then released at times of high demand to drive a turbine and generate electricity</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/IHA_Pumped%20storage%20reservoir.png" class="img-fluid figure-img" width="441"></p>
+<p></p><figcaption class="figure-caption">Pumped hydropower reservoirs on the landscape. Source: IHA</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Open-loop PSH has an ongoing hydrologic connection to a body of water, while with closed-loop PSH, reservoirs are not connected to any outside body of water</li>
+<li>Off-river PSH (closed loop) are not designed to capture water beyond the initial reservoir fill so there is minimal impact on natural stream flows</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/wpto-pumped-storage-hydropower-illustration-12-23-2021-01.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Comparison of open- vs.&nbsp;closed-loop pumped hydro. Credit: WPTO</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="international-forum-on-psh" class="level3">
+<h3 class="anchored" data-anchor-id="international-forum-on-psh">International Forum on PSH</h3>
+<p>Founded by <a href="https://www.hydropower.org/">International Hydropower Association</a> &amp; U.S. DOE. in 2020, the IFPSH initiative focused on guidance and recommendations for pumped PSH, to develop solutions and share BPs to deliver power and mitigate climate change. Co-chaired by Malcom Turnbull, former Australian Prime Minister, and Kelly Speakes-Backman, Acting Assistant Secretary for Energy Efficiency and Renewable Energy at the U.S. Department of Energy</p>
+<p>Key takeaways from the ISPSH:</p>
+<ul>
+<li>once selected, the PSH project should be managed to avoid, minimise and mitigate social and environmental impacts</li>
+<li>emerging innovations across three broad categories:
+<ul>
+<li><p>Furthering PSH potential: install at old mines, underground caverns, non-powered dams and conventional hydropower plants, as well as location agnostic underground PSH, off-river PSH and seawater PSH, represents vast untapped potential</p></li>
+<li><p>Retrofitting and upgrading PSH systems: latest technological advancements, such as the use of variable speed pump-turbines and hydraulic short circuit, can enhance the services provided by existing PSH</p></li>
+<li><p>Developing hybrid systems: coupling PSH with batteries, floating solar PV, heat storage and desalination can provide additional services with reduced costs and environmental impacts</p></li>
+</ul></li>
+</ul>
+<p>The urgent need for long duration storage is beginning to be recognized:</p>
+<ul>
+<li>April 2020 - EU Taxonomy of Sustainable Finance recognized all types of PSH as making a substantial contribution to climate change mitigation</li>
+<li>June 2021 - International Energy Agency <a href="https://www.iea.org/reports/hydropower-special-market-report">published a comprehensive hydropower marketreport</a> calling for the expansion of pumped storage hydropower</li>
+<li>July 2021 - British government i<a href="https://www.gov.uk/government/consultations/facilitating-the-deployment-of-large-scale-and-long-duration-electricity-storage-call-for-evidence">ssued a call for evidence</a> to better understand the barriers in place and how they may be addressed</li>
+<li>September 2021 - <a href="http://www.nea.gov.cn/2021-09/09/c_1310177087.htm">Chinese government</a> set a new target for 120GW of PSH by 2030, which represents a fourfold increase in less than a decade</li>
+</ul>
+</section>
+<section id="demand-and-trends" class="level3">
+<h3 class="anchored" data-anchor-id="demand-and-trends">Demand and trends</h3>
+<p>PSH was first used in Italy and Switzerland in the 1890s, by the US by 1930, and is now used worldwide. However, new PSH faces many challenges (licensing, remunerate services), so little development over the past 30 years.</p>
+<p>The figure below shows that whilst there is a sizable pipeline under development / permitting, most PSH under construction is in East Asia, principally China.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ORNL_Global_Pipeline_PSH_Projects.jpg" class="img-fluid figure-img" alt="As of 2019, there were 284 pumped storage hydropower projects producing a total of 226 GW of electricity. Additionally, 13 countries were constructing 50 PSH projects with a total capacity of 53 GW of electricity. China leads the PSH pipeline ranking with 102 GW of PSH projects; the United States and eight European countries are also within the top 20 countries with the largest PSH pipelines. Source: ORNL" width="523"></p>
+<p></p><figcaption class="figure-caption">As of 2019, there were 284 pumped storage hydropower projects producing a total of 226 GW of electricity. Additionally, 13 countries were constructing 50 PSH projects with a total capacity of 53 GW of electricity. China leads the PSH pipeline ranking with 102 GW of PSH projects; the United States and eight European countries are also within the top 20 countries with the largest PSH pipelines. Source: ORNL</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="general-notes" class="level2">
+<h2 class="anchored" data-anchor-id="general-notes">General Notes</h2>
+<ul>
+<li>a lot of recent literature - seems to be a very hot topic</li>
+</ul>
+</section>
+<section id="knowledge-gaps" class="level2">
+<h2 class="anchored" data-anchor-id="knowledge-gaps">Knowledge gaps</h2>
+</section>
+<section id="impacts-and-co-benefits" class="level2">
+<h2 class="anchored" data-anchor-id="impacts-and-co-benefits">Impacts and co-benefits</h2>
+<ul>
+<li>operational chnages to acheive low impacts and benefits</li>
+<li>entry / exist point</li>
+<li>floatovoltaics</li>
+</ul>
+</section>
+<section id="glossary" class="level1">
+<h1>Glossary</h1>
+<ul>
+<li><p>PSH: pumped storage hydropower (US)</p></li>
+<li><p>PHES: pumped hydro energy storage (AUS)</p></li>
+<li><p>IHA: International Hydropower Association</p></li>
+<li><p>Bluefield PHES use an existing reservoir to make a PHES pair</p></li>
+<li><p>Greenfield PHES use two new reservoirs.</p></li>
+<li><p>storage power capacity:</p></li>
+<li><p>storage energy volume:</p></li>
+<li><p>head:</p></li>
+<li><p>load: electricity demand</p></li>
+<li><p>Evaporation suppressors: small plastic objects floated on a reservoir to reduce wind speeds and evaporation rates</p></li>
+<li><p>curtailment: when the sun shines and the wind blows <em>more than</em> is demanded</p>
+<ul>
+<li>a system operator deliberately reduces the supply of electricity in order to balance the grid. Where storage does not exist, this means that renewable electricity is wasted and not stored for potential use in future</li>
+</ul></li>
+<li><p>variable energy: power output rises and falls in response to, e.g., sun and wind</p></li>
+</ul>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-uría-martínez2021" class="csl-entry" role="doc-biblioentry">
+Uría-Martínez, Rocío, Megan M Johnson, Rui Shan, Nicole M Samu, Gbadebo Oladosu, Joseph M Werble, and Hoyt Battey. 2021. <span>“U.S. Hydropower Market Report.”</span>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

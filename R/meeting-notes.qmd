@@ -1,0 +1,46 @@
+---
+title: "Meeting Notes"
+format: html
+---
+
+## 2015-05-11
+
+-   meet and greet with Hydroeco Lab group
+
+    -   Hanna (MS) - stormwater ponds and eco services
+    -   Eric (PhD) - Fish Lake groundwater flooding
+    -   Will (PhD) - urban tree hydrology
+    -   Arthur (PhD + DNR) - hydroecology of fens
+    -   Aaron (phd)
+
+-   Steve and I visited to discuss overall project plan and timeline for lit review
+
+-   generally: learn, summarize, brief Steve
+
+### Action items
+
+-   Font matter
+    -   what is it (PSH)?
+    -   knowledge gaps
+    -   demand and trends
+    -   learn the language
+-   Use above to identify topics for inclusion in lit review (which become work chunks)
+-   Impacts and Co-benefits
+    -   operational changes to achieve low impacts and benefits
+    -   entry / exist point
+    -   floatovoltaics
+
+## 2015-07-14
+
+-   discussed my preliminary note taking / lit review
+-   think about time scales of energy storage and when you need releases
+-   keep in mind legal issues - wordsmith and don't prescribe
+
+### Action items
+
+-   identify current impacts on Mokelumne River / Sac River
+    -   already imparied system, not meeting TMDLs
+    -   can lit review help fix stuff?!?
+-   share Zotero lib with Steve
+-   share link to html files from git hub
+-   use Trello
