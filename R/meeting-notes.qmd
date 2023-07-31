@@ -3,7 +3,71 @@ title: "Meeting Notes"
 format: html
 ---
 
-## 2015-05-11
+## GreenGen project meeting notes
+
+See [this webpage](https://greengenstorage.com/meetings/) for GreenGenStorage meeting notes and videos.
+
+## Work Notes
+
+### 2023-03-06
+
+-   Bryan, Josh, Steve
+-   Green Gen Storage Team
+    -   Nicholas Sher (public works)
+    -   Laura Johnson (permitting)
+    -   Diana (stakeholders)
+
+**PROJECT GOAL**: evaluate and mitigate the potential impacts and benefits of Mokelumne pumped hydro plant to the environment and stakeholders.
+
+-   evaluate alternative operations and configurations
+-   lit review on temp requirements of aquatic organisms
+-   an innovate project at the water-energy-environment nexus
+
+General project notes from Green Gen team:
+
+-   energy for summer and fall - ***400 MW battery***
+-   in process of permitting
+-   through Pacific Gas and Electric (PG&E)
+-   20 study plans - FERC approval
+    -   special use authorization from the Forest Service (concern about recreation)
+    -   then collect data (summer 2023)
+-   Existing hydro already at Salt Springs
+    -   this project may get them to halt those operations
+-   River is stressed and dammed - 2 large dams
+    -   **WOULD THIS PROJECT INCREASE STREAM TEMPERATURES BY MIXING WATERS?**
+    -   fish and amphibians need cold water
+-   already violating temperature rules - more stringent regs are in pipeline
+    -   20 degrees C = max (from PNW regime)
+    -   California water temps not good for regime (many think these need to change)
+    -   intermittent snow pack by 2040s - bad for project regime
+    -   climate change = bad, will this project make it worse?
+-   Stantec is collecting data (lots of sampling in 2023)
+    -   intake
+    -   outflow and canal at Salt Springs
+    -   reservoir profiles
+    -   bathymetry maps
+-   ONLY CARE ABOUT TEMPS AT LOWER (LARGER) RESERVOIR
+-   10% of design is done - need to figure out bathymetry maps and where input goes
+    -   could be variable intake - probably stationary
+-   Tunneling could drain Cole creek
+-   lake level change = inches to 6 feet, but variable
+    -   vs current draw down (lowest in DEC) at lake via winter rights and energy needs
+-   20 studies to do (7 biological)
+
+What they need:
+
+-   is the PNW standard appropriate?
+-   CC impacts on watershed? 2030s, 2040s, etc
+-   "Holistic outlook"
+    -   impacts small, outcomes huge
+
+    -   this project will help mitigate CC impacts, but people are concerned about local impacts like traffic, fishing, etc
+
+    -   but we need energy storage
+-   Floating PV on top, but people are not on board
+-   Flume moralities - bears can drown...
+
+### 2023-05-11
 
 -   meet and greet with Hydroeco Lab group
 
@@ -30,7 +94,7 @@ format: html
     -   entry / exist point
     -   floatovoltaics
 
-## 2015-07-14
+### 2023-07-14
 
 -   discussed my preliminary note taking / lit review
 -   think about time scales of energy storage and when you need releases

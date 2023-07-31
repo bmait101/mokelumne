@@ -4,14 +4,9 @@ format: html
 bibliography: references.bib
 ---
 
+# Peer-reviewd literature
+
 ## @blakers2021: A review of pumped hydro energy storage
-
-[Dr. Blakers](https://researchers.anu.edu.au/researchers/blakers-aw) is a Professor of Engineering at Australian National University (ANU).
-
--   Big name in "high renewable energy futures" (solar photovoltaics & wind)
--   Schtick: wind + PV + pumped hydro energy storage + demand management + interconnection = all energy needs at less cost than current fossil fuels
-
-### Paper summary
 
 -   renaissance in pumped hydro storage = rapid increase in *variable* wind and solar
 -   pumped hydro = 99% of global storage energy, 96% storage power
@@ -25,12 +20,6 @@ bibliography: references.bib
 -   All reservoirs are outside national parks or urban areas
     -   combined reservoir area is small (3 m\^2 per person per day)
     -   water requirement is small (3 liters per person per day); far less than coal
-
-#### Hydro Technology
-
-#### Best storage sites
-
-#### Costs
 
 #### Environmental impacts
 
@@ -95,6 +84,16 @@ bibliography: references.bib
 ## @nadeem2019
 
 -   a range of storage technologies are under development
+
+# Reports / grey literature
+
+## @iha2022
+
+-   
+
+## @iha2018
+
+-   
 
 # References
 
