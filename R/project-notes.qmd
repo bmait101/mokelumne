@@ -86,7 +86,7 @@ From the 2020 International Forum on Pumped Storage Hydropower ([IFPHS](https://
 
 ## Project description
 
-By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%. But wind and solar are not available all the time. The GreenGenStorage Mokelumne Water Battery Project will reduce California\'s reliance on fossil fuels by meeting the state\'s energy demands with reliable renewable energy. It takes advantage of two existing hydroelectric reservoirs in CA's Sierra foothills, so few environmental impacts. Without pumped hydro, CA will have to rely on fossil fuels to integrate variable renewables (in 2018, CA curtailed \~ 460,000 MWh, enough to power 80,000 households).
+By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%. But wind and solar are not available all the time. The GreenGenStorage Mokelumne Water Battery Project will reduce California's reliance on fossil fuels by meeting the state's energy demands with reliable renewable energy. It takes advantage of two existing hydroelectric reservoirs in CA's Sierra foothills, so few environmental impacts. Without pumped hydro, CA will have to rely on fossil fuels to integrate variable renewables (in 2018, CA curtailed \~ 460,000 MWh, enough to power 80,000 households).
 
 -   planned 400 MW capacity (up to 1200 depending on design, needs, environment)
 -   4,000 MWh of zero emission energy
@@ -99,7 +99,7 @@ By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%
 ## Benefits
 
 -   Provide carbon-free electricity, thereby reducing GHG emissions
--   Meet the state\'s energy and emissions goals
+-   Meet the state's energy and emissions goals
 -   Create hundreds of construction jobs and approximately ten permanent jobs
 -   Provide local economic stimulus throughout project development and operation
 
