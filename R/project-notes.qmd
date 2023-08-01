@@ -6,7 +6,7 @@ editor_options:
 bibliography: references.bib
 ---
 
-# General Notes
+## General Notes
 
 -   Global renewable generation capacity = 3064 GW (3 TW)
     -   hydropower capacity = 1360 GW (1.3 TW)
@@ -18,11 +18,11 @@ bibliography: references.bib
 -   Oct/Nov 2023 - World Hydropower Congress, Bali, Indonesia
 -   Nov/Dec 2023 - COP28, Dubai, UAE
 
-# Hydropower
+## Hydropower
 
 For over 100 years, hydroelectric power made using gigantic dams has provided renewable energy but displaced communities and destroyed ecosystems. But now a renaissance in pumped hydropower is changing the game.
 
-# Pumped hydro
+## Pumped hydro
 
 Water batteries for solar and wind power (world's biggest battery)
 
@@ -42,7 +42,7 @@ Water is pumped from a lower reservoir to an upper reservoir in times of high el
 -   operates like a conventional hydropower plant, but it can reuse water over and over
 -   at times of low demand when electricity prices tend to be lower, water is pumped from a lower reservoir to an upper reservoir, and then released at times of high demand to drive a turbine and generate electricity
 
-![Pumped hydropower reservoirs on the landscape. Source: IHA](images/IHA_Pumped-storage-reservoir-02.png){fig-align="center"}
+![Pumped hydropower reservoirs on the landscape. Source: IHA](images/IHA_Pumped-storage-reservoir.png){fig-align="center"}
 
 -   energy storage capacity depends on the size of its two reservoirs
 -   amount of power generated is linked to the size of the turbine
@@ -53,7 +53,7 @@ Water is pumped from a lower reservoir to an upper reservoir in times of high el
 -   Open-loop: with either an upper or lower reservoir that is continuously connected to a naturally flowing water source such as a river
 -   Closed-loop: an 'off-river' site that produces power from water pumped to an upper reservoir without a significant natural inflow
 
-![Comparison of open- vs. closed-loop pumped hydro. Credit: WPTO](images/wpto-pumped-storage-hydropower-illustration-12-23-2021-02.jpg){fig-align="center"}
+![Comparison of open- vs. closed-loop pumped hydro. Credit: WPTO](images/wpto-pumped-storage-hydropower-illustration.jpg){fig-align="center"}
 
 ### Demand & trends
 
@@ -61,7 +61,7 @@ PSH was first used in Italy and Switzerland in the 1890s, by the US by 1930, and
 
 The figure below shows that whilst there is a sizable pipeline under development / permitting, most PSH under construction is in East Asia, principally China.
 
-![As of 2019, there were 284 pumped storage hydropower projects producing a total of 226 GW of electricity. Additionally, 13 countries were constructing 50 PSH projects with a total capacity of 53 GW of electricity. China leads the PSH pipeline ranking with 102 GW of PSH projects; the United States and eight European countries are also within the top 20 countries with the largest PSH pipelines. Source: ORNL](images/ORNL_Global_Pipeline_PSH_Projects-01.jpg){fig-align="center"}
+![As of 2019, there were 284 pumped storage hydropower projects producing a total of 226 GW of electricity. Additionally, 13 countries were constructing 50 PSH projects with a total capacity of 53 GW of electricity. China leads the PSH pipeline ranking with 102 GW of PSH projects; the United States and eight European countries are also within the top 20 countries with the largest PSH pipelines. Source: ORNL](images/ORNL_Global_Pipeline_PSH_Projects.jpg){fig-align="center"}
 
 ### Future Potential
 
@@ -80,13 +80,12 @@ From the 2020 International Forum on Pumped Storage Hydropower ([IFPHS](https://
 -   Retrofitting and upgrading PSH systems: latest technological advancements, such as the use of variable speed pump-turbines and hydraulic short circuit, can enhance the services provided by existing PSH
 -   Developing hybrid systems: coupling PSH with batteries, floating solar PV, heat storage and desalination can provide additional services with reduced costs and environmental impacts
 
-## 
 
-# Mokelumne Water Battery Project
+## Mokelumne Water Battery Project
 
-## Project description
+### Project description
 
-By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%. But wind and solar are not available all the time. The GreenGenStorage Mokelumne Water Battery Project will reduce California's reliance on fossil fuels by meeting the state's energy demands with reliable renewable energy. It takes advantage of two existing hydroelectric reservoirs in CA's Sierra foothills, so few environmental impacts. Without pumped hydro, CA will have to rely on fossil fuels to integrate variable renewables (in 2018, CA curtailed \~ 460,000 MWh, enough to power 80,000 households).
+By 2030, 60% of CA's energy must come from renewable resources, and by 2045, 100%. But wind and solar are not available all the time. The GreenGen Storage Mokelumne Water Battery Project will reduce California's reliance on fossil fuels by meeting the state's energy demands with reliable renewable energy. It takes advantage of two existing hydroelectric reservoirs in CA's Sierra foothills, so few environmental impacts. Without pumped hydro, CA will have to rely on fossil fuels to integrate variable renewables (in 2018, CA curtailed \~ 460,000 MWh, enough to power 80,000 households).
 
 -   planned 400 MW capacity (up to 1200 depending on design, needs, environment)
 -   4,000 MWh of zero emission energy
@@ -96,14 +95,14 @@ By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%
 
 ![The Mokelumne Water Battery Project is located in the Sierra Nevada mountains, east of Sacramento, and about 33 miles east of Jackson, California. The project will pump water from the existing Salt Springs Reservoir up to the Lower Bear River Reservoir located on the Mokelumne River. The project will also include a water conveyance tunnel connecting the reservoirs, a powerhouse, transmission line, and other associated infrastructure.](images/mokelumne-map2.png){fig-align="center"}
 
-## Benefits
+### Benefits
 
 -   Provide carbon-free electricity, thereby reducing GHG emissions
 -   Meet the state's energy and emissions goals
 -   Create hundreds of construction jobs and approximately ten permanent jobs
 -   Provide local economic stimulus throughout project development and operation
 
-## Environmental Impacts
+### Environmental Impacts
 
 "The project leaders have spent their careers working towards environmental causes and encouraging renewable energy. Project development will be guided by this deep commitment to respecting and protecting existing environments and resource use where possible, and to mitigating changes where needed. The project team pledges to work closely with environmental resource agencies and interested stakeholders to ensure that this commitment is met."
 
@@ -119,7 +118,7 @@ By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%
     -   Foothills yellow-legged frog
     -   Mesocarnivor and birds (great grey owl): buffer areas
 
-## Progress to date
+### Progress to date
 
 -   July 2016 - GreenGen App for preliminary permit
 -   Dec 2017 - FERC-issued preliminary permit
@@ -138,7 +137,7 @@ By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%
 
 -   compare project operations to baseline conditions
 
-## Goal: Evaluate impacts and co-benefits
+### Goal: Evaluate impacts and co-benefits
 
 -   operational changes to achieve low impacts and benefits
 -   size of tunnels
@@ -148,7 +147,7 @@ By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%
 -   entry / exist point
 -   floatovoltaics
 
-# Relevant Groups
+## Relevant Groups
 
 -   **Clean Energy Ministerial ([CEM](https://www.cleanenergyministerial.org/))**
     -   high-level global forum to promote policies and programmes that advance clean energy technology, to share lessons learned and best practices, and to encourage the transition to a global clean energy economy
@@ -172,7 +171,7 @@ By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%
 -   **US DOE Water Power Technologies Office (WPTO)**
     -   does R&D to understand and assess value of potential benefits of existing and prospective PSH (e.g., the [HydroWIRES Initiative](https://www.energy.gov/eere/water/hydrowires-initiative) for grid reliability, resilience, and integration).
 
-# Glossary
+## Glossary
 
 -   Curtailment: when the sun shines and the wind blows *more than* is demanded, a system operator deliberately reduces the supply of electricity in order to balance the grid. Where storage does not exist, this means that renewable electricity is wasted and not stored for potential use in future
 
@@ -190,7 +189,7 @@ By 2030, 60% of CA's energy must come from reneable resources, and by 2045, 100%
 
 -   Variable energy: power output rises and falls in response to, e.g., sun and wind
 
-# References
+## References
 
 ::: {#refs}
 :::
