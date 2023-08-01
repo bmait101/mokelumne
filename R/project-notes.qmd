@@ -1,34 +1,83 @@
 ---
 title: "Mokelumne Project Notes"
-format: html
+format: 
+  html:
+      toc: true
+      toc-depth: 3
+      toc-location: left
+      toc-title: Contents
+number-sections: true
+number-depth: 3
 editor_options: 
   chunk_output_type: console
 bibliography: references.bib
 ---
 
-## General Notes
+## Misc / notable news/ events
 
--   Global renewable generation capacity = 3064 GW (3 TW)
-    -   hydropower capacity = 1360 GW (1.3 TW)
-
-### Notable News
-
--   Mat 2023 - [NYT article](https://www.nytimes.com/interactive/2023/05/02/climate/hydroelectric-power-energy.html) on the rapid rise of pumped hydro
+-   May 2023 - [NYT article](https://www.nytimes.com/interactive/2023/05/02/climate/hydroelectric-power-energy.html) on the rapid rise of pumped hydro
 -   July 2023 - groups want to [triple total renewable energy capacity](https://www.hydropower.org/news/private-and-public-sectors-call-for-an-ambitious-global-target-of-tripling-total-renewable-energy-capacity-to-11-tw-by-2030) to 11 TW by 2030
+-   Aug 2023 - first new U.S. [nuclear reactor](https://www.eia.gov/todayinenergy/detail.php?id=57280) since 2016 operational
 -   Oct/Nov 2023 - World Hydropower Congress, Bali, Indonesia
 -   Nov/Dec 2023 - COP28, Dubai, UAE
 
-## Hydropower
+## Energy storage
 
-For over 100 years, hydroelectric power made using gigantic dams has provided renewable energy but displaced communities and destroyed ecosystems. But now a renaissance in pumped hydropower is changing the game.
+An energy storage system (ESS) for electricity generation uses electricity (or some other energy source, such as solar-thermal energy) to charge an energy storage system or device, which is discharged to supply (generate) electricity when needed at desired levels and quality.
 
-## Pumped hydro
+### EES Technologies
 
-Water batteries for solar and wind power (world's biggest battery)
+The types of ESSs in commercial use in the United States, in order of total power generation capacity as of the end of 2022 are:
 
--   PSH is a type of clean, hydroelectric energy storage technology, energy storage is a critical source of grid system *flexibility*, and most stored energy is PSH
+-   Pumped-storage hydroelectric
+-   Batteries (electro-chemical)
+-   Solar electric with thermal energy storage
+-   Compressed-air storage
+-   Flywheels
+-   Capacitors (R&D)
+-   [Super-conducting magnetic storage](https://arpa-e.energy.gov/technologies/projects/magnetic-energy-storage-system) (R&D)
+-   [Hydrogen](https://www.eia.gov/energyexplained/hydrogen/)
+-   [Thermal ice-storage systems](https://www.nrel.gov/docs/legosti/old/20176.pdf)
+
+![](images/energystoragetechnologies.jpg){fig-align="center"}
+
+### Categories of EESs
+
+Two basic ratings for energy storage systems are:
+
+-   *Power capacity*---the maximum instantaneous amount of electric power that can be generated on a continuous basis and is measured in units of watts (kilowatts \[kW\], megawatts \[MW\], or gigawatts \[GW\])
+-   *Energy capacity*---the total amount of energy that can be stored in or discharged from the storage system and is measured in units of watthours (kilowatthours \[kWh\], megawatthours \[MWh\], or gigawatthours \[GWh\])
+
+Two general categories of ESSs based on the size of power generation capacity:
+
+-   *Utility scale or large scale* have at least 1 MW of net generation capacity and are mostly owned by electric utilities or independent power producers to provide grid support services.
+
+-   *Small scale* have less than 1 MW of net generation capacity, and many are owned by electricity end users that use [solar photovoltaic](https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php) systems to charge a battery.
+
+ESSs are not [*primary*](https://www.eia.gov/tools/glossary/index.php?id=Primary%20energy) electricity generation sources. They must use electricity supplied by separate electricity generators or from an electric power grid to charge the storage system, which makes ESSs *secondary* generation sources. ESSs use more electricity for charging than they can provide when [discharging and supplying electricity](https://www.eia.gov/todayinenergy/detail.php?id=46756). Gross generation reflects the actual amount of electricity supplied by the storage system. Net generation is gross generation minus electricity used to recharge the storage system and the electricity consumed to operate the energy storage system itself.
+
+### Timescales of energy storage
+
+ESSs are designed to supply electricity on varying timescales, which is reflected in the duration of their discharge-generation cycle length, and they can be grouped into two general categories according to their usual duration and main use:
+
+-   *Short duration*---on the scale of minutes and power oriented
+
+-   *Diurnal or daily duration*---on the scale of hours and energy oriented
+
+![](images/energystoragetech-range.jpg){fig-align="center"}
+
+### Grid-scale energy storage
+
+These are technologies connected to the power grid that can store energy and supply it back to the grid at a more advantageous time, like when the sun is down at night, or when the wind doesn't blow. Pumped hydro is the most used tech, but can only be done in certain locations (though that is changing with off-river sites). Batteries are also now playing a growing role too.
+
+The [Net Zero Emissions by 2050](https://www.iea.org/reports/global-energy-and-climate-model/net-zero-emissions-by-2050-scenario-nze) (NZE) Scenario envisions both the massive deployment of variable renewables like solar PV and wind power and a large increase in overall electricity demand as more end uses are electrified. Grid-scale storage, particularly batteries, will be essential to manage the impact on the power grid and handle the hourly and seasonal variations in renewable electricity output while keeping grids stable and reliable in the face of growing demand. This scenario also meets key energy-related United Nations Sustainable Development Goals (SDGs), in particular by achieving universal energy access by 2030 and major improvements in air quality. It is consistent with limiting the global temperature rise to 1.5 °C with no or limited temperature overshoot (with a 50% probability), in line with reductions assessed in the IPCC in its [Sixth Assessment Report](https://www.ipcc.ch/report/sixth-assessment-report-working-group-3/).
+
+## Pumped Hydro
+
+Pumped-storage hydroelectric (PSH) systems are the oldest and some of the largest (in power and energy capacity) utility-scale ESSs in the United States and the world.
+
+-   clean, flexible, hydroelectric energy storage technology
 -   absorbs surplus energy at times of low demand and releases it when demand is high
--   World's biggest battery: 94% of global utility-scale energy storage [@uría-martínez2021]
 -   Supports ever-growing proportion of variable renewable energy
     -   As more wind and solar become available, PSH can integrate the indeterminacy and seasonality of variable renewable (can't forecast the sun a wind a year out...)
     -   provide storage capacity to reduce curtailment during oversupply
@@ -37,38 +86,48 @@ Water batteries for solar and wind power (world's biggest battery)
 
 ### How it works
 
-Water is pumped from a lower reservoir to an upper reservoir in times of high electricity supply (sun for solar panel / wind for mills) and/or low demand. During times of low supply and/or high demand, water from the upper reservoir is released into the lower reservoir, generating electricity as it moves through a turbine.
+Water is pumped from a lower reservoir to an upper reservoir in times of high electricity supply and/or low demand. During times of low supply and/or high demand, water from the upper reservoir is released into the lower reservoir, generating electricity as it moves through a turbine. So it operates like a conventional hydropower plant, but it can reuse water over and over.
 
--   operates like a conventional hydropower plant, but it can reuse water over and over
--   at times of low demand when electricity prices tend to be lower, water is pumped from a lower reservoir to an upper reservoir, and then released at times of high demand to drive a turbine and generate electricity
+![Pumped hydropower reservoirs, solar panels, and wind turbines interconnected on the landscape. Source: IHA](images/IHA_Pumped-storage-reservoir.png){fig-align="center"}
 
-![Pumped hydropower reservoirs on the landscape. Source: IHA](images/IHA_Pumped-storage-reservoir.png){fig-align="center"}
-
--   energy storage capacity depends on the size of its two reservoirs
--   amount of power generated is linked to the size of the turbine
--   a facility with two reservoirs roughly the size of two Olympic swimming pools, and a 500 metre height difference between them, could provide a capacity of 3 megawatts (MW) and store up to 3.5 megawatt hours (MWh) of electricity.
+Broadly speaking, the energy storage capacity depends on the size of its two reservoirs, while the amount of power generated is linked to the size of the turbines. For example, a facility with two reservoirs roughly the size of two Olympic swimming pools, and a 500 meter height difference between them, could provide a capacity of 3 MW and store up to 3.5 MWh of electricity. PSH systems are generally operated most often during summer months to help meet daily peaks in electricity demand that are often the result of increases in cooling demand by utility customers.
 
 ### Open- vs. closed-loop
 
--   Open-loop: with either an upper or lower reservoir that is continuously connected to a naturally flowing water source such as a river
--   Closed-loop: an 'off-river' site that produces power from water pumped to an upper reservoir without a significant natural inflow
+Open-loop pumped hydro has either an upper or lower reservoir that is continuously connected to a naturally flowing water source such as a river. Closed-loop pumped hydro has an 'off-river' site that produces power from water pumped to an upper reservoir without a significant natural inflow.
 
-![Comparison of open- vs. closed-loop pumped hydro. Credit: WPTO](images/wpto-pumped-storage-hydropower-illustration.jpg){fig-align="center"}
+![Comparison of open- vs. closed-loop pumped hydro. Credit: DOE WPTO](images/wpto-pumped-storage-hydropower-illustration.jpg){fig-align="center"}
 
 ### Demand & trends
 
-PSH was first used in Italy and Switzerland in the 1890s, by the US by 1930, and is now used worldwide. However, new PSH faces many challenges (licensing, remunerate services), so little development over the past 30 years, but that is changing.
+PSH was first used in Italy and Switzerland in the 1890s, by the US by 1930 (with most [built in the 1970\'s](https://www.eia.gov/todayinenergy/detail.php?id=41833)), and is now used worldwide. New PSH faces many challenges (licensing, remunerate services), so little development over the past 30 years, but that is changing rapidly and exponentially. We are in a pumped hydro and batter renaissance.
+
+Global stats from @irena2023:
+
+-   Global renewable power capacity = 3371 GW = 3.3 TW = 40% of all power
+    -   295 GW added in 2022 (9.6% increase; 83% of power additions)
+    -   solar = 192 GW, wind = 75 GW
+    -   to meet NZE and 1.5 C warming, need 1000 GW per year
+-   Global hydropower power capacity = 1392 GW = 1.40 TW
+-   Global renewable hydropower power capacity = 1255 GW = 1.26 TW
+-   Pumped hydro power capacity = 137 GW (21-22 GW in US)
+
+U.S. stats from the EIA ([as of 2022](https://www.eia.gov/energyexplained/electricity/energy-storage-for-electricity-generation.php)):
+
+-   40 PSH systems in operation across 18 states
+-   Total power capacity = 22,000 MW = 22 GW (vs. 8 GW for batter ESSs)
+-   largest plant is Bath County facility in Virginia: six generators, each 477 MW power capacity for a combined total of about 2,860 MW
+-   smallest and oldest PSH facility is the Rocky River plant in Connecticut, which began operation in 1928 and has two generators each with 3.5 MW of nameplate power capacity and one generator with 24 MW nameplate power capacity.
+-   newest PSH system is the Lake Hodges Hydroelectric Facility in California, which became operational in 2012 and has 42 MW of nameplate power capacity.
+-   Five states---California, Georgia, Michigan, South Carolina, and Virginia---combined, had 61% of the total U.S. PSH nameplate power generation capacity in 2022, and they accounted for about 67% of total gross electricity generation from PSH facilities in 2022.
+
+### Future Potential
+
+There is significant potential for scaling up global pumped hydro capacity, including from more than 600,000 identified off-river sites [@stocks2021]. Currently over 100 projects in pipeline, and pumped hydropower storage capacity is expected to increase by almost 50 per cent -- to about 240 GW by 2030 [@iha2018]
 
 The figure below shows that whilst there is a sizable pipeline under development / permitting, most PSH under construction is in East Asia, principally China.
 
 ![As of 2019, there were 284 pumped storage hydropower projects producing a total of 226 GW of electricity. Additionally, 13 countries were constructing 50 PSH projects with a total capacity of 53 GW of electricity. China leads the PSH pipeline ranking with 102 GW of PSH projects; the United States and eight European countries are also within the top 20 countries with the largest PSH pipelines. Source: ORNL](images/ORNL_Global_Pipeline_PSH_Projects.jpg){fig-align="center"}
-
-### Future Potential
-
--   165 GW installed capacity; \~9,000 GWh of electricity is currently stored [@iha2022]
-    -   U.S. = 42 plants, 22 GW capacity, 550 GWh of electricity stored
--   Significant potential for scaling up global pumped hydro capacity, including from more than 600,000 identified off-river sites [@stocks2021]
--   \>100 projects in pipeline: pumped hydropower storage capacity is expected to increase by almost 50 per cent -- to about 240 GW by 2030 [@iha2018]
 
 IHA's [Pumped Storage Tracking Tool](https://www.hydropower.org/hydropower-pumped-storage-tool) maps the locations and vital statistics for existing and planned pumped storage projects. It is the most comprehensive online resource on the world's 'water batteries'.
 
@@ -79,7 +138,6 @@ From the 2020 International Forum on Pumped Storage Hydropower ([IFPHS](https://
 -   Furthering PSH potential: install at old mines, underground caverns, non-powered dams and conventional hydropower plants, as well as location agnostic underground PSH, off-river PSH and seawater PSH, represents vast untapped potential
 -   Retrofitting and upgrading PSH systems: latest technological advancements, such as the use of variable speed pump-turbines and hydraulic short circuit, can enhance the services provided by existing PSH
 -   Developing hybrid systems: coupling PSH with batteries, floating solar PV, heat storage and desalination can provide additional services with reduced costs and environmental impacts
-
 
 ## Mokelumne Water Battery Project
 
@@ -131,13 +189,17 @@ By 2030, 60% of CA's energy must come from renewable resources, and by 2045, 100
 -   Spring 2023 - water temp and hydrology models begin
 -   Summer 2023 - field studies (difficult with snow conditions)
 
-## Studies
+### Studies
 
-### WR-1 (Hydrologic and water temperature operations models)
+#### WR-1 (Hydrologic and water temperature operations models)
 
 -   compare project operations to baseline conditions
 
-### Goal: Evaluate impacts and co-benefits
+## UW-Madison Project Overview
+
+**Executive Summary**
+
+In this collaboration, Dr Steve Loheide will serve in an advisory role in directing environmental studies to evaluate and mitigate potential impacts and benefits of the Mokelumne water battery project to the environment and stakeholders. Dr. Loheide will lead his Ecohydrology Group in identifying environmental impacts and co-benefits of the project and evaluating alternative operations and configurations of the Mokelumne water battery project in partnership with the GreenGenStorage project team to improve environmental outcomes and stakeholder satisfaction. This partnership will be mutually beneficial in that GreenGenStorage will receive a third-party, external perspective during the development of the Mokelumne water battery project and researchers at the University of Wisconsin-Madison will have the opportunity to engage in an innovative project at the water-energy-environment nexus that will serve as a test bed from which critical scholarship will be generated.
 
 -   operational changes to achieve low impacts and benefits
 -   size of tunnels
@@ -149,45 +211,62 @@ By 2030, 60% of CA's energy must come from renewable resources, and by 2045, 100
 
 ## Relevant Groups
 
--   **Clean Energy Ministerial ([CEM](https://www.cleanenergyministerial.org/))**
-    -   high-level global forum to promote policies and programmes that advance clean energy technology, to share lessons learned and best practices, and to encourage the transition to a global clean energy economy
--   Global Energy Monitor ([GEM](https://globalenergymonitor.org/))
-    -   develop and share information in support of the movement for clean energy
-    -   many trackers, including the [Hydropower tracker](https://globalenergymonitor.org/projects/global-hydropower-tracker/)
--   **Global Renewables Alliance ([GRA](https://globalrenewablesalliance.org/))**
--   **International Hydropower Association ([IHA](https://www.hydropower.org/))**
-    -   "The global voice for sustainable hydropower"
-    -   2023 World Hydropower Congress, Bali, Indonesia, 31 Oct - 2 Nov
--   **International Energy Agency ([IEA](IEA))**
--   **International Forum on PSH ([IFPSH](https://pumped-storage-forum.hydropower.org/))**
-    -   government-led multi-stakeholder platform to shape and enhance the role of pumped storage hydropower in future power systems
-    -   created Nov 2020 chaired by US DOE
--   **International Renewable Energy Agency ([IRENA](https://www.irena.org/))**
-    -   intergovernmental organization mandated to facilitate cooperation, advance knowledge, and promote the adoption and sustainable use of renewable energy
--   **United Nations (UN)**
-    -   "Peace, dignity, and equality on a healthy planet"
-    -   intergovernmental organization whose stated purposes are to maintain international peace and security, develop friendly relations among nations, achieve international cooperation, and serve as a center for harmonizing the actions of nations
-    -   COP28 - 2023 Conference of the Parties to the UN Framework Convention on Climate Change, Dubai, UAE
--   **US DOE Water Power Technologies Office (WPTO)**
-    -   does R&D to understand and assess value of potential benefits of existing and prospective PSH (e.g., the [HydroWIRES Initiative](https://www.energy.gov/eere/water/hydrowires-initiative) for grid reliability, resilience, and integration).
+**Clean Energy Ministerial ([CEM](https://www.cleanenergyministerial.org/))**
+
+-   high-level global forum to promote policies and programmes that advance clean energy technology, to share lessons learned and best practices, and to encourage the transition to a global clean energy economy
+
+**U.S. Energy Information Administration ([EIA](eia.gov))**
+
+-   independent statistics and analysis of energy markets and trends
+-   Battery Storage in the United States: [An Update on Market Trends](https://www.eia.gov/analysis/studies/electricity/batterystorage/)
+-   [explainer](https://www.eia.gov/energyexplained/electricity/energy-storage-for-electricity-generation.php) on electricity and energy storage
+
+**Global Energy Monitor ([GEM](https://globalenergymonitor.org/))**
+
+-   develop and share information in support of the movement for clean energy
+-   many trackers, including the [Hydropower tracker](https://globalenergymonitor.org/projects/global-hydropower-tracker/)
+
+**Global Renewables Alliance ([GRA](https://globalrenewablesalliance.org/))**
+
+**International Hydropower Association ([IHA](https://www.hydropower.org/))**
+
+-   "The global voice for sustainable hydropower"
+-   2023 World Hydropower Congress, Bali, Indonesia, 31 Oct - 2 Nov
+
+**International Energy Agency (IEA)**
+
+-   2023 tracking clean energy [progress report](https://www.iea.org/reports/tracking-clean-energy-progress-2023)
+
+**International Forum on PSH ([IFPSH](https://pumped-storage-forum.hydropower.org/))**
+
+-   government-led multi-stakeholder platform to shape and enhance the role of pumped storage hydropower in future power systems
+-   created Nov 2020 chaired by US DOE
+
+**International Renewable Energy Agency ([IRENA](https://www.irena.org/))**
+
+-   intergovernmental organization mandated to facilitate cooperation, advance knowledge, and promote the adoption and sustainable use of renewable energy
+
+**United Nations (UN)**
+
+-   "Peace, dignity, and equality on a healthy planet"
+-   intergovernmental organization whose stated purposes are to maintain international peace and security, develop friendly relations among nations, achieve international cooperation, and serve as a center for harmonizing the actions of nations
+-   COP28 - 2023 Conference of the Parties to the UN Framework Convention on Climate Change, Dubai, UAE
+
+**US DOE Water Power Technologies Office (WPTO)**
+
+-   does R&D to understand and assess value of potential benefits of existing and prospective PSH (e.g., the [HydroWIRES Initiative](https://www.energy.gov/eere/water/hydrowires-initiative) for grid reliability, resilience, and integration).
 
 ## Glossary
 
--   Curtailment: when the sun shines and the wind blows *more than* is demanded, a system operator deliberately reduces the supply of electricity in order to balance the grid. Where storage does not exist, this means that renewable electricity is wasted and not stored for potential use in future
+**Curtailment**: when the sun shines and the wind blows *more than* is demanded, a system operator deliberately reduces the supply of electricity in order to balance the grid. Where storage does not exist, this means that renewable electricity is wasted and not stored for potential use in future
 
--   Evaporation suppressors: small plastic objects floated on a reservoir to reduce wind speeds and evaporation ratesPSH: pumped storage hydropower (US)
+**Evaporation suppressors**: small plastic objects floated on a reservoir to reduce wind speeds and evaporation ratesPSH: pumped storage hydropower (US)
 
--   Head:
+**Head**:
 
--   Load: electricity demand
+**Load**: electricity demand
 
--   PHES: pumped hydro energy storage (AUS)
-
--   Storage power capacity:
-
--   Storage energy volume:
-
--   Variable energy: power output rises and falls in response to, e.g., sun and wind
+**Variable energy**: power output rises and falls in response to, e.g., sun and wind
 
 ## References
 
