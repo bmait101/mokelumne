@@ -3,7 +3,7 @@ title: "Literature Review"
 format: html
 bibliography: references.bib
 editor_options: 
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
 
 ```{r}
@@ -15,65 +15,131 @@ editor_options:
 library(tidyverse)
 library(here)
 library(kableExtra)
+library(knitr)
+library(pander)
 ```
 
 This literature review aims to evaluate the streamflow and temperature requirements of aquatic species to assess the significance of potential changes to the stream thermal regime from Mokelumne. We also review thermal criteria set by resource agencies (e.g., NMFS)
 
 ## Fish and Aquatic Organisms
 
+```{r}
+#| label: load-spp-list
+#| echo: false
+#| warning: false
+#| message: false
+
+species <- read_csv(here("data","species-list.csv"))
+fish <- species |> filter(Class == "Fishes") |> select(2:4)
+nonfish <- species |> filter(Class != "Fishes")|> select(2:4)
+```
+
 The Project's affected area for fish and aquatic resources is located within the Cole Creek, Bear River, Upper and Lower Bear Reservoirs and the Salt Springs Reservoir -- North Fork Mokelumne River watersheds. More specifically, the proposed Project will involve the Salt Springs Reservoir, and the Upper and Lower Bear Reservoirs, all of which are on the Mokelumne River. Additionally, the proposed water conveyance tunnel alignments that will connect the Salt Springs and Bear Reservoirs, pass beneath Cole Creek, a tributary of the Mokelumne.
 
 The Project watersheds feature similar species composition, hydrologic regime, and topographic profiles to other western alpine watersheds in California. These three watersheds are located on the western slope of the Sierra Nevada Mountain Range and are therefore primarily fed by snow melt runoff accumulated from higher elevations.
 
-### Fishes
+### Fish
+
+UC Davis CalFish database queries were conducted for these watersheds which provided data on freshwater native and non-native fish present currently and/or historically within these watersheds (@tbl-fish-species). Fish species present in the project area include native and nonnative species that have been introduced through stocking in reservoirs for recreational fishing.
 
 ```{r}
-#| label: fish-species
-#| eval: false
+#| label: tbl-fish-species
+#| eval: true
 #| echo: false
 #| message: false
 #| warning: false
 #| tbl-cap: "Fish species identified by GreenGen in study area."
-#| tbl-colwidths: [15,40,40,10]
-species <- read_csv(here("data","species-list.csv"))
-species |> filter(Class == "Fishes") |> knitr::kable()
 
+# pandoc.table(
+#   fish,
+#   justify = "left"
+#   )
+
+kable(fish) |> 
+  column_spec(2, italic = TRUE)
 ```
 
-| Common Name                                | Scientific Name                   | Origin |
-|---------------------------|----------------------------|-----------------|
-| Pacific Lamprey                            | *Entosphenus tridentatus*         | Native |
-| Delta Smelt                                | *Hypomesus transpacificus*        | Native |
-| Hardhead                                   | *Mylopharaodon conocephalus*      | Native |
-| Sacramento Hitch                           | *Lavinia exilicauda exilicauda*   | Native |
-| Chinook Salmon (Central Valley spring run) | *Oncorhynchus tshawytscha* pop. 6 | Native |
-| Steelhead (coastal Rainbow Trout)          | *Oncorhynchus mykiss irrideus*    | Native |
+Central California roach is a species of moderate concern according to CDFW, as the agency states that although the species does not face an extinction risk, there is a high degree of uncertainty regarding population systematics.
 
-: Fish species identified by GreenGen in study area.
+Within the reservoirs and riverine features associated with implementation of the proposed Project, only two have potential to occur: Sacramento hitch, and hardhead.
 
-### Reptiles and amphibians
+One species, Oncorhynchus mykiss irideus, occurs within Project watersheds as resident rainbow trout, but not as anadromous steelhead. Additional subspecies of rainbow trout are expected to occur from hatchery stocking operations.
 
-| Common Name                      | Scientific Name                        | Origin |
-|---------------------------|----------------------------|-----------------|
-| Yosemite toad                    | *Anaxyrus canorus*                     | Native |
-| Foothill yellow-legged frog      | *Rana boylii*                          | Native |
-| Sierra Nevada yellow-legged frog | *Rana sierrae*                         | Native |
-| Southern long-toed salamander    | *Ambystoma macrodactylum sigillatum*   | Native |
-| Western pond turtle              | *Emys marmorata / Actinemys marmorata* | Native |
+The remaining three species -- Pacific lamprey, Delta smelt, and Chinook salmon -- do not exist in the Mokelumne River watershed above Camanche Dam (Pisces 2022, CDFW pers. comm. November 8, 2022).
 
-: Amphibian and reptile species with potential to occur in study area.
+Downstream of the immediate Project vicinity in the Lower Mokelumne River below Pardee and Camanche Reservoirs, primary aquatic species include Fall run chinook salmon, and federally threatened California Central Valley steelhead (Oncorhyncus mykiss). Federal Register notice December 17, 2020 (85 FR 81822) added the Mokelumne River Fish Hatchery steelhead population to the federal listing under the Endangered Species Act (ESA).
 
-Potential impacts identified in Mokelumne RSP:
+#### Issues
 
--   water quality and quantify (temperature and instream/environmental flows)
--   habitat quality and quantify (availability)
+-   Modifications to the volume and timing in water flow and reservoir levels (seasonal or daily)
+-   Changes to habitat conditions (e.g., streambed characteristics) from modified flow regimes, including increased streambank erosion and sedimentation downstream of proposed Project
+-   Vegetation removal within the riparian corridor creates potential for increased water temperatures from loss of shade
+-   Loss of riparian habitat resulting in loss of protective cover and increased predation
+-   Entrainment of fish into Project facilities during operations, including potential intermixing of fish communities between reservoirs
+    -   currently lake trout in Bear Reservoir; CDFW do not want them entrained into Salt Springs Reservoir; fish screen would ovoid this
+-   lake level change (Fluctuation of reservoir surface elevation from Project operations)
+    -   reservoir/spawning habitat for fish who wouldn't otherwise have access to spawning habitat
+-   Exchange of fish species from different watersheds and elevations during operations
+-   Changing water temperature and quality in affected stream reaches and water bodies and direct human disturbance related to Project operations and maintenance
+-   Changes to catch per unit effort and species composition for recreational anglers
+-   movement of pathogens: Whirling disease (Myxobolus cerebralis)
+
+### Amphibians and Reptiles
+
+A variety of amphibians and reptiles utilize the permanent and semi-permanent aquatic habitats in the proposed Project vicinity. A total of five special-status amphibian species and one specialstatus reptile species as categorized by USFWS under the ESA, CDFW, and USFS are located in the proposed Project area (@tbl-non-fish-species).
+
+```{r}
+#| label: tbl-non-fish-species
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-cap: "Amphibian and reptile species identified by GreenGen in study area."
+
+kable(nonfish) |> 
+  column_spec(2, italic = TRUE)
+```
+
+Project-related activities have the potential to both directly and indirectly affect all life stages of aquatic amphibian and reptile communities, including loss or degradation of breeding and/or foraging habitat for SNYLF, FYLF, WPT, and SLTS.
+
+The proposed Project area overlaps with USFWS critical habitat for the Sierra Nevada yellow-legged frog (SNYLF) (Ranasierrae), which is listed as endangered under the ESA and threatened by CDFW. SNYLF inhabits high-elevation streams, ponds, marshes, and meadows, where it utilizes slow-moving or still, shallow water for breeding. The species is rarely found more than a meter away from water and specific observations of the species have been made in or near streams near all three of the reservoirs in the proposed Project vicinity (CNDDB, 2020; USFWS 2020). At least two FERC-licensed hydroelectric projects (P-137 and P-2101) in the region have plans to monitor yellow-legged frogs (SNYLF or foothill yellow-legged frog) and/or operational requirements for flow releases to support yellow-legged frog populations, particular during the breeding season (SMUD, 2017; FERC, 2001).
+
+PG&E conducts surveys for FLYF and SNLYF in the proposed Project vicinity as part of its SEMP activities. Surveys for FYLF are conducted at five sites along the mainstem North Fork Mokelumne River within the Salt Springs reach, along with eight North Fork Mokelumne River tributary sites, all of which are downstream of the proposed Project location. PG&E has documented a total of 91 egg masses at designated breeding sites on the Salt Springs Reach of the North Fork Mokelumne River between 2001 and 2020. Young-of-the-year surveys at designated monitoring sites in this reach ranged from as few as one (in 2010 and 2011) to as many as 288 (in 2013) (PG&E, 2022).
+
+PG&E monitors SNYLF at Cole Creek, upstream of its confluence with the North Fork Mokelumne River. In 2009, PG&E documented two SNYLF tadpoles in July and two subadults in September. SNYLF have not been observed at Cole Creek during subsequent monitoring in 2014 and 2020 (PG&E, 2022).
+
+### Issues
+
+-   surface level fluctuations / flow alterations can cause loss or degradation of breeding and/or foraging habitat
+    -   stranding or scouring or egg masses and larvae
+-   modified flow regimes, including increased streambank erosion and changes to sedimentation downstream of the proposed Project, could potentially impact habitat as well, causing decreased water quality for larvae and egg masses, and loss of bank habitat
+-   Changing water temperature and quality in affected stream reaches and water bodies could impact foraging and breeding habitat.
+-   Vegetation clearing, creation or improvement of access roads, digging and trenching, and other Project construction activity, operations and maintenance could result in temporary and permanent habitat loss.
+-   risk of increased disturbance and mortality from the increased traffic associated with operations and maintenance
+-   use of herbicides and vegetation maintenance equipment could impact amphibian reproduction or health
+-   Forest Service will have opinions re: foothill yellow-legged water temperature issues for release downstream of Salt Springs
 -   movement of pathogens (chytridiomycosis fungus *Batrachochytrium dendrobatidis* and *Ranavirus* spp.)
+
+### Benthic Macroinvertebrates
+
+BMIs are an important food source for fisheries communities within the Project area as well as indicators of water quality and ecosystem health. A BMI Study is proposed to establish a pre-Project baseline inventory of the BMI community.
+
+#### Issues
+
+-   Modifications to the volume and timing in water flow and reservoir levels (seasonal or daily) and transition from lentic to lotic ecosystem types
+-   Cycling of water between reservoirs may disrupt current disturbance regimes and may reduce habitat suitability for sensitive long-lived taxa (including EPT species) and increase habitat suitability for disturbance-resilient species (such as blackflies, worms and snails). Effects of disturbance regime shifts may disproportionately affect shoreline and shallow water habitats preferred by BMI species
+-   Changes to habitat conditions (e.g., streambed characteristics) from modified flow regimes, including increased streambank erosion and sedimentation downstream of proposed Project may impact aquatic life
+-   Changes in water chemistry could alter production, composition, and health of BMI community and affect fisheries communities
+-   Exchange of predator species (e.g., fish) from different watersheds and elevations during operations
+-   Changing water temperature and quality in affected stream reaches and water bodies and direct human disturbance related to Project operations and maintenance may impact aquatic life
 
 ## Streamflow requirements
 
 ## Temperature Requirements
 
-## Flow and Thermal Criteria in Region
+## Flow and Thermal Criteria /Thresholds
+
+-   PG&E must meet water temperature requirements for operations
 
 ## Pumped Hydro Review
 
