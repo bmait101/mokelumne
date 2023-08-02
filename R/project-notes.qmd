@@ -165,22 +165,6 @@ By 2030, 60 percent of CA's energy must come from renewable resources, and by 20
 -   Create hundreds of construction jobs and approximately ten permanent jobs
 -   Provide local economic stimulus throughout project development and operation
 
-### Environmental Impacts
-
-"The project leaders have spent their careers working towards environmental causes and encouraging renewable energy. Project development will be guided by this deep commitment to respecting and protecting existing environments and resource use where possible, and to mitigating changes where needed. The project team pledges to work closely with environmental resource agencies and interested stakeholders to ensure that this commitment is met."
-
--   Already a stressed system (and CC will make it worse)
--   Water temperature and downstream impacts (model will look at impacts)
--   Using Lower Bear (fewer impacts to cultural/bio resources and no new roads)
--   No dam raises (no new inundation)
-    -   footprint is 53 acres, all FS land
-    -   90% of facilities are underground
--   3,000 acre-feet of water back and forth (impacts on shore line)
--   Biological
-    -   Sierra yellow-legged frog
-    -   Foothills yellow-legged frog
-    -   Mesocarnivor and birds (great grey owl): buffer areas
-
 ### Progress to date
 
 -   July 2016 - GreenGen App for preliminary permit
@@ -194,6 +178,24 @@ By 2030, 60 percent of CA's energy must come from renewable resources, and by 20
 -   Feb 2023 - FERC issued Study Plan Determination (SPD)
 -   Spring 2023 - water temp and hydrology models begin
 -   Summer 2023 - field studies (difficult with snow conditions)
+
+### Environmental Impacts
+
+"The project leaders have spent their careers working towards environmental causes and encouraging renewable energy. Project development will be guided by this deep commitment to respecting and protecting existing environments and resource use where possible, and to mitigating changes where needed. The project team pledges to work closely with environmental resource agencies and interested stakeholders to ensure that this commitment is met."
+
+-   Designed to be an enhancement when constructed
+-   Already a stressed system (and CC will make it worse)
+-   Wild & Scenic River starts ½ mile downstream of Salt Springs but upstream of confluence of Mokelumne and Bear
+-   Model water temperature and downstream impacts from proposed operations and downstream effects
+-   Using Lower Bear (fewer impacts to cultural/bio resources and no new roads)
+-   No dam raises (no new inundation)
+    -   footprint is 53 acres, all FS land
+    -   90% of facilities are underground
+-   3,000 acre-feet of water back and forth (impacts on shore line)
+
+### Water rights
+
+-   reservoir goes low -- if they can store more water in Lower Bear, they may be able to operate project yearlong; advantageous to the project
 
 ### Project Studies
 
@@ -296,15 +298,15 @@ Mechanism to achieve co-benefits:
 
 **Curtailment**: when the sun shines and the wind blows *more than* is demanded, a system operator deliberately reduces the supply of electricity in order to balance the grid. Where storage does not exist, this means that renewable electricity is wasted and not stored for potential use in future
 
-**Electric consumption:** determined by how much electricity you use overall (while demand is determined by when you use it), measured in watthours
+**Electricity generation / production:** how much electricity produced over time (while demand is determined by when you use it), measured in watthours (kWh)
 
-**Electricity demand (generation)**: how much electricity is being used at any given time; measured as total electricity generation, adjusted for electricity imports and exports, in units of watthours; demand ebbs and flows over short and long time spans
+**Electricity demand**: how much electricity is being used at any given time; measured in watthours (kWh); demand ebbs and flows over short and long time spans
 
 **Evaporation suppressors**: small plastic objects floated on a reservoir to reduce wind speeds and evaporation rates
 
-**Power capacity**: the maximum instantaneous amount of electric power that can be generated on a continuous basis and is measured in units of watts (kilowatts \[kW\], megawatts \[MW\], or gigawatts \[GW\])
+**Power capacity**: the maximum instantaneous amount of electric power that can be generated on a continuous basis and is measured in units of watts (kilowatts \[kW\], megawatts \[MW\], or gigawatts \[GW\]); utility-scale are at least 1 MW
 
-**Energy capacity**: the total amount of energy that can be stored in or discharged from the storage system and is measured in units of watthours (kilowatthours \[kWh\], megawatthours \[MWh\], or gigawatthours \[GWh\])
+**Energy capacity**: the total amount of energy that can be stored in or discharged from the storage system; measured in units of watthours (kilowatthours \[kWh\], megawatthours \[MWh\], or gigawatthours \[GWh\])
 
 **Head**:
 
