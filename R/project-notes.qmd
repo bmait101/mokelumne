@@ -13,14 +13,6 @@ editor_options:
 bibliography: references.bib
 ---
 
-## Misc / notable news/ events
-
--   May 2023 - [NYT article](https://www.nytimes.com/interactive/2023/05/02/climate/hydroelectric-power-energy.html) on the rapid rise of pumped hydro
--   July 2023 - groups want to [triple total renewable energy capacity](https://www.hydropower.org/news/private-and-public-sectors-call-for-an-ambitious-global-target-of-tripling-total-renewable-energy-capacity-to-11-tw-by-2030) to 11 TW by 2030
--   Aug 2023 - first new U.S. [nuclear reactor](https://www.eia.gov/todayinenergy/detail.php?id=57280) since 2016 operational
--   Oct/Nov 2023 - World Hydropower Congress, Bali, Indonesia
--   Nov/Dec 2023 - COP28, Dubai, UAE
-
 ## Energy storage
 
 An energy storage system (ESS) for electricity generation uses electricity (or some other energy source, such as solar-thermal energy) to charge an energy storage system or device, which is discharged to supply (generate) electricity when needed at desired levels and quality.
@@ -41,7 +33,7 @@ The types of ESSs in commercial use in the United States, in order of total powe
 
 ![](images/energystoragetechnologies.jpg){fig-align="center"}
 
-### Categories of EESs
+### EES Categories
 
 Two basic ratings for energy storage systems are:
 
@@ -100,16 +92,16 @@ Open-loop pumped hydro has either an upper or lower reservoir that is continuous
 
 ### Demand & trends
 
-PSH was first used in Italy and Switzerland in the 1890s, by the US by 1930 (with most [built in the 1970\'s](https://www.eia.gov/todayinenergy/detail.php?id=41833)), and is now used worldwide. New PSH faces many challenges (licensing, remunerate services), so little development over the past 30 years, but that is changing rapidly and exponentially. We are in a pumped hydro and batter renaissance.
+PSH was first used in Italy and Switzerland in the 1890s, by the US by 1930 (with most [built in the 1970\'s](https://www.eia.gov/todayinenergy/detail.php?id=41833)), and is now used worldwide. New PSH faces many challenges (licensing, remunerate services), so little development over the past 30 years. But it is undergoing a renaissance in countries where wind and solar power are also growing, helping allay concerns about weather-related dips in renewable energy output.
 
 Global stats from @irena2023:
 
 -   Global renewable power capacity = 3371 GW = 3.3 TW = 40% of all power
+    -   global human population at 10 billion by 2050; when developing counties reach advanced needs, world will need 200,000 TWh/year [@blakers2021]
     -   295 GW added in 2022 (9.6% increase; 83% of power additions)
     -   solar = 192 GW, wind = 75 GW
     -   to meet NZE and 1.5 C warming, need 1000 GW per year
--   Global hydropower power capacity = 1392 GW = 1.40 TW
--   Global renewable hydropower power capacity = 1255 GW = 1.26 TW
+-   Global hydro power capacity = 1392 GW = 1.40 TW (vs. 1310 GW in 2019)
 -   Pumped hydro power capacity = 137 GW (21-22 GW in US)
 
 U.S. stats from the EIA ([as of 2022](https://www.eia.gov/energyexplained/electricity/energy-storage-for-electricity-generation.php)):
@@ -123,17 +115,30 @@ U.S. stats from the EIA ([as of 2022](https://www.eia.gov/energyexplained/electr
 
 ### Future Potential
 
-There is significant potential for scaling up global pumped hydro capacity, including from more than 600,000 identified off-river sites [@stocks2021]. Currently over 100 projects in pipeline, and pumped hydropower storage capacity is expected to increase by almost 50 per cent -- to about 240 GW by 2030 [@iha2018]
+There is significant potential for scaling up global pumped hydro capacity, including from more than 600,000 identified off-river sites [@stocks2021]. Currently over 100 projects in pipeline, and pumped hydropower storage capacity is expected to increase by almost 50 per cent -- to about 240 GW by 2030 [@iha2018].
 
-The figure below shows that whilst there is a sizable pipeline under development / permitting, most PSH under construction is in East Asia, principally China.
+A May 2023 [NYT article](https://www.nytimes.com/interactive/2023/05/02/climate/hydroelectric-power-energy.html) highlighted the the shift away from conventional hydro and rapid rise of pumped hydro across the world. It summarized data from the [GEM](https://globalenergymonitor.org/)'s [Global Hydropower Tracker](https://globalenergymonitor.org/projects/global-hydropower-tracker/). Some takeaways:
 
-![As of 2019, there were 284 pumped storage hydropower projects producing a total of 226 GW of electricity. Additionally, 13 countries were constructing 50 PSH projects with a total capacity of 53 GW of electricity. China leads the PSH pipeline ranking with 102 GW of PSH projects; the United States and eight European countries are also within the top 20 countries with the largest PSH pipelines. Source: ORNL](images/ORNL_Global_Pipeline_PSH_Projects.jpg){fig-align="center"}
+-   China is ambitiously planning new pumped hydro (now surpassing Europe's capacity)
+-   In US and AUS, legislation has spurred new renewable energy projects
+-   Conventional hydro (reservoir and non-reservoir dams) aren't dead. China and sub-Saharan Africa have many planned for cheap electricity
+-   China accounts for about half of global growth in renewables: now leads world in wind/solar/hydro capacity (but still loves coal)
+-   Run-of-river facilities on the rise in mountainous places (Nepal)
+-   Conventional dams have big problems
+    -   environmental (habitat loss, environmental flows)
+    -   methane releases (3-7% of human emissions)\\
+    -   safety (earthquakes)
+    -   water evaporation
 
-IHA's [Pumped Storage Tracking Tool](https://www.hydropower.org/hydropower-pumped-storage-tool) maps the locations and vital statistics for existing and planned pumped storage projects. It is the most comprehensive online resource on the world's 'water batteries'.
+The figure below shows that whilst there is a sizable pipeline under development / permitting, most PSH under construction is in East Asia, principally China (80% of planned projects worldwide).
 
-## Knowledge gaps
+![](images/ORNL_Global_Pipeline_PSH_Projects.jpg){fig-align="center"}
 
-From the 2020 International Forum on Pumped Storage Hydropower ([IFPHS](https://pumped-storage-forum.hydropower.org/)):
+The IHA's also has a [Pumped Storage Tracking Tool](https://www.hydropower.org/hydropower-pumped-storage-tool) that maps the locations and vital statistics for existing and planned pumped storage projects. It claims it is the most comprehensive online resource on the world's 'water batteries'.
+
+### Knowledge gaps
+
+The 2020 International Forum on Pumped Storage Hydropower ([IFPHS](https://pumped-storage-forum.hydropower.org/)) identified three key impediments to more pumped hydro:
 
 -   Furthering PSH potential: install at old mines, underground caverns, non-powered dams and conventional hydropower plants, as well as location agnostic underground PSH, off-river PSH and seawater PSH, represents vast untapped potential
 -   Retrofitting and upgrading PSH systems: latest technological advancements, such as the use of variable speed pump-turbines and hydraulic short circuit, can enhance the services provided by existing PSH
@@ -143,15 +148,15 @@ From the 2020 International Forum on Pumped Storage Hydropower ([IFPHS](https://
 
 ### Project description
 
-By 2030, 60% of CA's energy must come from renewable resources, and by 2045, 100%. But wind and solar are not available all the time. The GreenGen Storage Mokelumne Water Battery Project will reduce California's reliance on fossil fuels by meeting the state's energy demands with reliable renewable energy. It takes advantage of two existing hydroelectric reservoirs in CA's Sierra foothills, so few environmental impacts. Without pumped hydro, CA will have to rely on fossil fuels to integrate variable renewables (in 2018, CA curtailed \~ 460,000 MWh, enough to power 80,000 households).
+By 2030, 60 percent of CA's energy must come from renewable resources, and by 2045, 100 percent. But wind and solar are not available all the time. The GreenGen Storage Mokelumne Water Battery Project will reduce California's reliance on fossil fuels by meeting the state's energy demands with reliable renewable energy. It takes advantage of two existing hydroelectric reservoirs in CA's Sierra foothills, so few environmental impacts. Without pumped hydro, CA will have to rely on fossil fuels to integrate variable renewables (in 2018, CA curtailed \~ 460,000 MWh, enough to power 80,000 households).
 
--   planned 400 MW capacity (up to 1200 depending on design, needs, environment)
--   4,000 MWh of zero emission energy
+-   400 MW power capacity
+-   4,000 MWh of energy capacity
 -   2 reversible pump-turbines
 -   8-10 hours of energy storage
--   will move \~ 3,000 acre-feet of water back and forth
+-   will move approx. 3,000 acre-feet of water back and forth
 
-![The Mokelumne Water Battery Project is located in the Sierra Nevada mountains, east of Sacramento, and about 33 miles east of Jackson, California. The project will pump water from the existing Salt Springs Reservoir up to the Lower Bear River Reservoir located on the Mokelumne River. The project will also include a water conveyance tunnel connecting the reservoirs, a powerhouse, transmission line, and other associated infrastructure.](images/mokelumne-map2.png){fig-align="center"}
+![The Mokelumne Water Battery Project is located in the Sierra Nevada mountains, east of Sacramento, and about 33 miles east of Jackson, California. The project will pump water from the existing Salt Springs Reservoir up to the Lower Bear River Reservoir located on the Mokelumne River. The project will also include a water conveyance tunnel connecting the reservoirs, a powerhouse, transmission line, and other associated infrastructure (90% underground).](images/mokelumne-map2.png){fig-align="center"}
 
 ### Benefits
 
@@ -183,31 +188,62 @@ By 2030, 60% of CA's energy must come from renewable resources, and by 2045, 100
 -   Spring 2022 - initial engineering report
 -   Fall 2021 - engineering/cultural/environmental team site visits
 -   April 2022 - Pre-Application Document (PAD)
--   Jan 2023 - Proposed Study Plan
+-   Sep 2022 - Proposed Study Plan (PSP)
+-   Nov 2022 - Amended PSP
+-   Jan 2023 - Filed Revised Study Plan (RSP) with FERC
 -   Feb 2023 - FERC issued Study Plan Determination (SPD)
-    -   confirmed all studies plus additions to Recreation and Enviro Justice Study
 -   Spring 2023 - water temp and hydrology models begin
 -   Summer 2023 - field studies (difficult with snow conditions)
 
-### Studies
+### Project Studies
 
-#### WR-1 (Hydrologic and water temperature operations models)
+#### Water Resources Studies
 
--   compare project operations to baseline conditions
+#### Biological Studies
+
+BR-1: amphibians and reptiles
+
+BR-2: wetland and riparian zone
+
+BR-3: fish community and entertainment
+
+BR-4: wildlife
+
+BR-5: Avian communities
+
+BR-6: benthic macro invertebrates
+
+BR-7: invasive species
 
 ## UW-Madison Project Overview
 
-**Executive Summary**
+Goal: evaluate and mitigate potential impacts and co-benefits of the Mokelumne water battery project to the environment and stakeholders and evaluate alternative operations and configurations of the Mokelumne water battery project improve environmental outcomes and stakeholder satisfaction.
 
-In this collaboration, Dr Steve Loheide will serve in an advisory role in directing environmental studies to evaluate and mitigate potential impacts and benefits of the Mokelumne water battery project to the environment and stakeholders. Dr. Loheide will lead his Ecohydrology Group in identifying environmental impacts and co-benefits of the project and evaluating alternative operations and configurations of the Mokelumne water battery project in partnership with the GreenGenStorage project team to improve environmental outcomes and stakeholder satisfaction. This partnership will be mutually beneficial in that GreenGenStorage will receive a third-party, external perspective during the development of the Mokelumne water battery project and researchers at the University of Wisconsin-Madison will have the opportunity to engage in an innovative project at the water-energy-environment nexus that will serve as a test bed from which critical scholarship will be generated.
+1.  modeling study of the combined thermal impacts of both climate change and a pumped-storage hydropower project proposed in the Mokelumne River in California
+    -   climate induced changes in runoff regimes, particularly low flow periods, have potential to exert greater control on changing thermal regimes than warming climate or adverse impacts of reservoir operations
+    -   increased storage provides an opportunity for environmental releases to counteract impacts to the thermal regimes during critical periods.
+    -   develop a suite of potential scenarios describing a range of pumped-storage operations to identify practices that enhance, or minimize impacts on, thermal regimes of the reservoirs and downstream river reaches
+    -   use historic and simulated future stream temperature records to apply a range of identified thermal niche models/ thermal tolerance metrics at locations downstream to determine the extent to which different strategies for describing individual species thermal niche agree in habitat outcomes
+2.  conduct a literature review evaluating the temperature requirements of aquatic species to evaluate the significance of potential changes to the stream thermal regime
+    -   includes a comparison of historic and forecasted future stream temperatures to thermal criteria set by resource agencies (NMFS) and whether these thermal criteria are achievable/realistic in a changing climate
+3.  identify potential ecosystem co-benefits that could arise from innovative pumped-storage hydropower operations
+    -   reduced thermal impairment of downstream river reaches
+    -   reduced carbon emissions,
+    -   maintenance of in-reservoir thermal regimes to support lake trout fisheries,
+    -   enhanced streamflow during critical stages of the salmon life-cycle,
+    -   increased availability of water rights,
+    -   minimized flood risk,
+    -   regulation of stream sediment transport,
+    -   improvement of aquatic habitat,
+    -   improvement in flow regimes to support downstream riparian vegetation and biota
 
--   operational changes to achieve low impacts and benefits
--   size of tunnels
--   reservoir fluctuation (2-12 ft, average \~ 3-4 ft); lowest during peak rec season
--   footprint of reservoir (2 foot dam raise at lower Bear)
--   footprint of powerhouse
--   entry / exist point
--   floatovoltaics
+Mechanism to achieve co-benefits:
+
+-   alteration of the magnitude and timing of pump-storage operations,
+-   increased reservoir storage,
+-   floating solar power,
+-   variable depth of pumped water extraction and injection,
+-   altered timing of reservoir releases
 
 ## Relevant Groups
 
@@ -260,13 +296,27 @@ In this collaboration, Dr Steve Loheide will serve in an advisory role in direct
 
 **Curtailment**: when the sun shines and the wind blows *more than* is demanded, a system operator deliberately reduces the supply of electricity in order to balance the grid. Where storage does not exist, this means that renewable electricity is wasted and not stored for potential use in future
 
-**Evaporation suppressors**: small plastic objects floated on a reservoir to reduce wind speeds and evaporation ratesPSH: pumped storage hydropower (US)
+**Electric consumption:** determined by how much electricity you use overall (while demand is determined by when you use it), measured in watthours
+
+**Electricity demand (generation)**: how much electricity is being used at any given time; measured as total electricity generation, adjusted for electricity imports and exports, in units of watthours; demand ebbs and flows over short and long time spans
+
+**Evaporation suppressors**: small plastic objects floated on a reservoir to reduce wind speeds and evaporation rates
+
+**Power capacity**: the maximum instantaneous amount of electric power that can be generated on a continuous basis and is measured in units of watts (kilowatts \[kW\], megawatts \[MW\], or gigawatts \[GW\])
+
+**Energy capacity**: the total amount of energy that can be stored in or discharged from the storage system and is measured in units of watthours (kilowatthours \[kWh\], megawatthours \[MWh\], or gigawatthours \[GWh\])
 
 **Head**:
 
 **Load**: electricity demand
 
 **Variable energy**: power output rises and falls in response to, e.g., sun and wind
+
+**Lumen**: (symbol: **lm**) SI unit of [luminous flux](https://en.wikipedia.org/wiki/Luminous_flux "Luminous flux"), a measure of the total quantity of [visible light](https://en.wikipedia.org/wiki/Visible_light "Visible light") emitted by a source per unit of time (brightness); Luminous flux differs from [power](https://en.wikipedia.org/wiki/Power_(physics) "Power (physics)") ([radiant flux](https://en.wikipedia.org/wiki/Radiant_flux "Radiant flux")) in that radiant flux includes all electromagnetic waves emitted, while luminous flux is [weighted](https://en.wikipedia.org/wiki/Weighting "Weighting") according to a model (a "[luminosity function](https://en.wikipedia.org/wiki/Luminosity_function "Luminosity function")") of the human eye's sensitivity to various [wavelengths](https://en.wikipedia.org/wiki/Wavelength "Wavelength")
+
+**Joule**: SI unit of energy; It is equal to the amount of [work](https://en.wikipedia.org/wiki/Work_(physics) "Work (physics)") done when a force of 1 [newton](https://en.wikipedia.org/wiki/Newton_(unit) "Newton (unit)") displaces a mass through a distance of 1 [metre](https://en.wikipedia.org/wiki/Metre "Metre") in the direction of the force applied. It is also the energy dissipated as heat when an [electric current](https://en.wikipedia.org/wiki/Electric_current "Electric current") of one [ampere](https://en.wikipedia.org/wiki/Ampere "Ampere") passes through a [resistance](https://en.wikipedia.org/wiki/Electrical_resistance_and_conductance "Electrical resistance and conductance") of one [ohm](https://en.wikipedia.org/wiki/Ohm "Ohm") for one second.
+
+**Watt:** (symbol: W) SI unit of [power](https://en.wikipedia.org/wiki/Power_(physics) "Power (physics)") or [radiant flux](https://en.wikipedia.org/wiki/Radiant_flux "Radiant flux"), equal to 1 [joule](https://en.wikipedia.org/wiki/Joule "Joule") per [second](https://en.wikipedia.org/wiki/Second "Second") or 1 kg⋅m^2^⋅s^−3^. It is used to [quantify](https://en.wikipedia.org/wiki/Quantification_(science) "Quantification (science)") the rate of [energy transfer](https://en.wikipedia.org/wiki/Work_(physics) "Work (physics)").
 
 ## References
 

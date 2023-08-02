@@ -108,3 +108,33 @@ What they need:
 -   share Zotero lib with Steve
 -   share link to html files from git hub
 -   use Trello
+
+## 2023-08-01
+
+-   demand and generation trends for energy: hourly, daily, monthly, annually
+
+    -   diurnal and seasonal cycles
+
+-   what is service area?
+
+-   daily water moving doesn't affect downstream
+
+-   annually
+
+-   will they be using
+
+-   when does water demand occur? water right occur? can we delay water releases if its not needed in June per say? June is highed solar production - so reduce downstream releases in summer (with solar and pumped) then we dont need to do water releases for energy. only if that when farmers need water. or delay that till august because have enough energy in june, then befits for fisheries during highest stress periods.
+
+-   are there benefits for doing this? then we have a discussion about changing it.
+
+-   when is wind coming though? how much is solar vs wind?
+
+-   is ther better habitat in downstream reaches of salt springs or mokumnle? which stream needs more? you could move water to accommodate if one is very good habitat, if only it had this extrra thing.
+
+-   how much electricity is normally proiduced on the system by saving water and releaseing later VERSUS batter time. if we saved all water and released in fall (is that a little or small amount versus capapcity)
+
+    -   battery storage needed for 1 day is fairly large compared to overall storager
+
+    -   if you used all water, how long would it last
+
+-   contaxct GreenGen - let them know we are working on this.
