@@ -9,7 +9,7 @@
 # User-specific files
 .Ruserdata
 R/*_files
-
+data/
 
 # Example code in package build process
 *-Ex.R
