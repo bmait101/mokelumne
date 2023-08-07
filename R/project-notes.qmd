@@ -13,60 +13,21 @@ editor_options:
 bibliography: references.bib
 ---
 
-## Energy storage
+## Traditional Hydropower
 
-An energy storage system (ESS) for electricity generation uses electricity (or some other energy source, such as solar-thermal energy) to charge an energy storage system or device, which is discharged to supply (generate) electricity when needed at desired levels and quality.
+Dam operations commonly cause large, frequent fluctuations in river stage, which persist for long distances downstream.
 
-### EES Technologies
+### Hydropeaking
 
-The types of ESSs in commercial use in the United States, in order of total power generation capacity as of the end of 2022 are:
+The practice of releasing pulses of water to increase hydroelectric power production at hydro dams to meet peak daily electricity demand.
 
--   Pumped-storage hydroelectric
--   Batteries (electro-chemical)
--   Solar electric with thermal energy storage
--   Compressed-air storage
--   Flywheels
--   Capacitors (R&D)
--   [Super-conducting magnetic storage](https://arpa-e.energy.gov/technologies/projects/magnetic-energy-storage-system) (R&D)
--   [Hydrogen](https://www.eia.gov/energyexplained/hydrogen/)
--   [Thermal ice-storage systems](https://www.nrel.gov/docs/legosti/old/20176.pdf)
+Causes huge changes in flows downstream of dams.
 
-![](images/energystoragetechnologies.jpg){fig-align="center"}
-
-### EES Categories
-
-Two basic ratings for energy storage systems are:
-
--   *Power capacity*---the maximum instantaneous amount of electric power that can be generated on a continuous basis and is measured in units of watts (kilowatts \[kW\], megawatts \[MW\], or gigawatts \[GW\])
--   *Energy capacity*---the total amount of energy that can be stored in or discharged from the storage system and is measured in units of watthours (kilowatthours \[kWh\], megawatthours \[MWh\], or gigawatthours \[GWh\])
-
-Two general categories of ESSs based on the size of power generation capacity:
-
--   *Utility scale or large scale* have at least 1 MW of net generation capacity and are mostly owned by electric utilities or independent power producers to provide grid support services.
-
--   *Small scale* have less than 1 MW of net generation capacity, and many are owned by electricity end users that use [solar photovoltaic](https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php) systems to charge a battery.
-
-ESSs are not [*primary*](https://www.eia.gov/tools/glossary/index.php?id=Primary%20energy) electricity generation sources. They must use electricity supplied by separate electricity generators or from an electric power grid to charge the storage system, which makes ESSs *secondary* generation sources. ESSs use more electricity for charging than they can provide when [discharging and supplying electricity](https://www.eia.gov/todayinenergy/detail.php?id=46756). Gross generation reflects the actual amount of electricity supplied by the storage system. Net generation is gross generation minus electricity used to recharge the storage system and the electricity consumed to operate the energy storage system itself.
-
-### Timescales of energy storage
-
-ESSs are designed to supply electricity on varying timescales, which is reflected in the duration of their discharge-generation cycle length, and they can be grouped into two general categories according to their usual duration and main use:
-
--   *Short duration*---on the scale of minutes and power oriented
-
--   *Diurnal or daily duration*---on the scale of hours and energy oriented
-
-![](images/energystoragetech-range.jpg){fig-align="center"}
-
-### Grid-scale energy storage
-
-These are technologies connected to the power grid that can store energy and supply it back to the grid at a more advantageous time, like when the sun is down at night, or when the wind doesn't blow. Pumped hydro is the most used tech, but can only be done in certain locations (though that is changing with off-river sites). Batteries are also now playing a growing role too.
-
-The [Net Zero Emissions by 2050](https://www.iea.org/reports/global-energy-and-climate-model/net-zero-emissions-by-2050-scenario-nze) (NZE) Scenario envisions both the massive deployment of variable renewables like solar PV and wind power and a large increase in overall electricity demand as more end uses are electrified. Grid-scale storage, particularly batteries, will be essential to manage the impact on the power grid and handle the hourly and seasonal variations in renewable electricity output while keeping grids stable and reliable in the face of growing demand. This scenario also meets key energy-related United Nations Sustainable Development Goals (SDGs), in particular by achieving universal energy access by 2030 and major improvements in air quality. It is consistent with limiting the global temperature rise to 1.5 °C with no or limited temperature overshoot (with a 50% probability), in line with reductions assessed in the IPCC in its [Sixth Assessment Report](https://www.ipcc.ch/report/sixth-assessment-report-working-group-3/).
+Causes water to move in and out of the streambed / hyporheic zone and fundamentally alters adjacent hydrology and dynamics [@huckssawyer2009], with impacts on aquatic insects and whole food webs [@Kennedy2016].
 
 ## Pumped Hydro
 
-Pumped-storage hydroelectric (PSH) systems are the oldest and some of the largest (in power and energy capacity) utility-scale ESSs in the United States and the world.
+Pumped-storage hydroelectric (PSH) systems are the oldest and some of the largest (in power and energy capacity) utility-scale energy storage systems (ESS) in the United States and the world.
 
 -   clean, flexible, hydroelectric energy storage technology
 -   absorbs surplus energy at times of low demand and releases it when demand is high
@@ -84,15 +45,11 @@ Water is pumped from a lower reservoir to an upper reservoir in times of high el
 
 Broadly speaking, the energy storage capacity depends on the size of its two reservoirs, while the amount of power generated is linked to the size of the turbines. For example, a facility with two reservoirs roughly the size of two Olympic swimming pools, and a 500 meter height difference between them, could provide a capacity of 3 MW and store up to 3.5 MWh of electricity. PSH systems are generally operated most often during summer months to help meet daily peaks in electricity demand that are often the result of increases in cooling demand by utility customers.
 
-### Open- vs. closed-loop
+### Trends
 
-Open-loop pumped hydro has either an upper or lower reservoir that is continuously connected to a naturally flowing water source such as a river. Closed-loop pumped hydro has an 'off-river' site that produces power from water pumped to an upper reservoir without a significant natural inflow.
+PSH was first used in Italy and Switzerland in the 1890s, by the US by 1930 (with most [built in the 1970's](https://www.eia.gov/todayinenergy/detail.php?id=41833)), and is now used worldwide. New PSH faces many challenges (licensing, remunerate services), so little development over the past 30 years. But it is undergoing a renaissance in countries where wind and solar power are also growing, helping allay concerns about weather-related dips in renewable energy output.
 
-![Comparison of open- vs. closed-loop pumped hydro. Credit: DOE WPTO](images/wpto-pumped-storage-hydropower-illustration.jpg){fig-align="center"}
-
-### Demand & trends
-
-PSH was first used in Italy and Switzerland in the 1890s, by the US by 1930 (with most [built in the 1970\'s](https://www.eia.gov/todayinenergy/detail.php?id=41833)), and is now used worldwide. New PSH faces many challenges (licensing, remunerate services), so little development over the past 30 years. But it is undergoing a renaissance in countries where wind and solar power are also growing, helping allay concerns about weather-related dips in renewable energy output.
+![](images/hydro-review-psh-in-op.jpg){fig-align="center"}
 
 Global stats from @irena2023:
 
@@ -136,13 +93,62 @@ The figure below shows that whilst there is a sizable pipeline under development
 
 The IHA's also has a [Pumped Storage Tracking Tool](https://www.hydropower.org/hydropower-pumped-storage-tool) that maps the locations and vital statistics for existing and planned pumped storage projects. It claims it is the most comprehensive online resource on the world's 'water batteries'.
 
-### Knowledge gaps
+### Impediments to progress
+
+-   licensing regulations and requirements (costs and lead time)
+-   engineering development costs
+-   costs vs other ESS costs
+-   environmental, geotechinical, political constraints
+-   long-distance interconnection issues
+-   Industry trends are focusing on distributed generation and storage, which is more directed toward batteries and other forms of storage related to bringing DER and renewable generation to market.
 
 The 2020 International Forum on Pumped Storage Hydropower ([IFPHS](https://pumped-storage-forum.hydropower.org/)) identified three key impediments to more pumped hydro:
 
 -   Furthering PSH potential: install at old mines, underground caverns, non-powered dams and conventional hydropower plants, as well as location agnostic underground PSH, off-river PSH and seawater PSH, represents vast untapped potential
 -   Retrofitting and upgrading PSH systems: latest technological advancements, such as the use of variable speed pump-turbines and hydraulic short circuit, can enhance the services provided by existing PSH
 -   Developing hybrid systems: coupling PSH with batteries, floating solar PV, heat storage and desalination can provide additional services with reduced costs and environmental impacts
+
+## Mokelumne River
+
+-   Mokelumne ("People of the Fish Net")
+-   95-miles (153 km) long river in Sierra Nevada Mountains (2,143 square miles (5,550 km^2^)
+-   Upper Mokelumne River Basin and drains about 550 square miles (1,400 km^2^), or 25.7% of the total watershed
+
+![Map of the Mokelume & Cosumnes Rivers in Central California, USA. Shaded relief and coastline from US Geological Survey.](images/Mokerivernew.png){fig-align="center"}
+
+### Modifications
+
+-   1920: Upper Mokelumne River Hydro project
+-   1929: Pardee dam
+-   1963: Camanche dam
+-   1964: [Mokelumne River Fish Hatchery](https://en.wikipedia.org/wiki/Mokelumne_River_Fish_Hatchery)
+-   Cosumnes River, the Mokelumne's major tributary, is one of only a few Sierra rivers without large damss
+
+### Ecology
+
+-   Mokelumne River provides habitat for Pacific salmon and steelhead trout spawning runs
+    -   historical migrattion upstream of Pardee Dam, before a natural waterfall prevented further progress
+    -   Camanche Dam has blocked access to several miles of the highest quality habitat
+-   Lower Mokelumne River is home to at least 35 species of fish
+
+## Mokelumne River Hydroelectric Project
+
+-   Upper Mokelumne River heavily damned and plumbed for hydropower since 1925 by PG&E
+    -   7 storage reservoirs on 90 miles of stream (4 power houses) = 204 MW capacity
+        -   Salt Springs, Bear River (x2), Tiger Creek, several small reservoirs in headwaters
+    -   2 tunnels (Tiger Creek condiut, Electra tunnel) = 25 miles of piping around riverbed
+-   settlement in 2000 broke 28-yr deadlock, new 30-yr licence from FERC
+    -   comprehensive flows for all reaches
+    -   required mean daily temp of 20 degree C or less in 9 coldwater reaches
+    -   flow requirements for each month of year for minimum water levels
+    -   monthly adjustments to stream flows
+    -   mandated pulse flows in spring
+    -   ramping rates to limit up and downs
+    -   limits to short-term power generation releases in summer
+    -   no more using river as conduit for short term releases for maintenance
+-   3 smaller dams dismantled in 2003
+-   now with predictable whitewater runs
+-   stream ecology monitoring program estiablished
 
 ## Mokelumne Water Battery Project
 
@@ -167,7 +173,9 @@ By 2030, 60 percent of CA's energy must come from renewable resources, and by 20
 
 ### Progress to date
 
--   July 2016 - GreenGen App for preliminary permit
+-   Jun 2008: FERC issues initial 3-yr preliminary permit to study designs
+-   Dec 2014: [FERC refuses to extend](https://www.hydroreview.com/world-regions/north-america/ferc-refuses-to-extend-pg-e-permit-to-study-up-to-1-200-mw-mokelumne-pumped-storage/) PG&E permit to study up to 1,200-MW Mokelumne Pumped-Storage
+-   July 2016 - GreenGen App for another preliminary permit
 -   Dec 2017 - FERC-issued preliminary permit
 -   Spring 2022 - initial engineering report
 -   Fall 2021 - engineering/cultural/environmental team site visits
@@ -196,26 +204,6 @@ By 2030, 60 percent of CA's energy must come from renewable resources, and by 20
 ### Water rights
 
 -   reservoir goes low -- if they can store more water in Lower Bear, they may be able to operate project yearlong; advantageous to the project
-
-### Project Studies
-
-#### Water Resources Studies
-
-#### Biological Studies
-
-BR-1: amphibians and reptiles
-
-BR-2: wetland and riparian zone
-
-BR-3: fish community and entertainment
-
-BR-4: wildlife
-
-BR-5: Avian communities
-
-BR-6: benthic macro invertebrates
-
-BR-7: invasive species
 
 ## UW-Madison Project Overview
 
@@ -247,6 +235,14 @@ Mechanism to achieve co-benefits:
 -   variable depth of pumped water extraction and injection,
 -   altered timing of reservoir releases
 
+## News coverage
+
+Oct 2018 --- [Hydro Review](https://www.hydroreview.com/world-regions/north-america/nmfs-central-valley-salmon-recovery-plan-includes-76-ferc-hydro-projects/): NMFS Central Valley salmon recovery plan includes 76 FERC hydro projects
+
+Apr 2018 --- [Hydro Review](https://www.hydroreview.com/business-finance/business/pumped-storage-keeping-it-part-of-the-energy-storage-discussion/#gref): Keeping PSH part of the ESS conversation
+
+May 2023 --- [NYT](https://www.nytimes.com/interactive/2023/05/02/climate/hydroelectric-power-energy.html): shift from conventional hydro and rapid rise of pumped hydro across the world
+
 ## Relevant Groups
 
 **Clean Energy Ministerial ([CEM](https://www.cleanenergyministerial.org/))**
@@ -263,6 +259,10 @@ Mechanism to achieve co-benefits:
 
 -   develop and share information in support of the movement for clean energy
 -   many trackers, including the [Hydropower tracker](https://globalenergymonitor.org/projects/global-hydropower-tracker/)
+
+**Global Energy Storage Database ([DOE](https://sandia.gov/ess-ssl/gesdb/public/))**
+
+-   research-grade information on grid-connected energy storage projects and relevant state and federal policies
 
 **Global Renewables Alliance ([GRA](https://globalrenewablesalliance.org/))**
 
@@ -308,7 +308,7 @@ Mechanism to achieve co-benefits:
 
 **Energy capacity**: the total amount of energy that can be stored in or discharged from the storage system; measured in units of watthours (kilowatthours \[kWh\], megawatthours \[MWh\], or gigawatthours \[GWh\])
 
-**Head**:
+**Hydraulic Head**: measures the amount of mechanical energy available in water in a river, stream or even lake; equivalent to the water level in a static (non-flowing) water body
 
 **Load**: electricity demand
 

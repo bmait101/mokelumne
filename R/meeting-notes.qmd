@@ -7,7 +7,7 @@ format: html
 
 See [this webpage](https://greengenstorage.com/meetings/) for GreenGenStorage meeting notes and videos.
 
-## Work Notes
+## Work Meeting Notes
 
 ### 2023-03-06
 
@@ -134,7 +134,20 @@ What they need:
 -   how much electricity is normally proiduced on the system by saving water and releaseing later VERSUS batter time. if we saved all water and released in fall (is that a little or small amount versus capapcity)
 
     -   battery storage needed for 1 day is fairly large compared to overall storager
-
     -   if you used all water, how long would it last
 
--   contaxct GreenGen - let them know we are working on this.
+-   contact GreenGen - let them know we are working on this.
+
+-   reduce impacts of traditional hydropower (esp. hydropeaking)?
+
+    -   shift water releases later in the season with conjuctive management between pumped storage hydropower and traditional hydropower
+    -   PSH and traditional hydropower might be able to work together to reduce the need for hydropeaking in traditional hydropower (which is bad)
+        -   affects water exahcnge with surroundings
+        -   etc.
+        -   HSP could smooth some of that out
+
+### Action items
+
+1.  typical diurnal/seasonal/annual pumped hydro schedule
+2.  typical diurnal/seasonal/annual conventiional hydro schedule
+3.  typical hydrographs for study area

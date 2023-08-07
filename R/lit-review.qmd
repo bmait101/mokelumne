@@ -19,7 +19,7 @@ library(knitr)
 library(pander)
 ```
 
-This literature review aims to evaluate the streamflow and temperature requirements of aquatic species to assess the significance of potential changes to the stream thermal regime from Mokelumne. We also review thermal criteria set by resource agencies (e.g., NMFS)
+This literature review aims to evaluate the streamflow and temperature requirements of aquatic species in the Mokelumne Project Area. We also review thermal criteria set by resource agencies (e.g., NMFS).
 
 ## Fish and Aquatic Organisms
 
@@ -34,7 +34,7 @@ fish <- species |> filter(Class == "Fishes") |> select(2:4)
 nonfish <- species |> filter(Class != "Fishes")|> select(2:4)
 ```
 
-The Project's affected area for fish and aquatic resources is located within the Cole Creek, Bear River, Upper and Lower Bear Reservoirs and the Salt Springs Reservoir -- North Fork Mokelumne River watersheds. More specifically, the proposed Project will involve the Salt Springs Reservoir, and the Upper and Lower Bear Reservoirs, all of which are on the Mokelumne River. Additionally, the proposed water conveyance tunnel alignments that will connect the Salt Springs and Bear Reservoirs, pass beneath Cole Creek, a tributary of the Mokelumne.
+The Project is located within the Cole Creek, Bear River, Lower Bear Reservoir, and Salt Springs Reservoir -- North Fork Mokelumne River watersheds. The proposed Project will involve the Salt Springs Reservoir and Lower Bear Reservoirs, all of which are on the Mokelumne River. Additionally, the proposed water conveyance tunnel alignments that will connect the Salt Springs and Bear Reservoirs, pass beneath Cole Creek, a tributary of the Mokelumne.
 
 The Project watersheds feature similar species composition, hydrologic regime, and topographic profiles to other western alpine watersheds in California. These three watersheds are located on the western slope of the Sierra Nevada Mountain Range and are therefore primarily fed by snow melt runoff accumulated from higher elevations.
 
@@ -44,7 +44,6 @@ UC Davis CalFish database queries were conducted for these watersheds which prov
 
 ```{r}
 #| label: tbl-fish-species
-#| eval: true
 #| echo: false
 #| message: false
 #| warning: false
@@ -69,7 +68,7 @@ The remaining three species -- Pacific lamprey, Delta smelt, and Chinook salmon 
 
 Downstream of the immediate Project vicinity in the Lower Mokelumne River below Pardee and Camanche Reservoirs, primary aquatic species include Fall run chinook salmon, and federally threatened California Central Valley steelhead (Oncorhyncus mykiss). Federal Register notice December 17, 2020 (85 FR 81822) added the Mokelumne River Fish Hatchery steelhead population to the federal listing under the Endangered Species Act (ESA).
 
-#### Issues
+#### Identified Issues
 
 -   Modifications to the volume and timing in water flow and reservoir levels (seasonal or daily)
 -   Changes to habitat conditions (e.g., streambed characteristics) from modified flow regimes, including increased streambank erosion and sedimentation downstream of proposed Project
@@ -100,15 +99,15 @@ kable(nonfish) |>
   column_spec(2, italic = TRUE)
 ```
 
-Project-related activities have the potential to both directly and indirectly affect all life stages of aquatic amphibian and reptile communities, including loss or degradation of breeding and/or foraging habitat for SNYLF, FYLF, WPT, and SLTS.
+#### Yellow-Legged Frogs
 
-The proposed Project area overlaps with USFWS critical habitat for the Sierra Nevada yellow-legged frog (SNYLF) (Ranasierrae), which is listed as endangered under the ESA and threatened by CDFW. SNYLF inhabits high-elevation streams, ponds, marshes, and meadows, where it utilizes slow-moving or still, shallow water for breeding. The species is rarely found more than a meter away from water and specific observations of the species have been made in or near streams near all three of the reservoirs in the proposed Project vicinity (CNDDB, 2020; USFWS 2020). At least two FERC-licensed hydroelectric projects (P-137 and P-2101) in the region have plans to monitor yellow-legged frogs (SNYLF or foothill yellow-legged frog) and/or operational requirements for flow releases to support yellow-legged frog populations, particular during the breeding season (SMUD, 2017; FERC, 2001).
+The proposed Project area overlaps with USFWS critical habitat for the Sierra Nevada yellow-legged frog (SNYLF), which is listed as endangered under the ESA and threatened by CDFW.
 
-PG&E conducts surveys for FLYF and SNLYF in the proposed Project vicinity as part of its SEMP activities. Surveys for FYLF are conducted at five sites along the mainstem North Fork Mokelumne River within the Salt Springs reach, along with eight North Fork Mokelumne River tributary sites, all of which are downstream of the proposed Project location. PG&E has documented a total of 91 egg masses at designated breeding sites on the Salt Springs Reach of the North Fork Mokelumne River between 2001 and 2020. Young-of-the-year surveys at designated monitoring sites in this reach ranged from as few as one (in 2010 and 2011) to as many as 288 (in 2013) (PG&E, 2022).
+SNYLF inhabits high-elevation streams, ponds, marshes, and meadows, where it utilizes slow-moving or still, shallow water for breeding. The species is rarely found more than a meter away from water and specific observations of the species have been made in or near streams near all three of the reservoirs in the proposed Project vicinity (CNDDB, 2020; USFWS 2020).
 
-PG&E monitors SNYLF at Cole Creek, upstream of its confluence with the North Fork Mokelumne River. In 2009, PG&E documented two SNYLF tadpoles in July and two subadults in September. SNYLF have not been observed at Cole Creek during subsequent monitoring in 2014 and 2020 (PG&E, 2022).
+At least two FERC-licensed hydroelectric projects (P-137 and P-2101) in the region have plans to monitor yellow-legged frogs (SNYLF or FYLF) and/or operational requirements for flow releases to support yellow-legged frog populations, particular during the breeding season (SMUD, 2017; FERC, 2001). PG&E conducts surveys for FLYF and SNLYF in the proposed Project vicinity as part of its SEMP activities. Surveys for FYLF are conducted at five sites along the mainstem North Fork Mokelumne River within the Salt Springs reach, along with eight North Fork Mokelumne River tributary sites, all of which are downstream of the proposed Project location. PG&E has documented a total of 91 egg masses at designated breeding sites on the Salt Springs Reach of the North Fork Mokelumne River between 2001 and 2020. Young-of-the-year surveys at designated monitoring sites in this reach ranged from as few as one (in 2010 and 2011) to as many as 288 (in 2013) (PG&E, 2022). PG&E monitors SNYLF at Cole Creek, upstream of its confluence with the North Fork Mokelumne River. In 2009, PG&E documented two SNYLF tadpoles in July and two subadults in September. SNYLF have not been observed at Cole Creek during subsequent monitoring in 2014 and 2020 (PG&E, 2022).
 
-### Issues
+### Identified Issues
 
 -   surface level fluctuations / flow alterations can cause loss or degradation of breeding and/or foraging habitat
     -   stranding or scouring or egg masses and larvae
@@ -133,15 +132,11 @@ BMIs are an important food source for fisheries communities within the Project a
 -   Exchange of predator species (e.g., fish) from different watersheds and elevations during operations
 -   Changing water temperature and quality in affected stream reaches and water bodies and direct human disturbance related to Project operations and maintenance may impact aquatic life
 
-## Streamflow requirements
-
-## Temperature Requirements
-
 ## Flow and Thermal Criteria /Thresholds
 
 -   PG&E must meet water temperature requirements for operations
 
-## Pumped Hydro Review
+## Peer reviewed literature
 
 ### @blakers2021: A review of pumped hydro energy storage
 
@@ -151,23 +146,7 @@ BMIs are an important food source for fisheries communities within the Project a
     -   Effectively says no ecological impact on off-river, so long as placed in benign place
 -   data from @irena2020, IEA [Data Page](https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Electricity%20generation%20by%20source), US DOE [Global ESS Database](https://gesdb.sandia.gov/)
 -   impacts primary relate to flooding of land within reservoir
--   other impacts: construction of roads, pipes/tunnels for conveying water, powerhouse, switchyard, high voltage transmission lines
--   How much storage capacity is needed?
-    -   rule of thumb = 1 d (24h) storage, accommodates day-night cycle (batteries & PSH), about 27 GWh per million people
--   How much land is needed?
-    -   small for off-river and can be selected to minimize sensitive land
-    -   per GWh, 12 ha for off-river PHES, head of 400m, 90% efficient, 85% usable water volume, 20 m average water depth = 3 m\^2 per person (queen size bed)
-    -   For 27 GWh per 1 million people = 1 plant with 1 GW power and 3 km\^2 flooded area
-    -   20x less land needed than for solar PVs
-    -   then add floating PVs which can also reduce evaporation
--   How much water is needed?
-    -   per GWh, 1 Gigalitre for off-rover PHES, head of 400m, 90% efficient
-    -   For 27 GWh per 1 million people = 27 kl per person - NOT CONSUMED!
-    -   water needed for initial fill and to replace evaporation is 3 l/person/day, which is about 20 s of a typical shower
-    -   Evaporation suppressors can tip the balance in favor of rainfall in arid regions
-
-#### Future energies & big picture
-
+-   Rule of thumb = 1 d (24h) storage, accommodates day-night cycle (batteries & PSH), about 27 GWh per million people
 -   Major economies (USA, EU, China, Japan) committed to 100% renewables by 2050s
 -   global human population at 10 billion by 2050; when developing counties reach advanced needs, world will need 200,000 TWh/year
 -   assuming solar (60%), wind (30%), other (10%), need 81 TW solar, 17 TW wind
