@@ -4,19 +4,36 @@ library(tidyverse)
 library(eia2)
 
 # set API key if not already set globally
-Sys.getenv("EIA_KEY")
 eia_get_key()
 
 # explore available datasets
 eia2()
 
+eia2("total-energy")
+
+## Electricity
+
 # explore routes within datasets
 eia2("electricity")
+eia2("electricity/operating-generator-capacity")
 
-# explore power ops data
-# explore routes within datasets
-eia2("electricity/electric-power-operational-data")
-# facets = location, sector, fueltype
+###
+
+
+
+
+
+
+
+
+
+
+
+
+### Power generaction
+
+
+
 
 elec_power_generation <- 
   eia2(
