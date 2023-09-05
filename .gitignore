@@ -9,7 +9,10 @@
 # User-specific files
 .Ruserdata
 R/*_files
+R/images
 data/
+out/
+slides/
 
 # Example code in package build process
 *-Ex.R
