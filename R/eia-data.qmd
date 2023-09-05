@@ -1,0 +1,233 @@
+---
+title: "EIA Data and Trends"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+The eia2 package provides functions to download data from the US Energy Information Administration [Open Data API version 2](https://www.eia.gov/opendata/). Routes can be browered on their [API Dashboard](https://www.eia.gov/opendata/browser/).
+
+```{r}
+#| label: set-up
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(patchwork)
+library(eia2)
+
+# # custom plotting theme
+source(here::here("R","theme-moke.R"))
+theme_set(theme_moke())
+
+# set API key if not already set globally
+eia_get_key()
+```
+
+Check available EIA datasets
+
+```{r}
+eia2()
+```
+
+## Electricity
+
+```{r}
+eia2("electricity")
+```
+
+| Route                           | Description                             |
+|------------------------------------|------------------------------------|
+| retail-sales                    | electricity sales to ultimate customers |
+| electric-power-operational-data | monthly/annual power operations         |
+| rto                             | hourly/daily power operations by RTO    |
+| state-electricity-profiles      | state profiles                          |
+| operating-generator-capacity    | inventory of operable generators in US  |
+| facility-fuel                   | hourly/daily power operations by plant  |
+
+### Capacity
+
+This is an inventory of operable electricity generators in the U.S. from form [EIA860 / EIA860M](https://www.eia.gov/electricity/data/eia860/).
+
+```{r}
+#| label: pull-elec-op-data
+
+# check available data and facets
+elec_cap <- eia2("electricity/operating-generator-capacity")
+elec_cap$data
+elec_cap$facets
+
+# pull data for pumped hydro for most recent month
+elec_cap_data <- 
+  eia2(
+    "electricity/operating-generator-capacity",
+    data_cols = c(
+      "nameplate-capacity-mw", 
+      "operating-year-month", 
+      "latitude", 
+      "longitude"
+      ), 
+    facets = list(
+      technology = c("Hydroelectric Pumped Storage")
+      ), 
+    start = "2023-05", 
+    end = "2023-05"
+    )
+
+# clean data
+elec_cap_data <- elec_cap_data |> 
+  janitor::clean_names() |> 
+  separate(operating_year_month, into = c("year","month"), sep = "-") |> 
+  mutate(year = ymd(year, truncated = 2L))
+
+# save data
+saveRDS(
+  elec_cap_data,
+  here::here("data","eia","electricity-capacity-psh_20230808.rds")
+  )
+```
+
+#### Summary stats
+
+```{r}
+#| label: elec-op-summary-stats
+
+# number of operating plants
+n_distinct(elec_cap_data$plant_name)
+
+# number states
+n_distinct(elec_cap_data$state_name)
+
+# total operating nameplate capacity
+elec_cap_data |> 
+  summarise(total_cap_gw = sum(nameplate_capacity_mw)/1000)
+```
+
+#### Plots
+
+```{r}
+#| label: pull-elec-op-plots
+
+elec_cap_data |> 
+  group_by(year) |> 
+  summarise(cap_gw = sum(nameplate_capacity_mw)/1000) |> 
+  ggplot(aes(year, cap_gw)) +
+  geom_bar(stat = "identity", fill = "lightblue", 
+           color = "black", linewidth=.2) + 
+  scale_x_date(breaks = seq(as.Date("1920-01-01"), as.Date("2015-01-01"), by="10 years"), date_labels = "%Y") + 
+  scale_y_continuous(limits = c(0,5), expand = c(0,0)) + 
+  labs(
+    x = "", y = "Gigawatts", 
+    title = "U.S. hydroelectric pumped storage capcity by initial operating year"
+  ) 
+
+# ggsave(here::here("out","plots","electricity-capacity-by-year.png"), 
+#        width = 3, height = 2, dpi = 300)
+
+elec_cap_data |> 
+  group_by(state_name) |> 
+  summarise(cap_gw = sum(nameplate_capacity_mw)/1000) |> 
+  ggplot(aes(reorder(state_name, cap_gw), cap_gw)) +
+  coord_flip() + 
+  geom_bar(stat = "identity", fill = "lightblue", 
+           color = "black", linewidth=.2) + 
+  scale_y_continuous(limits = c(0,4), expand = c(0,0)) + 
+  labs(
+    x = "", y = "Gigawatts", 
+    title = "U.S. hydroelectric pumped storage capcity by state"
+  ) 
+```
+
+### Power generation
+
+Monthly/annual power operations. 
+
+```{r}
+#| label: pull-elec-power-data
+
+# check available data and facets
+elec_op_power <- eia2("electricity/electric-power-operational-data")
+elec_op_power
+elec_op_power$data
+elec_op_power$facets
+
+# pull data for pumped hydro for most recent month
+elec_op_power_data <- 
+  eia2(
+   "electricity/electric-power-operational-data",
+    data_cols = c(
+      "generation"
+      ), 
+    facets = list(
+      location = c("US"), 
+      sectorid = c("99"),  # all sectors
+      fueltypeid = c(
+        "COL",
+        "NG",
+        "NUC",
+        "HYC",
+        "SUN",
+        "GEO",
+        "WND",
+        "BIO",
+        "HPS"
+        )
+      ),
+    start = "2001-01", 
+    end = "2023-05", 
+   frequency = "annual"
+    )
+
+# clean data
+elec_op_power_data <- elec_op_power_data |> 
+  janitor::clean_names()
+
+# save data
+saveRDS(
+  elec_cap_data,
+  here::here("data","eia","electricity-power_20230905.rds")
+  )
+```
+
+Plot electricity generation by fuel type over time for fossil fuels and renewables:
+
+```{r}
+
+(elec_op_power_data |> 
+  filter(fueltypeid %in% c("COL","NG","NUC","HYC")) |> 
+  mutate(fuel_type_description = factor(fuel_type_description, levels = c(
+    "coal, excluding waste coal", "natural gas", "nuclear", "conventional hydroelectric"
+  ))) |> 
+  ggplot(aes(period, generation/1000, fill = fuel_type_description)) + 
+  geom_bar(position="stack", stat="identity") + 
+  labs(
+    x = "", y = "Generation (GWh)", fill = "Generation Source",
+    title = "Coal, Natural Gas, Nuclear, and Conventioal Hydro"
+  ) + 
+  scale_fill_manual(values = c("grey20","blue4","red4","blue")) ) /
+
+(elec_op_power_data |> 
+  filter(fueltypeid %in% c("SUN","GEO","BIO","WND","HYC")) |> 
+  mutate(fuel_type_description = factor(fuel_type_description, levels = c(
+    "solar", "geothermal", "biomass", "wind", "conventional hydroelectric"
+  ))) |> 
+  ggplot(aes(period, generation/1000, fill = fuel_type_description)) + 
+  geom_bar(position="stack", stat="identity") + 
+  labs(
+    x = "", y = "Generation (GWh)", fill = "Generation Source",
+    title = "Renewable Energy Sources"
+  ) + 
+  scale_fill_manual(values = c("gold","orange4","green4","purple","blue")))
+
+
+path <- here::here("out", "plots", "electricity-generation-by-fuel-over-time")
+ggsave(glue::glue("{path}.pdf"), plot = last_plot(), 
+       width = 2, height = 2, scale = 2, device = cairo_pdf)
+pdftools::pdf_convert(pdf = glue::glue("{path}.pdf"),
+                      filenames = glue::glue("{path}.png"),
+                      format = "png", dpi = 300)
+```
+
+
+
+
