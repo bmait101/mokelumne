@@ -9,7 +9,6 @@
 # User-specific files
 .Ruserdata
 R/*_files
-R/images
 data/
 out/
 slides/
@@ -45,7 +44,6 @@ vignettes/*.pdf
 .Renviron
 
 # pkgdown site
-docs/
 
 # translation temp files
 po/*~
