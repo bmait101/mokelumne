@@ -18,13 +18,16 @@ library(here)
 
 This literature review aims to evaluate:
 
-1.  streamflow / temperature requirements of aquatic species in the Mokelumne Project Area.
-2.  thermal criteria set by resource agencies (e.g., NMFS)
-3.  alternative operating (pumping) procedures or design for maximizing co-benefits
+1.  start of art of pumped hydro
+2.  alternative operating or design for maximizing co-benefits (energy-environment trade off)
+3.  streamflow / temperature requirements of aquatic species in the Mokelumne Project Area.
+4.  thermal criteria set by resource agencies (e.g., NMFS)
 
-## Peer reviewed literature
+## Pumped Hydro
 
-### @blakers2021: A review of pumped hydro energy storage
+### Peer reviewed literature
+
+#### @blakers2021: A review of pumped hydro energy storage
 
 -   Off-river pumped hydro as a very large-scale low-cost and mature energy storage technology to support 100% renewable energy futures
 -   Off river hydro is likely to have low environmental impact and low water consumption
@@ -32,14 +35,14 @@ This literature review aims to evaluate:
     -   Effectively says no ecological impact on off-river, so long as placed in benign place
 -   data from @irena2020, IEA [Data Page](https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Electricity%20generation%20by%20source), US DOE [Global ESS Database](https://gesdb.sandia.gov/)
 -   impacts primary relate to flooding of land within reservoir
--   Rule of thumb = 1 d (24h) storage, accommodates day-night cycle (batteries & PSH), about 27 GWh per million people
+-   Rule of thumb = 1 d (24h) storage, accommodates day-night cycle (batteries & PSH), about 1 GW per 1 million people plus 24 hours storage = 24 GWh per 1 million people can support 100% renewable energy
 -   Major economies (USA, EU, China, Japan) committed to 100% renewables by 2050s
 -   global human population at 10 billion by 2050; when developing counties reach advanced needs, world will need 200,000 TWh/year
 -   assuming solar (60%), wind (30%), other (10%), need 81 TW solar, 17 TW wind
 -   assuming 1 day rule of thumb, need 500 TWh (storage energy) and 20 TW (power)
     -   more than order of magnitude larger than now, but way less the available pool of off-rover pumped hydro resources (23,000 TWh)
 
-### @stocks2021: global atlas of closed-loop pumped hydro
+#### @stocks2021a: global atlas of closed-loop pumped hydro
 
 -   ANU 100% Renewable Energy Group created [global pumped hydro atlas](https://re100.eng.anu.edu.au/index.html)
     -   616,000 off-river sites; 23 million GW-hours = 100x more than needed for 100% electricity world
@@ -48,42 +51,42 @@ This literature review aims to evaluate:
     -   combined reservoir area is small (3 m\^2 per person per day)
     -   water requirement is small (3 liters per person per day); far less than coal
 
-### @lu2021: pumped hydro for 100% renewables in SE Asia
+#### @lu2021a: pumped hydro for 100% renewables in SE Asia
 
 -   eliminating fossil fuels = triple electricity production
 -   electricity demand needs to triple to electrify transport (via electric vehicles), heating (via electric heat pumps and electric furnaces) and chemical synthesis
 
-### @koohi-fayegh2020
+#### @koohi-fayegh2020
 
 -   pumped hydro provides storage from hours to weeks
 
-### @hunt2020: global potential of pumped hydro
+#### @hunt2020a: global potential of pumped hydro
 
 -   pumped hydro provides storage from hours to weeks
 
-### @blakers2019: pathways to 100% renewable electricity
+#### @blakers2019: pathways to 100% renewable electricity
 
 -   deep electrification is key to future, reduce emissions by ¾
 
-### @nadeem2019
+#### @nadeem2019a
 
 -   a range of storage technologies are under development
 
-### @blakers2017: 100% renewables in Australia
+#### @blakers2017: 100% renewables in Australia
 
 -   examined the amount of storage required to support a 100% renewable electricity system in Australia which derives 90% of its energy from variable wind and solar and 10% from existing hydro and bioenergy sources
 -   1 GW (storage) and 20 GWh (energy) per million people
 -   spillage of extra (\~ 5-25%) preferable to overbuilding storage
 
-## Reports
+### Reports
 
-### @stantec2023: PSH potential in Canada
+#### @stantec2023a: PSH potential in Canada
 
 -   goal: strategic value of PSH, along with identification of the viable potential for sites
 -   tremendous potential for PSH - 8,000 GW identified at almost 1,200 sites; 85% are realistic to be developed before 2035
 -   Off-river, closed-loop systems offer advantages in environmental impact and operational independence, and consequently those locations were prioritized in this report
 
-### @irena2022: Renewable power generation costs in 2022
+#### @irena2022a: Renewable power generation costs in 2022
 
 -   In 2022, about 86% (187 GW) of all the newly commissioned renewable capacity had lower costs than fossil fuel-fired electricity.
 -   renewable capacity added since 2000 reduced the electricity sector fuel bill in 2022 by at least US\$520 billion
@@ -91,7 +94,7 @@ This literature review aims to evaluate:
 -   2022 as a veritable turning point in the deployment for renewables as its cost-competitiveness has never been greater despite the lingering commodity and equipment cost inflation
 -   only hydro costs went up, but still lower than the cheapest new fossil fuel-fired electricity option in 2022
 
-### @saulsbury2020: A Comparison of the Environmental Effects of Open-Loop and Closed-Loop Pumped Storage Hydropower
+#### @saulsbury2020: A Comparison of the Environmental Effects of Open-Loop and Closed-Loop Pumped Storage Hydropower
 
 ## References
 
