@@ -1,0 +1,161 @@
+---
+title: "Pumped Storage Hydro"
+format: 
+  html:
+      toc: true
+      toc-depth: 3
+      toc-location: left
+      toc-title: Contents
+number-sections: true
+number-depth: 3
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+## Pumped Storage Hydropower
+
+Pumped-storage hydroelectric (PSH) systems are the oldest and some of the largest (in power and energy capacity) utility-scale energy storage systems (ESS) in the United States and the world.
+
+**General Characteristics:**
+
+-   Long duration ESS (water battery or energy sponge)
+-   Life of \>50 years without degradation
+-   Flexible resource that can change output to meet grid conditions
+-   Large synchronous inertial
+-   Regional energy security
+
+### How it works
+
+Water is pumped from a lower reservoir to an upper reservoir in times of high electricity supply and/or low demand. During times of low supply and/or high demand, water from the upper reservoir is released into the lower reservoir, generating electricity as it moves through a turbine. PSH systems are generally operated most often during summer months to help meet daily peaks in electricity demand that are often the result of increases in cooling demand by utility customers.
+
+![Pumped hydropower reservoirs, solar panels, and wind turbines interconnected on the landscape. Source: IHA](images/IHA_Pumped-storage-reservoir.png){alt="Pumped hydropower reservoirs, solar panels, and wind turbines interconnected on the landscape. Source: IHA" fig-align="center"}
+
+Broadly speaking, the energy storage capacity depends on the size of its two reservoirs, while the amount of power generated is linked to the size of the turbines. For example, a facility with two reservoirs roughly the size of two Olympic swimming pools, and a 500 meter height difference between them, could provide a capacity of 3 MW and store up to 3.5 MWh of electricity. PSH systems are generally operated most often during summer months to help meet daily peaks in electricity demand that are often the result of increases in cooling demand by utility customers.
+
+### Key benefits
+
+-   clean, flexible, hydroelectric energy storage technology
+-   stability from time-shifting power generated during low demand for electricity during high-demand
+-   supports ever-growing proportion of variable renewable energy (which can destabilize grids)
+    -   PSH can integrate the indeterminacy and seasonality of variable renewable (variable output)
+    -   reduce curtailment during oversupply (store the energy)
+    -   provide inertia to stabilize grids through frequency control and voltage regulation
+    -   storage and reserve power with rapid mode changes (fast ramping for peak demand)
+    -   black-start capability
+    -   long asset life, low-lifetime cost and independence from raw materials
+
+#### Load shifting
+
+Pumped hydro storage plants serve an important role on electric power systems: they improve system-wide efficiency and reliability by allowing system operators to time-shift power generated during periods of low demand for electricity for use during high-demand periods. Although more electricity is used to force the water uphill at night than is produced when it flows downhill during the day, shifting the availability of power from overnight generation to serve daytime load adds significant value. (NOTE: also achieved using other ESSs).
+
+![Source: U.S. Energy Information Administration.](images/eia-psh-net-gen-negative.png){alt="Source: U.S. Energy Information Administration." fig-align="left" width="630"}
+
+For example, In 2011, pumped storage plants produced 23 billion kilowatthours (kWh) of gross generation---roughly as much as petroleum-fired generation in that year. Pumped storage plants, however, consumed 29 billion kilowatthours (kWh) of electricity in 2011 to refill their storage reservoirs, resulting in a net generation loss of 6 billion kWh. But, this flattens the duck curve.
+
+![Source: U.S. Energy Information Administration.](images/eia-psh-flattening.png){alt="Source: U.S. Energy Information Administration." fig-align="left"}
+
+### Status and Trends
+
+#### Global
+
+PSH was first used in Italy and Switzerland in the 1890s, by the US by 1930 (with most built in the 1970's), and is now used worldwide.
+
+New PSH faces many challenges (licensing, remunerate services), so little development over the past 30 years. But it is undergoing a renaissance in countries where wind and solar power are also growing, helping allay concerns about weather-related dips in renewable energy output.
+
+![](images/hydro-review-psh-in-op.jpg){fig-align="left"}
+
+Global stats from @irena2023:
+
+-   Renewable power capacity = 3.3 TW = 40% of all power
+    -   295 GW added in 2022 (9.6% increase; 83% of power additions)
+-   hydro = 1392 GW = 1.40 TW (vs. 1310 GW in 2019)
+-   pumped hydro = 137 GW (165?)
+-   solar = 192 GW
+-   wind = 75 GW
+-   global human population at 10 billion by 2050; when developing counties reach advanced needs, world will need 200,000 TWh/year [@blakers2021]
+-   to meet NZE and 1.5 C warming, 1000 GW per year until 2030
+
+#### United States
+
+-   40 PSH systems in operation across 18 states (NHA says 40 sites at 23 GWs)
+-   22.1 GW (vs. 8 GW for batter ESSs); 2% of U.S. generating capacity
+-   Five states---CA, GA, MI, SC, VA---combined, had 61% of the total U.S. PSH nameplate power generation capacity in 2022, and they accounted for about 67% of total gross electricity generation from PSH facilities in 2022.
+
+![](images/eia-psh-over-time.svg){fig-align="left"}
+
+![Source: U.S. Energy Information Administration, Annual Electric Generator Report (Form EIA-860)](images/eia-psh-capacity-2011.png){alt="Source: U.S. Energy Information Administration, Annual Electric Generator Report (Form EIA-860)" fig-align="left"}
+
+#### Canada
+
+-   Currently at \~ 85 GW installed hydropower (both trad and psh)
+-   Has tremendous potential for PSH - 8,000 GW identified at almost 1,200 sites [@stantec2023]
+
+#### Australia
+
+-   [Snowy 2.0](https://en.wikipedia.org/wiki/Snowy_2.0_Pumped_Storage_Power_Station) PSH is largest new renewable energy project in AUS; 200 MW or 10% capacity, bringing total capacity to 2,200 MW; 350,000 MWh of energy storage for 150 years. Cost \~ 12 billion.
+
+### Future Potential
+
+According to the NHA, as of January 2012, FERC had granted preliminary permits for 34 GW of pumped storage capacity over a total of 22 states
+
+As of December 2022, EIA had not received formal notices for planned new PSH or flywheel energy storage projects. However, as of February 2023, the FERC, which permits and licenses non-federal PSH projects in the United States, reports [pending licenses](https://cms.ferc.gov/media/pending-licenses-and-relicenses-pumped-storage-projects-map-0) for 2,672 MW of new PSH capacity in California, Massachusetts, and Wyoming. In addition, FERC has issued [preliminary permits](https://www.ferc.gov/media/issued-preliminary-permits-pumped-storage-projects-map) for 47,960 MW of PSH capacity in 21 states.
+
+There is significant potential for scaling up global pumped hydro capacity, including from more than 600,000 identified off-river sites [@stocks2021]. Currently over 100 projects in pipeline, and pumped hydropower storage capacity is expected to increase by almost 50 per cent -- to about 240 GW by 2030 [@iha2018].
+
+A May 2023 [NYT article](https://www.nytimes.com/interactive/2023/05/02/climate/hydroelectric-power-energy.html) highlighted the the shift away from conventional hydro and rapid rise of pumped hydro across the world. It summarized data from the [GEM](https://globalenergymonitor.org/)'s [Global Hydropower Tracker](https://globalenergymonitor.org/projects/global-hydropower-tracker/). Some takeaways:
+
+-   China is ambitiously planning new pumped hydro (now surpassing Europe's capacity)
+-   In US and AUS, legislation has spurred new renewable energy projects
+-   Conventional hydro (reservoir and non-reservoir dams) aren't dead. China and sub-Saharan Africa have many planned for cheap electricity
+-   China accounts for about half of global growth in renewables: now leads world in wind/solar/hydro capacity (but still loves coal)
+-   Run-of-river facilities on the rise in mountainous places (Nepal)
+-   Conventional dams have big problems
+    -   environmental (habitat loss, environmental flows)
+    -   methane releases (3-7% of human emissions)\\
+    -   safety (earthquakes)
+    -   water evaporation
+
+The figure below shows that whilst there is a sizable pipeline under development / permitting, most PSH under construction is in East Asia, principally China (80% of planned projects worldwide).
+
+![](images/ORNL_Global_Pipeline_PSH_Projects.jpg){fig-align="left"}
+
+The IHA's also has a [Pumped Storage Tracking Tool](https://www.hydropower.org/hydropower-pumped-storage-tool) that maps the locations and vital statistics for existing and planned pumped storage projects. It claims it is the most comprehensive online resource on the world's 'water batteries'.
+
+### Impediments to progress
+
+-   licensing regulations and requirements (costs and lead time)
+    -   US clean energy projects take longer to get off the ground, from power lines, to wind and solar plants
+    -   in US, new 2-yr expedited process for off-river pumped hydro, but not successfully used yet
+-   engineering development costs
+-   costs vs other ESS costs
+-   environmental, geotechinical, political constraints
+-   long-distance interconnection issues
+-   Industry trends are focusing on distributed generation and storage, which is more directed toward batteries
+-   PSH's key attributes, such as grid reliability and the integration of additional renewable resources, are not adequately compensated within the current environmental and power markets and regulatory constructs
+
+The 2020 IFPSH identified three key impediments to more pumped hydro:
+
+-   Furthering PSH potential: install at old mines, underground caverns, non-powered dams and conventional hydropower plants, as well as location agnostic underground PSH, off-river PSH and seawater PSH, represents vast untapped potential
+-   Retrofitting and upgrading PSH systems: latest technological advancements, such as the use of variable speed pump-turbines and hydraulic short circuit, can enhance the services provided by existing PSH
+-   Developing hybrid systems: coupling PSH with batteries, floating solar PV, heat storage and desalination can provide additional services with reduced costs and environmental impacts
+
+## Conventional Hydropower
+
+Dam operations commonly cause large, frequent fluctuations in river stage, which persist for long distances downstream.
+
+Minimizing and mitigating environmental impacts of hydropower is a key challenge. Impacts and mitigation actions are highly influence by operational mode: load-following vs. peaking vs. run-of-river.
+
+Mitigation can come in different forms:
+
+-   build structures (fish passage, fish safe turbine, boat ramps, trails)
+-   flow mitigation (minimum flows, ramp rate restrictions)
+-   Operational flows can be designed to minimize impacts
+
+### Hydropeaking
+
+The practice of releasing pulses of water to increase hydroelectric power production at hydro dams to meet peak daily electricity demand.
+
+Causes huge changes in flows downstream of dams.
+
+Causes water to move in and out of the streambed / hyporheic zone and fundamentally alters adjacent hydrology and dynamics [@huckssawyer2009], with impacts on aquatic insects and whole food webs [@Kennedy2016].
