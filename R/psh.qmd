@@ -13,6 +13,93 @@ editor_options:
 bibliography: references.bib
 ---
 
+## Conventional Hydropower
+
+Hydropower extracts mechanical energy from water, transforming it into electrical energy to generate electricity.
+
+China (200 GW), Canada (89 GW), and Brazil (70 GW) are leaders in total hydro generation. Other notable producers include Russia, India, Norway, Japan, and Venezuela (which is almost completely dependent on hydropower).
+
+Humans have been harnessing energy from water for millennia, although not explicitly for electricity generation. The ancient Greeks used water wheels to grind wheat over 2000 years ago. Hydropower continued to be exclusively converted directly into mechanical power up until the end of the 19th century when electrical dynamos were attached to the shaft to generate electricity. Dynamos were the first type of electrical generator.
+
+Dam operations commonly cause large, frequent fluctuations in river stage, which persist for long distances downstream.
+
+Minimizing and mitigating environmental impacts of hydropower is a key challenge
+
+-   highly influence by operational mode: load-following vs. peaking vs. run-of-river.\]
+
+Mitigation can come in different forms:
+
+-   build structures (fish passage, fish safe turbine, boat ramps, trails)
+-   flow mitigation (minimum flows, ramp rate restrictions)
+-   operational flows can be designed to minimize impacts
+
+### Hydropeaking
+
+The practice of releasing pulses of water to increase hydroelectric power production at hydro dams to meet peak daily electricity demand.
+
+Causes huge changes in flows downstream of dams.
+
+Causes water to move in and out of the streambed / hyporheic zone and fundamentally alters adjacent hydrology and dynamics [@huckssawyer2009], with impacts on aquatic insects and whole food webs [@Kennedy2016].
+
+### The Duck Curve: integrating solar and wind
+
+Solar and wind generation require quick generation ramp up/down resulting in a graph of power production over the course of a day that shows the timing imbalance between peak demand and solar power generation (the duck curve). The term was coined in 2012 by the California Independent System Operator.
+
+```{r}
+#| label: fig-duck-curve
+#| message: false
+#| warning: false
+library(tidyverse)
+library(here)
+library(scales)
+
+source(here::here("R","theme-moke.R"))
+path_demand <- here("data", "CAISO-netdemand-20230719.csv")
+demand <- read_csv(path_demand)
+
+demand <- demand |>
+  rename("variable" = `Net Demand 07/19/2023undefined`) |> 
+  pivot_longer(-variable, names_to = "time", values_to = "MW") |> 
+  mutate(time = case_when(
+    time == "00:00...2" ~ "00:00", 
+    time == "00:00...290" ~ "23:59", 
+    TRUE ~ time
+  )) 
+
+demand$time <- as_date(hm(demand$time), origin = "2023-07-19")
+
+plot.title <- "California hourly eletric demand vs. demand less solar and wind"
+plot.subtitle <- "19 July 2023"
+plot.caption <- "By Bryan M Maitland | Source: CAISO"
+demand |> 
+  drop_na(MW) |> 
+  ggplot() + 
+  geom_line(aes(x = time, y = MW, color = variable)) + 
+  scale_x_datetime(breaks = date_breaks("1 hour"), labels = date_format("%H")) + 
+  labs(x = "Hour of day", color = "", 
+       title = plot.title, subtitle = plot.subtitle, caption = plot.caption) 
+```
+
+The duck curve is a example of a *dunkelflaute*, a "dark doldrums" or "dark wind lull" --- a period of time in which little or no energy can be generated with wind or solar power. Also known as the anticyclonic gloom in meteorology.
+
+In locations where a substantial amount of solar electric capacity has been installed, the amount of power that must be generated from sources other than solar or wind displays a rapid increase around sunset and peaks in the mid-evening hours, producing a graph that resembles the silhouette of a duck.
+
+A major challenge is deploying mitigating capacity at a rate that keeps up with the growth of solar energy production. The effects of the duck curve have happened faster than anticipated.
+
+Hydro considerations:
+
+-   environmental flows often restrict hydropower response speed
+-   environmental flows most common during times with most grid stress
+    -   no requirement to consider grid reliability
+    -   potential pinch points for grid reliability and biota with wind/solar integration
+-   different tools may be needed to understand sub-hourly impacts and assess habitat and generation tradeoff
+
+Mitigation Strategies:
+
+-   installing more dispatchable generation (grids with high penetration of renewable energy sources generally need dispatchable generation rather than baseload generation)
+-   orient PVs west to maximize generation at sunset
+-   energy storage systems
+
 ## Pumped Storage Hydropower
 
 Pumped-storage hydroelectric (PSH) systems are the oldest and some of the largest (in power and energy capacity) utility-scale energy storage systems (ESS) in the United States and the world.
@@ -140,22 +227,4 @@ The 2020 IFPSH identified three key impediments to more pumped hydro:
 -   Retrofitting and upgrading PSH systems: latest technological advancements, such as the use of variable speed pump-turbines and hydraulic short circuit, can enhance the services provided by existing PSH
 -   Developing hybrid systems: coupling PSH with batteries, floating solar PV, heat storage and desalination can provide additional services with reduced costs and environmental impacts
 
-## Conventional Hydropower
-
-Dam operations commonly cause large, frequent fluctuations in river stage, which persist for long distances downstream.
-
-Minimizing and mitigating environmental impacts of hydropower is a key challenge. Impacts and mitigation actions are highly influence by operational mode: load-following vs. peaking vs. run-of-river.
-
-Mitigation can come in different forms:
-
--   build structures (fish passage, fish safe turbine, boat ramps, trails)
--   flow mitigation (minimum flows, ramp rate restrictions)
--   Operational flows can be designed to minimize impacts
-
-### Hydropeaking
-
-The practice of releasing pulses of water to increase hydroelectric power production at hydro dams to meet peak daily electricity demand.
-
-Causes huge changes in flows downstream of dams.
-
-Causes water to move in and out of the streambed / hyporheic zone and fundamentally alters adjacent hydrology and dynamics [@huckssawyer2009], with impacts on aquatic insects and whole food webs [@Kennedy2016].
+## 
