@@ -162,3 +162,4 @@ Brenda's talk at AFS was "Energy flexibility-environment tradeoff toolkit for hy
 Action Items:
 
 -   follow up with Brenda in \~ 1-2 month
+-   can we use the tool on Mokelumne as a test case?
