@@ -1,6 +1,8 @@
 ---
 title: "Literature Review"
-format: html
+format:
+  html:
+    embed-resources: true
 bibliography: references.bib
 editor_options: 
   chunk_output_type: inline
