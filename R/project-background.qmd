@@ -1,5 +1,5 @@
 ---
-title: "Background Research for Mokelumne PSH Project"
+title: "Background Research"
 format: 
   html:
       toc: true
@@ -28,16 +28,16 @@ library(pander)
 
 ## UW-Madison Project Overview
 
-Goal: evaluate and mitigate **potential impacts** and **co-benefits** of the Mokelumne water battery project to the environment and stakeholders, and evaluate alternative operations and configurations to improve environmental outcomes and stakeholder satisfaction.
+Goal: evaluate and mitigate **potential impacts** and **co-benefits** of the Mokelumne water battery project, and evaluate alternative operations and configurations to improve environmental outcomes and stakeholder satisfaction.
 
 1.  (NOT UW) modeling study of the combined thermal impacts of both climate change and a pumped-storage hydropower project proposed in the Mokelumne River in California
     -   climate induced changes in runoff regimes, particularly low flow periods, have potential to exert greater control on changing thermal regimes than warming climate or adverse impacts of reservoir operations
     -   increased storage provides an opportunity for environmental releases to counteract impacts to the thermal regimes during critical periods.
     -   develop a suite of potential scenarios describing a range of pumped-storage operations to identify practices that enhance, or minimize impacts on, thermal regimes of the reservoirs and downstream river reaches
     -   use historic and simulated future stream temperature records to apply a range of identified thermal niche models/ thermal tolerance metrics at locations downstream to determine the extent to which different strategies for describing individual species thermal niche agree in habitat outcomes
-2.  conduct a literature review evaluating the temperature requirements of aquatic species to evaluate the significance of potential changes to the stream thermal regime
+2.  (UW) conduct a literature review evaluating the temperature requirements of aquatic species to evaluate the significance of potential changes to the stream thermal regime
     -   includes a comparison of historic and forecasted future stream temperatures to thermal criteria set by resource agencies (NMFS) and whether these thermal criteria are achievable/realistic in a changing climate
-3.  identify potential ecosystem co-benefits that could arise from innovative pumped-storage hydropower operations
+3.  (UW) identify potential ecosystem co-benefits that could arise from innovative pumped-storage hydropower operations
     -   reduced thermal impairment of downstream river reaches
     -   reduced carbon emissions,
     -   maintenance of in-reservoir thermal regimes to support lake trout fisheries,
@@ -48,7 +48,7 @@ Goal: evaluate and mitigate **potential impacts** and **co-benefits** of the Mok
     -   improvement of aquatic habitat,
     -   improvement in flow regimes to support downstream riparian vegetation and biota
 
-Mechanism to achieve co-benefits:
+Some mechanism to achieve co-benefits:
 
 -   alteration of the magnitude and timing of pump-storage operations,
 -   increased reservoir storage,
@@ -58,27 +58,25 @@ Mechanism to achieve co-benefits:
 
 ## Mokelumne River System
 
--   Mokelumne ("People of the Fish Net")
--   95-miles (153 km) long river in Sierra Nevada Mountains (2,143 square miles (5,550 km^2^)
--   Upper Mokelumne River Basin and drains about 550 square miles (1,400 km^2^), or 25.7% of the total watershed
+Mokelumne ("People of the Fish Net") River runs 95-miles (153 km) in the Sierra Nevada Mountains (2,143 square miles (5,550 km^2^). The Upper Mokelumne River Basin and drains about 550 square miles (1,400 km^2^), or 25.7% of the total watershed.
 
 ![Map of the Mokelumne & Cosumnes Rivers in Central California, USA. Shaded relief and coastline from US Geological Survey.](images/Mokerivernew.png){fig-align="center"}
 
 ### Human modifications
 
--   1920: Upper Mokelumne River Hydro project (see below)
+-   1920: Upper Mokelumne River Hydro project (see @sec-mokelumne-river-hydroelectric-project)
 -   1929: Pardee dam
 -   1963: Camanche dam
 -   1964: [Mokelumne River Fish Hatchery](https://en.wikipedia.org/wiki/Mokelumne_River_Fish_Hatchery)
 -   Consumes River, the Mokelumne's major tributary, is one of only a few Sierra rivers without large dams
 
-### Mokelumne River Hydroelectric Project
+### Mokelumne River Hydroelectric Project {#sec-mokelumne-river-hydroelectric-project}
 
 -   Upper Mokelumne River heavily damned and plumbed for hydropower since 1925 by PG&E
     -   7 storage reservoirs on 90 miles of stream (4 power houses) = 204 MW capacity
-        -   Salt Springs, Bear River (x2), Tiger Creek, several small reservoirs in headwaters
+    -   Salt Springs, Bear River (x2), Tiger Creek, several small reservoirs in headwaters
     -   2 tunnels (Tiger Creek condiut, Electra tunnel) = 25 miles of piping around riverbed
--   settlement in 2000 broke 28-yr deadlock, new 30-yr licence from FERC
+-   New 30-yr FERC licence in 2020 broke 28-year deadlock
     -   comprehensive flows for all reaches
     -   required mean daily temp of 20 degree C or less in 9 coldwater reaches
     -   flow requirements for each month of year for minimum water levels
@@ -106,14 +104,13 @@ nonfish <- species |> filter(Class != "Fishes")|> select(2:4)
 
 The watershed features similar species composition, hydrologic regime, and topographic profiles to other western alpine watersheds in California. These three watersheds are located on the western slope of the Sierra Nevada Mountain Range and are therefore primarily fed by snow melt runoff accumulated from higher elevations.
 
--   Mokelumne River provides habitat for Pacific salmon and steelhead trout spawning runs
-    -   historical migration upstream of Pardee Dam, before a natural waterfall prevented further progress
-    -   Comanche Dam has blocked access to several miles of the highest quality habitat
--   Lower Mokelumne River is home to at least ***35 species of fish???***
+Mokelumne River provides habitat for Pacific salmon and steelhead trout spawning runs. Historical migration upstream of Pardee Dam, before a natural waterfall prevented further progress. Comanche Dam has blocked access to several miles of the highest quality habitat. The Lower Mokelumne River is home to at least 35 species of fish.
 
 #### Fish
 
-UC Davis CalFish database queries were conducted by GreenGen to identify native and non-native fish present currently and/or historically within these watersheds (@tbl-fish-species). Fish species present in the watershed and project area include native and nonnative species that have been introduced through stocking in reservoirs for recreational fishing.
+UC Davis CalFish database queries were done by GreenGen to identify native and non-native fish present currently and/or historically within these watersheds (@tbl-fish-species).
+
+Fish species present in the watershed and project area include native and nonnative species that have been introduced through stocking in reservoirs for recreational fishing.
 
 ```{r}
 #| label: tbl-fish-species
@@ -135,11 +132,11 @@ Central California roach is a species of moderate concern according to CDFW, as 
 
 Within the reservoirs and riverine features associated with implementation of the proposed Project, only two have potential to occur: Sacramento hitch, and hardhead.
 
-One species, Oncorhynchus mykiss irideus, occurs within Project watersheds as resident rainbow trout, but not as anadromous steelhead. Additional subspecies of rainbow trout are expected to occur from hatchery stocking operations.
+*Oncorhynchus mykiss irideus*, occurs within Project watersheds as resident rainbow trout, but not as anadromous steelhead. Additional subspecies of rainbow trout are expected to occur from hatchery stocking operations.
 
-The remaining three species -- Pacific lamprey, Delta smelt, and Chinook salmon -- do not exist in the Mokelumne River watershed above Camanche Dam (Pisces 2022, CDFW pers. comm. November 8, 2022).
+Pacific lamprey, Delta smelt, and Chinook salmon do not exist in the Mokelumne River watershed above Camanche Dam.
 
-Downstream of the immediate Project vicinity in the Lower Mokelumne River below Pardee and Camanche Reservoirs, primary aquatic species include Fall run chinook salmon, and federally threatened California Central Valley steelhead (Oncorhyncus mykiss). Federal Register notice December 17, 2020 (85 FR 81822) added the Mokelumne River Fish Hatchery steelhead population to the federal listing under the Endangered Species Act (ESA).
+Downstream of the immediate Project vicinity in the Lower Mokelumne River below Pardee and Camanche Reservoirs, primary aquatic species include Fall run chinook salmon, and federally threatened California Central Valley steelhead. Federal Register notice December 17, 2020 (85 FR 81822) added the Mokelumne River Fish Hatchery steelhead population to the federal listing under the Endangered Species Act (ESA).
 
 Identified Issues:
 
@@ -172,14 +169,6 @@ knitr::kable(nonfish) |>
   kableExtra::column_spec(2, italic = TRUE)
 ```
 
-#### Yellow-Legged Frogs
-
-The proposed Project area overlaps with USFWS critical habitat for the Sierra Nevada yellow-legged frog (SNYLF), which is listed as endangered under the ESA and threatened by CDFW.
-
-SNYLF inhabits high-elevation streams, ponds, marshes, and meadows, where it utilizes slow-moving or still, shallow water for breeding. The species is rarely found more than a meter away from water and specific observations of the species have been made in or near streams near all three of the reservoirs in the proposed Project vicinity (CNDDB, 2020; USFWS 2020).
-
-At least two FERC-licensed hydroelectric projects (P-137 and P-2101) in the region have plans to monitor yellow-legged frogs (SNYLF or FYLF) and/or operational requirements for flow releases to support yellow-legged frog populations, particular during the breeding season (SMUD, 2017; FERC, 2001). PG&E conducts surveys for FLYF and SNLYF in the proposed Project vicinity as part of its SEMP activities. Surveys for FYLF are conducted at five sites along the mainstem North Fork Mokelumne River within the Salt Springs reach, along with eight North Fork Mokelumne River tributary sites, all of which are downstream of the proposed Project location. PG&E has documented a total of 91 egg masses at designated breeding sites on the Salt Springs Reach of the North Fork Mokelumne River between 2001 and 2020. Young-of-the-year surveys at designated monitoring sites in this reach ranged from as few as one (in 2010 and 2011) to as many as 288 (in 2013) (PG&E, 2022). PG&E monitors SNYLF at Cole Creek, upstream of its confluence with the North Fork Mokelumne River. In 2009, PG&E documented two SNYLF tadpoles in July and two subadults in September. SNYLF have not been observed at Cole Creek during subsequent monitoring in 2014 and 2020 (PG&E, 2022).
-
 Identified Issues
 
 -   surface level fluctuations / flow alterations can cause loss or degradation of breeding and/or foraging habitat
@@ -194,7 +183,9 @@ Identified Issues
 
 ### Benthic Macroinvertebrates
 
-BMIs are an important food source for fisheries communities within the Project area as well as indicators of water quality and ecosystem health. A BMI Study is proposed to establish a pre-Project baseline inventory of the BMI community.
+BMIs are an important food source for fisheries communities within the Project area as well as indicators of water quality and ecosystem health.
+
+A BMI Study is proposed to establish a pre-Project baseline inventory of the BMI community.
 
 Issues:
 
@@ -264,7 +255,7 @@ The PSH Project is located within the Cole Creek, Bear River, Lower Bear Reservo
 
 ### Water rights
 
--   reservoir goes low -- if they can store more water in Lower Bear, they may be able to operate project yearlong; advantageous to the project
+-   reservoir goes low -- if they can store more water in Lower Bear, they may be able to operate project yearlong
 
 ## Relevant Groups
 
