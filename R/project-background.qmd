@@ -1,0 +1,353 @@
+---
+title: "Background Research for Mokelumne PSH Project"
+format: 
+  html:
+      toc: true
+      toc-depth: 3
+      toc-location: left
+      toc-title: Contents
+number-sections: true
+number-depth: 3
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+```{r}
+#| label: prep
+#| warning: false
+#| message: false
+#| echo: false
+
+library(tidyverse)
+library(here)
+library(kableExtra)
+library(knitr)
+library(pander)
+```
+
+## UW-Madison Project Overview
+
+Goal: evaluate and mitigate **potential impacts** and **co-benefits** of the Mokelumne water battery project to the environment and stakeholders, and evaluate alternative operations and configurations to improve environmental outcomes and stakeholder satisfaction.
+
+1.  (NOT UW) modeling study of the combined thermal impacts of both climate change and a pumped-storage hydropower project proposed in the Mokelumne River in California
+    -   climate induced changes in runoff regimes, particularly low flow periods, have potential to exert greater control on changing thermal regimes than warming climate or adverse impacts of reservoir operations
+    -   increased storage provides an opportunity for environmental releases to counteract impacts to the thermal regimes during critical periods.
+    -   develop a suite of potential scenarios describing a range of pumped-storage operations to identify practices that enhance, or minimize impacts on, thermal regimes of the reservoirs and downstream river reaches
+    -   use historic and simulated future stream temperature records to apply a range of identified thermal niche models/ thermal tolerance metrics at locations downstream to determine the extent to which different strategies for describing individual species thermal niche agree in habitat outcomes
+2.  conduct a literature review evaluating the temperature requirements of aquatic species to evaluate the significance of potential changes to the stream thermal regime
+    -   includes a comparison of historic and forecasted future stream temperatures to thermal criteria set by resource agencies (NMFS) and whether these thermal criteria are achievable/realistic in a changing climate
+3.  identify potential ecosystem co-benefits that could arise from innovative pumped-storage hydropower operations
+    -   reduced thermal impairment of downstream river reaches
+    -   reduced carbon emissions,
+    -   maintenance of in-reservoir thermal regimes to support lake trout fisheries,
+    -   enhanced streamflow during critical stages of the salmon life-cycle,
+    -   increased availability of water rights,
+    -   minimized flood risk,
+    -   regulation of stream sediment transport,
+    -   improvement of aquatic habitat,
+    -   improvement in flow regimes to support downstream riparian vegetation and biota
+
+Mechanism to achieve co-benefits:
+
+-   alteration of the magnitude and timing of pump-storage operations,
+-   increased reservoir storage,
+-   floating solar power,
+-   variable depth of pumped water extraction and injection,
+-   altered timing of reservoir releases
+
+## Mokelumne River System
+
+-   Mokelumne ("People of the Fish Net")
+-   95-miles (153 km) long river in Sierra Nevada Mountains (2,143 square miles (5,550 km^2^)
+-   Upper Mokelumne River Basin and drains about 550 square miles (1,400 km^2^), or 25.7% of the total watershed
+
+![Map of the Mokelumne & Cosumnes Rivers in Central California, USA. Shaded relief and coastline from US Geological Survey.](images/Mokerivernew.png){fig-align="center"}
+
+### Human modifications
+
+-   1920: Upper Mokelumne River Hydro project (see below)
+-   1929: Pardee dam
+-   1963: Camanche dam
+-   1964: [Mokelumne River Fish Hatchery](https://en.wikipedia.org/wiki/Mokelumne_River_Fish_Hatchery)
+-   Consumes River, the Mokelumne's major tributary, is one of only a few Sierra rivers without large dams
+
+### Mokelumne River Hydroelectric Project
+
+-   Upper Mokelumne River heavily damned and plumbed for hydropower since 1925 by PG&E
+    -   7 storage reservoirs on 90 miles of stream (4 power houses) = 204 MW capacity
+        -   Salt Springs, Bear River (x2), Tiger Creek, several small reservoirs in headwaters
+    -   2 tunnels (Tiger Creek condiut, Electra tunnel) = 25 miles of piping around riverbed
+-   settlement in 2000 broke 28-yr deadlock, new 30-yr licence from FERC
+    -   comprehensive flows for all reaches
+    -   required mean daily temp of 20 degree C or less in 9 coldwater reaches
+    -   flow requirements for each month of year for minimum water levels
+    -   monthly adjustments to stream flows
+    -   mandated pulse flows in spring
+    -   ramping rates to limit up and downs
+    -   limits to short-term power generation releases in summer
+    -   no more using river as conduit for short term releases for maintenance
+-   3 smaller dams dismantled in 2003
+-   now with predictable whitewater runs
+-   stream ecology monitoring program established
+
+### Ecology & Biodiversity
+
+```{r}
+#| label: load-spp-list
+#| echo: false
+#| warning: false
+#| message: false
+
+species <- read_csv(here("data","species-list.csv"))
+fish <- species |> filter(Class == "Fishes") |> select(2:4)
+nonfish <- species |> filter(Class != "Fishes")|> select(2:4)
+```
+
+The watershed features similar species composition, hydrologic regime, and topographic profiles to other western alpine watersheds in California. These three watersheds are located on the western slope of the Sierra Nevada Mountain Range and are therefore primarily fed by snow melt runoff accumulated from higher elevations.
+
+-   Mokelumne River provides habitat for Pacific salmon and steelhead trout spawning runs
+    -   historical migration upstream of Pardee Dam, before a natural waterfall prevented further progress
+    -   Comanche Dam has blocked access to several miles of the highest quality habitat
+-   Lower Mokelumne River is home to at least ***35 species of fish???***
+
+#### Fish
+
+UC Davis CalFish database queries were conducted by GreenGen to identify native and non-native fish present currently and/or historically within these watersheds (@tbl-fish-species). Fish species present in the watershed and project area include native and nonnative species that have been introduced through stocking in reservoirs for recreational fishing.
+
+```{r}
+#| label: tbl-fish-species
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-cap: "Fish species identified by GreenGen in study area."
+
+# pander::pandoc.table(
+#   fish,
+#   justify = "left"
+#   )
+
+knitr::kable(fish) |> 
+  kableExtra::column_spec(2, italic = TRUE)
+```
+
+Central California roach is a species of moderate concern according to CDFW, as the agency states that although the species does not face an extinction risk, there is a high degree of uncertainty regarding population systematics.
+
+Within the reservoirs and riverine features associated with implementation of the proposed Project, only two have potential to occur: Sacramento hitch, and hardhead.
+
+One species, Oncorhynchus mykiss irideus, occurs within Project watersheds as resident rainbow trout, but not as anadromous steelhead. Additional subspecies of rainbow trout are expected to occur from hatchery stocking operations.
+
+The remaining three species -- Pacific lamprey, Delta smelt, and Chinook salmon -- do not exist in the Mokelumne River watershed above Camanche Dam (Pisces 2022, CDFW pers. comm. November 8, 2022).
+
+Downstream of the immediate Project vicinity in the Lower Mokelumne River below Pardee and Camanche Reservoirs, primary aquatic species include Fall run chinook salmon, and federally threatened California Central Valley steelhead (Oncorhyncus mykiss). Federal Register notice December 17, 2020 (85 FR 81822) added the Mokelumne River Fish Hatchery steelhead population to the federal listing under the Endangered Species Act (ESA).
+
+Identified Issues:
+
+-   Modifications to the volume and timing in water flow and reservoir levels (seasonal or daily)
+-   Changes to habitat conditions (e.g., streambed characteristics) from modified flow regimes, including increased streambank erosion and sedimentation downstream of proposed Project
+-   Vegetation removal within the riparian corridor creates potential for increased water temperatures from loss of shade
+-   Loss of riparian habitat resulting in loss of protective cover and increased predation
+-   Entrainment of fish into Project facilities during operations, including potential intermixing of fish communities between reservoirs
+    -   currently lake trout in Bear Reservoir; CDFW do not want them entrained into Salt Springs Reservoir; fish screen would ovoid this
+-   lake level change (Fluctuation of reservoir surface elevation from Project operations)
+    -   reservoir/spawning habitat for fish who wouldn't otherwise have access to spawning habitat
+-   Exchange of fish species from different watersheds and elevations during operations
+-   Changing water temperature and quality in affected stream reaches and water bodies and direct human disturbance related to Project operations and maintenance
+-   Changes to catch per unit effort and species composition for recreational anglers
+-   movement of pathogens: Whirling disease (Myxobolus cerebralis)
+
+### Amphibians and Reptiles
+
+A variety of amphibians and reptiles use the permanent and semi-permanent aquatic habitats in the watershed and proposed Project vicinity. A total of five special-status amphibian species and one special status reptile species as categorized by USFWS under the ESA, CDFW, and USFS are located in the proposed Project area (@tbl-non-fish-species).
+
+```{r}
+#| label: tbl-non-fish-species
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-cap: "Amphibian and reptile species identified by GreenGen in study area."
+
+knitr::kable(nonfish) |> 
+  kableExtra::column_spec(2, italic = TRUE)
+```
+
+#### Yellow-Legged Frogs
+
+The proposed Project area overlaps with USFWS critical habitat for the Sierra Nevada yellow-legged frog (SNYLF), which is listed as endangered under the ESA and threatened by CDFW.
+
+SNYLF inhabits high-elevation streams, ponds, marshes, and meadows, where it utilizes slow-moving or still, shallow water for breeding. The species is rarely found more than a meter away from water and specific observations of the species have been made in or near streams near all three of the reservoirs in the proposed Project vicinity (CNDDB, 2020; USFWS 2020).
+
+At least two FERC-licensed hydroelectric projects (P-137 and P-2101) in the region have plans to monitor yellow-legged frogs (SNYLF or FYLF) and/or operational requirements for flow releases to support yellow-legged frog populations, particular during the breeding season (SMUD, 2017; FERC, 2001). PG&E conducts surveys for FLYF and SNLYF in the proposed Project vicinity as part of its SEMP activities. Surveys for FYLF are conducted at five sites along the mainstem North Fork Mokelumne River within the Salt Springs reach, along with eight North Fork Mokelumne River tributary sites, all of which are downstream of the proposed Project location. PG&E has documented a total of 91 egg masses at designated breeding sites on the Salt Springs Reach of the North Fork Mokelumne River between 2001 and 2020. Young-of-the-year surveys at designated monitoring sites in this reach ranged from as few as one (in 2010 and 2011) to as many as 288 (in 2013) (PG&E, 2022). PG&E monitors SNYLF at Cole Creek, upstream of its confluence with the North Fork Mokelumne River. In 2009, PG&E documented two SNYLF tadpoles in July and two subadults in September. SNYLF have not been observed at Cole Creek during subsequent monitoring in 2014 and 2020 (PG&E, 2022).
+
+Identified Issues
+
+-   surface level fluctuations / flow alterations can cause loss or degradation of breeding and/or foraging habitat
+    -   stranding or scouring or egg masses and larvae
+-   modified flow regimes, including increased streambank erosion and changes to sedimentation downstream of the proposed Project, could potentially impact habitat as well, causing decreased water quality for larvae and egg masses, and loss of bank habitat
+-   Changing water temperature and quality in affected stream reaches and water bodies could impact foraging and breeding habitat.
+-   Vegetation clearing, creation or improvement of access roads, digging and trenching, and other Project construction activity, operations and maintenance could result in temporary and permanent habitat loss.
+-   risk of increased disturbance and mortality from the increased traffic associated with operations and maintenance
+-   use of herbicides and vegetation maintenance equipment could impact amphibian reproduction or health
+-   Forest Service will have opinions re: foothill yellow-legged water temperature issues for release downstream of Salt Springs
+-   movement of pathogens (chytridiomycosis fungus *Batrachochytrium dendrobatidis* and *Ranavirus* spp.)
+
+### Benthic Macroinvertebrates
+
+BMIs are an important food source for fisheries communities within the Project area as well as indicators of water quality and ecosystem health. A BMI Study is proposed to establish a pre-Project baseline inventory of the BMI community.
+
+Issues:
+
+-   Modifications to the volume and timing in water flow and reservoir levels (seasonal or daily) and transition from lentic to lotic ecosystem types
+-   Cycling of water between reservoirs may disrupt current disturbance regimes and may reduce habitat suitability for sensitive long-lived taxa (including EPT species) and increase habitat suitability for disturbance-resilient species (such as blackflies, worms and snails). Effects of disturbance regime shifts may disproportionately affect shoreline and shallow water habitats preferred by BMI species
+-   Changes to habitat conditions (e.g., streambed characteristics) from modified flow regimes, including increased streambank erosion and sedimentation downstream of proposed Project may impact aquatic life
+-   Changes in water chemistry could alter production, composition, and health of BMI community and affect fisheries communities
+-   Exchange of predator species (e.g., fish) from different watersheds and elevations during operations
+-   Changing water temperature and quality in affected stream reaches and water bodies and direct human disturbance related to Project operations and maintenance may impact aquatic life
+
+## Mokelumne Water Battery Project
+
+### Project description
+
+By 2030, 60 percent of CA's energy must come from renewable resources, and by 2045, 100 percent. But wind and solar are not available all the time.
+
+The GreenGen Storage Mokelumne Water Battery Project will reduce California's reliance on fossil fuels by meeting the state's energy demands with reliable renewable energy. It takes advantage of two existing hydroelectric reservoirs in CA's Sierra foothills, so few environmental impacts. Without pumped hydro, CA will have to rely on fossil fuels to integrate variable renewables (in 2018, CA curtailed \~ 460,000 MWh, enough to power 80,000 households).
+
+The PSH Project is located within the Cole Creek, Bear River, Lower Bear Reservoir, and Salt Springs Reservoir -- North Fork Mokelumne River watersheds. The proposed Project will involve the Salt Springs Reservoir and Lower Bear Reservoirs, all of which are on the Mokelumne River. Additionally, the proposed water conveyance tunnel alignments that will connect the Salt Springs and Bear Reservoirs, pass beneath Cole Creek, a tributary of the Mokelumne.
+
+![The Mokelumne Water Battery Project is located in the Sierra Nevada mountains, east of Sacramento, and about 33 miles east of Jackson, California. The project will pump water from the existing Salt Springs Reservoir up to the Lower Bear River Reservoir located on the Mokelumne River. The project will also include a water conveyance tunnel connecting the reservoirs, a powerhouse, transmission line, and other associated infrastructure (90% underground).](images/mokelumne-map2.png){fig-align="center"}
+
+### Key features
+
+-   400 MW power capacity
+-   4,000 MWh of energy capacity
+-   2 reversible pump-turbines
+-   8-10 hours of energy storage
+-   will move approx. 3,000 acre-feet of water back and forth
+
+### Benefits
+
+-   Provide carbon-free electricity, thereby reducing GHG emissions
+-   Meet the state's energy and emissions goals
+-   Create hundreds of construction jobs and approximately ten permanent jobs
+-   Provide local economic stimulus throughout project development and operation
+
+### Progress to date
+
+-   Jun 2008: FERC issues initial 3-yr preliminary permit to study designs
+-   Dec 2014: [FERC refuses to extend](https://www.hydroreview.com/world-regions/north-america/ferc-refuses-to-extend-pg-e-permit-to-study-up-to-1-200-mw-mokelumne-pumped-storage/) PG&E permit to study up to 1,200-MW Mokelumne Pumped-Storage
+-   July 2016 - GreenGen App for another preliminary permit
+-   Dec 2017 - FERC-issued preliminary permit
+-   Spring 2022 - initial engineering report
+-   Fall 2021 - engineering/cultural/environmental team site visits
+-   April 2022 - Pre-Application Document (PAD)
+-   Sep 2022 - Proposed Study Plan (PSP)
+-   Nov 2022 - Amended PSP
+-   Jan 2023 - Filed Revised Study Plan (RSP) with FERC
+-   Feb 2023 - FERC issued Study Plan Determination (SPD)
+-   Spring 2023 - water temp and hydrology models begin
+-   Summer 2023 - field studies (difficult with snow conditions)
+
+### Environmental Impacts
+
+"The project leaders have spent their careers working towards environmental causes and encouraging renewable energy. Project development will be guided by this deep commitment to respecting and protecting existing environments and resource use where possible, and to mitigating changes where needed. The project team pledges to work closely with environmental resource agencies and interested stakeholders to ensure that this commitment is met."
+
+-   Designed to be an enhancement when constructed
+-   Already a stressed system (and CC will make it worse)
+-   Wild & Scenic River starts ½ mile downstream of Salt Springs but upstream of confluence of Mokelumne and Bear
+-   Model water temperature and downstream impacts from proposed operations and downstream effects
+-   Using Lower Bear (fewer impacts to cultural/bio resources and no new roads)
+-   No dam raises (no new inundation)
+    -   footprint is 53 acres, all FS land
+    -   90% of facilities are underground
+-   3,000 acre-feet of water back and forth (impacts on shore line)
+
+### Water rights
+
+-   reservoir goes low -- if they can store more water in Lower Bear, they may be able to operate project yearlong; advantageous to the project
+
+## Relevant Groups
+
+**Clean Energy Ministerial ([CEM](https://www.cleanenergyministerial.org/))**
+
+-   high-level global forum to promote policies and programmes that advance clean energy technology, to share lessons learned and best practices, and to encourage the transition to a global clean energy economy
+
+**U.S. Energy Information Administration ([EIA](eia.gov))**
+
+-   independent statistics and analysis of energy markets and trends
+-   Battery Storage in the United States: [An Update on Market Trends](https://www.eia.gov/analysis/studies/electricity/batterystorage/)
+-   [explainer](https://www.eia.gov/energyexplained/electricity/energy-storage-for-electricity-generation.php) on electricity and energy storage
+
+**Global Energy Monitor ([GEM](https://globalenergymonitor.org/))**
+
+-   develop and share information in support of the movement for clean energy
+-   many trackers, including the [Hydropower tracker](https://globalenergymonitor.org/projects/global-hydropower-tracker/)
+
+**Global Energy Storage Database ([DOE](https://sandia.gov/ess-ssl/gesdb/public/))**
+
+-   research-grade information on grid-connected energy storage projects and relevant state and federal policies
+
+**Global Renewables Alliance ([GRA](https://globalrenewablesalliance.org/))**
+
+**National Hydropower Association ([NHA](https://www.hydro.org/))**
+
+-   nonprofit association dedicated exclusively to promoting the growth of clean, renewable hydropower and marine energy
+
+**International Hydropower Association ([IHA](https://www.hydropower.org/))**
+
+-   "The global voice for sustainable hydropower"
+-   2023 World Hydropower Congress, Bali, Indonesia, 31 Oct - 2 Nov
+
+**International Energy Agency (IEA)**
+
+-   2023 tracking clean energy [progress report](https://www.iea.org/reports/tracking-clean-energy-progress-2023)
+
+**International Forum on PSH ([IFPSH](https://pumped-storage-forum.hydropower.org/))**
+
+-   government-led multi-stakeholder platform to shape and enhance the role of pumped storage hydropower in future power systems
+-   created Nov 2020 chaired by US DOE
+
+**International Renewable Energy Agency ([IRENA](https://www.irena.org/))**
+
+-   intergovernmental organization mandated to facilitate cooperation, advance knowledge, and promote the adoption and sustainable use of renewable energy
+
+**United Nations (UN)**
+
+-   "Peace, dignity, and equality on a healthy planet"
+-   intergovernmental organization whose stated purposes are to maintain international peace and security, develop friendly relations among nations, achieve international cooperation, and serve as a center for harmonizing the actions of nations
+-   COP28 - 2023 Conference of the Parties to the UN Framework Convention on Climate Change, Dubai, UAE
+
+**US DOE Water Power Technologies Office (WPTO)**
+
+-   does R&D to understand and assess value of potential benefits of existing and prospective PSH (e.g., the [HydroWIRES Initiative](https://www.energy.gov/eere/water/hydrowires-initiative) for grid reliability, resilience, and integration).
+
+## Glossary
+
+**Curtailment**: when the sun shines and the wind blows *more than* is demanded, a system operator deliberately reduces the supply of electricity in order to balance the grid. Where storage does not exist, this means that renewable electricity is wasted and not stored for potential use in future
+
+**Electricity generation / production:** how much electricity produced over time (while demand is determined by when you use it), measured in watthours (kWh)
+
+**Electricity demand**: how much electricity is being used at any given time; measured in watthours (kWh); demand ebbs and flows over short and long time spans
+
+**Evaporation suppressors**: small plastic objects floated on a reservoir to reduce wind speeds and evaporation rates
+
+**Power capacity**: the maximum instantaneous amount of electric power that can be generated on a continuous basis and is measured in units of watts (kilowatts \[kW\], megawatts \[MW\], or gigawatts \[GW\]); utility-scale are at least 1 MW
+
+**Energy capacity**: the total amount of energy that can be stored in or discharged from the storage system; measured in units of watthours (kilowatthours \[kWh\], megawatthours \[MWh\], or gigawatthours \[GWh\])
+
+**Hydraulic Head**: measures the amount of mechanical energy available in water in a river, stream or even lake; equivalent to the water level in a static (non-flowing) water body
+
+**Load**: electricity demand
+
+**Variable energy**: power output rises and falls in response to, e.g., sun and wind
+
+**Lumen**: (symbol: **lm**) SI unit of luminous flux, a measure of the total quantity of visible light emitted by a source per unit of time (brightness); Luminous flux differs from power (radiant flux) in that radiant flux includes all electromagnetic waves emitted, while luminous flux is weighted according to a model (a "luminosity function") of the human eye's sensitivity to various wavelengths
+
+**Joule**: SI unit of energy; It is equal to the amount of work done when a force of 1 newton displaces a mass through a distance of 1 metre in the direction of the force applied. It is also the energy dissipated as heat when an electric current of one ampere passes through a resistance of one ohm for one second.
+
+**Watt:** (symbol: W) SI unit of power or radiant flux, equal to 1 joule per second or 1 kg⋅m^2^⋅s^−3^. It is used to quantify the rate of energy transfer.
+
+## References
+
+::: {#refs}
+:::
