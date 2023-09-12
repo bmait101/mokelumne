@@ -9,6 +9,7 @@
 # User-specific files
 .Ruserdata
 R/*_files
+R/*_html
 data/
 out/
 slides/
