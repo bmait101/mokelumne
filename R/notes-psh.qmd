@@ -76,7 +76,7 @@ A major challenge is deploying mitigating capacity at a rate that keeps up with 
 
 Here is California's famous duck curve, updated for 2023 (@fig-duck-cali-2023). CAISO now routinely flirts with near-zero net loads on the sunniest spring days. Basically, imagine that the sun shines every day and causes \~\$20 Billion worth of plants that look roughly like this to turn off to get out of the solar gen's way for \~12 hours.
 
-![The California duck curve is getting bigger and bigger. Figure from Brian Bartholomew. ](images/duck-curve.jpeg){#fig-duck-cali-2023}
+![The California duck curve is getting bigger and bigger. Figure from Brian Bartholomew.](images/duck-curve.jpeg){#fig-duck-cali-2023}
 
 Or, in other words:
 

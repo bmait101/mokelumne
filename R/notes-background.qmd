@@ -27,35 +27,44 @@ library(knitr)
 library(pander)
 ```
 
-## UW-Madison Project Overview
+## UW-Madison Collaboration Project
 
-Goal: evaluate and mitigate **potential impacts** and **co-benefits** of the Mokelumne water battery project, and evaluate alternative operations and configurations to improve environmental outcomes and stakeholder satisfaction.
+Goal: evaluate and mitigate potential impacts and benefits of the Mokelumne water battery project to the environment and stakeholders.
 
-1.  (NOT UW) modeling study of the combined thermal impacts of both climate change and a pumped-storage hydropower project proposed in the Mokelumne River in California
-    -   climate induced changes in runoff regimes, particularly low flow periods, have potential to exert greater control on changing thermal regimes than warming climate or adverse impacts of reservoir operations
-    -   increased storage provides an opportunity for environmental releases to counteract impacts to the thermal regimes during critical periods.
-    -   develop a suite of potential scenarios describing a range of pumped-storage operations to identify practices that enhance, or minimize impacts on, thermal regimes of the reservoirs and downstream river reaches
-    -   use historic and simulated future stream temperature records to apply a range of identified thermal niche models/ thermal tolerance metrics at locations downstream to determine the extent to which different strategies for describing individual species thermal niche agree in habitat outcomes
-2.  (UW) conduct a literature review evaluating the temperature requirements of aquatic species to evaluate the significance of potential changes to the stream thermal regime
-    -   includes a comparison of historic and forecasted future stream temperatures to thermal criteria set by resource agencies (NMFS) and whether these thermal criteria are achievable/realistic in a changing climate
-3.  (UW) identify potential ecosystem co-benefits that could arise from innovative pumped-storage hydropower operations
-    -   reduced thermal impairment of downstream river reaches
-    -   reduced carbon emissions,
-    -   maintenance of in-reservoir thermal regimes to support lake trout fisheries,
-    -   enhanced streamflow during critical stages of the salmon life-cycle,
-    -   increased availability of water rights,
-    -   minimized flood risk,
-    -   regulation of stream sediment transport,
-    -   improvement of aquatic habitat,
-    -   improvement in flow regimes to support downstream riparian vegetation and biota
+Approach: identifying environmental impacts and co-benefits of the project and evaluating alternative operations and configurations of the Mokelumne water battery project to improve environmental outcomes and stakeholder satisfaction.
 
-Some mechanism to achieve co-benefits:
+1\) Advise on modeling study of the combined thermal impacts of both climate change and a pumped-storage hydropower project proposed in the Mokelumne River in California
+
+-   climate induced changes in runoff regimes, particularly low flow periods, have potential to exert greater control on changing thermal regimes than warming climate or adverse impacts of reservoir operation
+-   increased storage provides an opportunity for environmental releases to counteract impacts to the thermal regimes during critical periods.
+-   develop a suite of potential scenarios describing a range of pumped-storage operations to identify practices that enhance, or minimize impacts on, thermal regimes of the reservoirs and downstream river reaches
+
+2\) Literature review evaluating the temperature requirements of aquatic species to assess impacts of potential changes to stream flow and temperature regimes.
+
+-   use historic and simulated future stream temperature records to apply a range of identified thermal niche models/ thermal tolerance metrics at locations downstream to determine the extent to which different strategies for describing individual species thermal niche agree in habitat outcomes
+-   compare historic and forecasted stream temperatures to thermal criteria set by resource agencies (NMFS) and assess whether these thermal criteria are achievable/realistic in a changing climate
+
+3\) Identify potential ***ecosystem co-benefits*** that could arise from innovative pumped-storage hydropower operations
+
+-   rtemperature regulation: reduced thermal impairment of downstream river reaches
+-   reduced carbon emissions,
+-   maintenance of in-reservoir thermal regimes to support lake trout fisheries,
+-   enhanced streamflow during critical stages of the salmon life-cycle,
+-   increased availability of water rights,
+-   minimized flood risk,
+-   regulation of stream sediment transport,
+-   improvement of aquatic habitat,
+-   improvement in flow regimes to support downstream riparian vegetation and biota (breeding herps)
+
+Mechanism to achieve co-benefits:
 
 -   alteration of the magnitude and timing of pump-storage operations,
 -   increased reservoir storage,
 -   floating solar power,
 -   variable depth of pumped water extraction and injection,
 -   altered timing of reservoir releases
+
+The feasibility and likelihood of realizing potential benefits will be evaluated.  Tradeoffs and synergies that exist between power storage and generation, water allocation, lake and stream temperature regulation, habitat creation/preservation, and other ecosystem services will be identified.
 
 ## Mokelumne River System
 

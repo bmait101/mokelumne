@@ -16,7 +16,7 @@ bibliography: references.bib
 
 -   evaluate alternative operations and configurations
 -   lit review on temp requirements of aquatic organisms
--   an innovate project at the water-energy-environment nexus
+-   find co-benefits
 
 General project notes from Green Gen team:
 
@@ -163,3 +163,7 @@ Action Items:
 
 -   follow up with Brenda in \~ 1-2 month
 -   can we use the tool on Mokelumne as a test case?
+
+## Thu 28 Sep 2023
+
+EIA: [Weather events have reduced our forecast of U.S. hydropower generation by 6% this year](https://www.eia.gov/todayinenergy/detail.php?id=60522&src=email#). About 50% of US hydro comes from the PNW, which despite good rain early has been in dorught and is down \~20% generation. This is offset by California snow pack, where generation is up 99%.
