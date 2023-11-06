@@ -1,0 +1,173 @@
+---
+title: "Annotated Bibliography"
+format:
+  html:
+    embed-resources: true
+bibliography: references.bib
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r}
+#| label: prep
+#| warning: false
+#| message: false
+#| echo: false
+
+library(tidyverse)
+library(here)
+```
+
+This literature review aims to evaluate:
+
+1.  start of art of pumped hydro
+2.  evaluate the temperature / flow requirements of aquatic species in Project Area.
+3.  alternative operating or design for maximizing co-benefits (energy-environment trade off)
+
+## Pumped Hydro
+
+### Peer reviewed literature
+
+------------------------------------------------------------------------
+
+@blakers2021
+
+-   Off-river pumped hydro as a very large-scale low-cost and mature energy storage technology to support 100% renewable energy futures
+-   Off river hydro is likely to have low environmental impact and low water consumption
+    -   Little focus on actual ecological impacts - mostly large scale land/water use
+    -   Effectively says no ecological impact on off-river, so long as placed in benign place
+-   data from @irena2020, IEA [Data Page](https://www.iea.org/data-and-statistics?country=WORLD&fuel=Energy%20supply&indicator=Electricity%20generation%20by%20source), US DOE [Global ESS Database](https://gesdb.sandia.gov/)
+-   impacts primary relate to flooding of land within reservoir
+-   Rule of thumb = 1 d (24h) storage, accommodates day-night cycle (batteries & PSH), about 1 GW per 1 million people plus 24 hours storage = 24 GWh per 1 million people can support 100% renewable energy
+-   Major economies (USA, EU, China, Japan) committed to 100% renewables by 2050s
+-   global human population at 10 billion by 2050; when developing counties reach advanced needs, world will need 200,000 TWh/year
+-   assuming solar (60%), wind (30%), other (10%), need 81 TW solar, 17 TW wind
+-   assuming 1 day rule of thumb, need 500 TWh (storage energy) and 20 TW (power)
+    -   more than order of magnitude larger than now, but way less the available pool of off-rover pumped hydro resources (23,000 TWh)
+
+------------------------------------------------------------------------
+
+@stocks2021a
+
+-   ANU 100% Renewable Energy Group created [global pumped hydro atlas](https://re100.eng.anu.edu.au/index.html)
+    -   616,000 off-river sites; 23 million GW-hours = 100x more than needed for 100% electricity world
+-   US = 35,000 sites, 1.4 million GWh = 300x more than needed to support solar/wind
+-   All reservoirs are outside national parks or urban areas
+    -   combined reservoir area is small (3 m\^2 per person per day)
+    -   water requirement is small (3 liters per person per day); far less than coal
+
+------------------------------------------------------------------------
+
+@lu2021a
+
+-   eliminating fossil fuels = triple electricity production
+-   electricity demand needs to triple to electrify transport (via electric vehicles), heating (via electric heat pumps and electric furnaces) and chemical synthesis
+
+------------------------------------------------------------------------
+
+@koohi-fayegh2020
+
+-   pumped hydro provides storage from hours to weeks
+
+------------------------------------------------------------------------
+
+@hunt2020a: global potential of pumped hydro
+
+-   pumped hydro provides storage from hours to weeks
+
+------------------------------------------------------------------------
+
+@blakers2019: pathways to 100% renewable electricity
+
+-   deep electrification is key to future, reduce emissions by ¾
+
+------------------------------------------------------------------------
+
+@nadeem2019a
+
+-   a range of storage technologies are under development
+
+------------------------------------------------------------------------
+
+@blakers2017: 100% renewables in Australia
+
+-   examined the amount of storage required to support a 100% renewable electricity system in Australia which derives 90% of its energy from variable wind and solar and 10% from existing hydro and bioenergy sources
+-   1 GW (storage) and 20 GWh (energy) per million people
+-   spillage of extra (\~ 5-25%) preferable to overbuilding storage
+
+------------------------------------------------------------------------
+
+### Reports
+
+------------------------------------------------------------------------
+
+@stantec2023a: PSH potential in Canada
+
+-   goal: strategic value of PSH, along with identification of the viable potential for sites
+-   tremendous potential for PSH - 8,000 GW identified at almost 1,200 sites; 85% are realistic to be developed before 2035
+-   Off-river, closed-loop systems offer advantages in environmental impact and operational independence, and consequently those locations were prioritized in this report
+
+------------------------------------------------------------------------
+
+@irena2022a: Renewable power generation costs in 2022
+
+-   In 2022, about 86% (187 GW) of all the newly commissioned renewable capacity had lower costs than fossil fuel-fired electricity.
+-   renewable capacity added since 2000 reduced the electricity sector fuel bill in 2022 by at least US\$520 billion
+-   Without the deployment of renewables over the past two decades, the economic disruption from the fossil fuel price shock in 2022 would have been much worse and possibly beyond many governments' ability to soften with public funding.
+-   2022 as a veritable turning point in the deployment for renewables as its cost-competitiveness has never been greater despite the lingering commodity and equipment cost inflation
+-   only hydro costs went up, but still lower than the cheapest new fossil fuel-fired electricity option in 2022
+
+------------------------------------------------------------------------
+
+@saulsbury2020: A Comparison of the Environmental Effects of Open-Loop and Closed-Loop Pumped Storage Hydropower
+
+------------------------------------------------------------------------
+
+## Aquatic Species
+
+### Fishes
+
+#### Sacramento Hitch (Lavinia exilicauda exilicauda)
+
+The hitch (*Lavinia exilicauda*) is a cyprinid fish endemic to central California, and was once very common. The common name may derive from a Pomoan word for this species. It is the only species in the monospecific genus *Lavinia*.
+
+Three distinct population segments (DPS) or subspecies of the hitch are recognized:
+
+-   Clear Lake hitch (*chi* in Pomoan language)
+-   Monterey hitch (Salinas hitch, Pajaro hitch)
+-   Sacramento hitch (Central Valley hitch)
+
+Although once abundant, but no longer commercially fished in Clear Lake, populations have been declining. The most likely cause appears to be loss of springtime spawning water flows due to water diversion and damming.
+
+Hitch are omnivores of the open water, eating a combination of filamentous algae, insects, and zooplankton. They can be found in lakes, sloughs, and slow-moving sections of rivers and streams. With the highest temperature tolerance among the native fish of the Central Valley, they can be found in both warm and cool water; they also have considerable salt tolerance.
+
+Life History for CA Fish Website:
+
+"Hitch are most often found in slow warm water, including lakes and quiet stretches of rivers. Hitch are sometimes found in cool and clear, low-gradient streams, hiding among aquatic vegetation in sandy runs or pools. They are the most heat tolerant of the native Central Valley fishes and can withstand water temperatures greater than 30°C under some conditions. They have also been found living in brackish water with salinities as high as 9 ppt. Within a pristine system hitch often share habitat with Sacramento Blackfish, Sacramento Suckers, and Sacramento Pikeminnows. In altered systems Hitch are found among introduced species like Mosquitofish, Catfish, and Centrarchids. In a stream the Hitch may use its upturned mouth to feed in the water column or to feed on the surface for insects. In a lake Hitch may occupy different spaces depending upon age. Juveniles typically live in shallow vegetated areas near shore, while the older fish (\>80 days) live in deeper offshore waters. Young Hitch may shoal for the first two months of residency in a lake. The diet of a limnetic (lake-dwelling) hitch may include zooplankton, crustaceans, or various forms of insects. Growth rates of Hitch vary depending upon the environmental conditions, though in general females reach sexual maturity in 2-3 years, while males may reach sexual maturity in years 1-3. Spawning typically happens in the tributaries to lakes and rivers, and may begin as early as February and end as late as July. Fecundity in Hitch is relatively high as one female may produce 3,000 to 63,000 eggs, depending upon body size. When spawning adults reach a suitable riffle for breeding one female may be surrounded by 1-5 males. A ripe female releases her eggs into the current and the males immediately fertilize the eggs. The eggs then settle into the gravel substrate where the size of the ova will increase and help lodge it into the rock particles. In 3-7 days the embryos hatch, and 3-4 days after the hatch the embryos begin to swim freely. The young Hitch may swim downstream to a lake or slough, or reside within the stream under the cover of aquatic plants. Hitch generally live for a total of 4-6 years."
+
+#### Hardhead (*Mylopharodon conocephalus*)
+
+The hardhead is a freshwater ray-finned fish from the family Cyprinidae, the carps and minnows, which is endemic to California. It is the sole member of the monotypic genus *Mylopharadon*.
+
+It has been also suggested that managing water flows to suit this species, and other native species, and disadvantage non native species should be researched and put into practice together with measures to mitigate impoundments and canalisation of the streams used by hardheads
+
+Life history from CA Fish Website:
+
+"Hardhead are typically found in small to large streams in a low to mid-elevation environment. Hardhead may also inhabit lakes or reservoirs. All ages are omnivores though the juvenile and adult fish have a slightly different diet and tooth structure for feeding. In general these fish will eat benthic invertebrates, aquatic plants and algae, or insects. The young fish typically feed on mayfly and caddisfly larvae, as well as small snails. Older fish may focus on plants, crayfish, and larger invertebrates. In a lake environment the fish may also feed on zooplankton. Within a stream hardhead tend to prefer warmer temperatures than salmonids and they are often found associated with pikeminnows and suckers. Their preferred stream temperature might easily exceed 20ºC, though these fish do not favor low dissolved oxygen levels. Therefore the hardhead minnow is usually found in clear deep streams with a slow but present flow. Most hardhead reach sexual maturity at 3 years and spawn in the spring around April-May, though spawning may take place as late as August. In small streams hardhead tend to spawn near their resident pools, while fish in larger rivers or lakes often move up to 30-75 km to find suitable spawning grounds. Though spawning may occur in pools, runs, or riffles, the bedding area will typically be characterized by gravel and rocky substrate. Females usually produce 7,000-24,000 eggs per year, though some fisheries biologists believe that the eggs may take two years to develop within the female. Upon hatching, young larval hardhead remain under vegetative cover along stream or lake margins. As the juveniles grow they may move to deeper water or be swept downstream to larger rivers below. Adult hardhead may live up to 9 or 10 years."
+
+#### Coastal Rainbow Trout (*Oncorhynchus mykiss irideus*)
+
+In California, coastal rainbow trout are the most widely-distributed native trout form and are found on the western slopes of the Sierra Nevada in waters draining to the Pacific Ocean.
+
+Wild, naturally-spawning resident coastal rainbow trout are likely much more abundant now than historically because of their wide-spread introduction into most suitable waters in the state, including reservoirs. Tailwater fisheries below large dams often provide excellent habitat conditions with stable flow and water temperatures. While local populations in urban and agricultural areas may be diminished or even eliminated, total abundance statewide is high.
+
+However, the anadromous life history form (steelhead) is severely impacted by dams, development, urbanization, water diversions, timber harvest, agriculture, and other land use practices across the state.
+
+Life history from CA Fish Website:
+
+"Rainbow Trout are by definition a cold water fish. Optimal growth occurs at 15-18ºC and mortality typically results at 24-27ºC. New research is revealing populations of trout that are sustaining life in conditions previously considered lethal. Trout or Steelhead require near saturation levels of dissolved oxygen to grow, though these fish can live at levels as low as 1.5-2.0 mg/L. *Oncorhynchus mykiss* generally have one of two distinct life patterns: resident inland trout and sea-run or anadromous Steelhead. Some inland trout do migrate for the purpose of spawning or food foraging. Resident forms of *O. mykiss* often spend their entire lives within a few hundred meters of stream or within the same lake. Steelhead or sea-run trout hatch in freshwater and then migrate to the ocean, finally returning home to spawn. Times spent in freshwater and in the ocean vary according to geography, life history patterns, and effects of natural phenomena. Spawning occurs in places where the streambed is composed of gravelly substrate, usually in riffles or pool tails. The female fish digs a redd (nest) and deposits 200 to 12,000 eggs depending upon her body size. Resident Rainbow Trout usually produce less than 1,000 eggs per year while Steelhead may produce up to 2,000 eggs per kg of body weight. After breeding the resident trout disperse to slower waters and the Steelhead rest before moving back out to sea. In 3-4 weeks the eggs hatch and the young trout spend another 2-3 weeks under the cover of the gravel before emerging as fry. In some instances the fry of anadromous Steelhead will emerge soon after hatching and swim straight to the ocean to avoid dry summer periods. Typically the young Steelhead or parr reside in freshwater for 1-3 years before smoltification (transition to being able live in salt water). When the smolts finally reach the ocean they begin feeding on estuarine invertebrates, krill, and then focus on fish. Steelhead may stay in saltwater for 1-2 years before returning to their native streams. Most anadromous salmonids die after spawning but Steelhead may make numerous trips back and forth between fresh and salt water to breed. Steelhead may spawn up to four times per life span, though the mortality rate between successive cycles is high. Rainbow Trout do not commonly live beyond 6 years, though fish have been recorded to reach 9-11 years. Within a stream resident rainbows and freshwater phase Steelhead have in-stream habitat preferences generally determined by size. The smallest fish are mostly found in riffles, medium sized fish in runs, and larger fish predominantly in pools. In streams and lakes Rainbow Trout feed on zooplankton, invertebrates, insects, drifting organisms, and sometimes other fish. Feeding usually peaks at dawn and dusk and summer consumption is greater than that in winter."
+
+## References
+
+::: {#refs}
+:::

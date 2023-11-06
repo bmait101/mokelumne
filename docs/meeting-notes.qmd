@@ -1,0 +1,265 @@
+---
+title: "Meeting Notes"
+format: html
+bibliography: references.bib
+---
+
+## UW-Madison Collaboration Project
+
+Goal: evaluate and mitigate potential impacts and benefits of the Mokelumne water battery project to the environment and stakeholders.
+
+Approach: identifying environmental impacts and co-benefits of the project and evaluating alternative operations and configurations of the Mokelumne water battery project to improve environmental outcomes and stakeholder satisfaction.
+
+1\) Advise on hydrology/temp modeling study of the combined impacts of both climate change and a pumped-storage hydropower project proposed in the Mokelumne River in California
+
+-   climate induced changes in runoff regimes, particularly low flow periods, have potential to exert greater control on changing thermal regimes than warming climate or adverse impacts of reservoir operation
+-   increased storage provides an opportunity for environmental releases to counteract impacts to the thermal regimes during critical periods.
+-   develop a suite of potential scenarios describing a range of pumped-storage operations to identify practices that enhance, or minimize impacts on, thermal regimes of the reservoirs and downstream river reaches
+
+2\) Literature review evaluating the temperature requirements of aquatic species to assess impacts of potential changes to stream flow and temperature regimes.
+
+-   use historic and simulated future stream temperature records to apply a range of identified thermal niche models/ thermal tolerance metrics at locations downstream to determine the extent to which different strategies for describing individual species thermal niche agree in habitat outcomes
+-   compare historic and forecasted stream temperatures to thermal criteria set by resource agencies (NMFS) and assess whether these thermal criteria are achievable/realistic in a changing climate
+
+3\) Identify potential ***ecosystem co-benefits*** that could arise from innovative pumped-storage hydropower operations
+
+-   temperature regulation: reduced thermal impairment of downstream river reaches
+-   reduced carbon emissions,
+-   maintenance of in-reservoir thermal regimes to support lake trout fisheries,
+-   enhanced stream flow during critical stages of the salmon life-cycle,
+-   increased availability of water rights
+    -   flows... sometimes you can release a benefit and sometimes not; need big storage that you deplete during dry season to supply water and create energy
+    -   so hydro matches well when you need big releases
+    -   where you don't need hydro for power (where you have solar in summer), you don't need to release when you need power, so don't need to empty reservoir, and release when you need it, for energy, or for fish
+    -   water limited you don't have that freedom
+    -   takeoff of how much you need water downstream
+    -   does timing when poeple need water match when ecosystems need water
+    -   we are loosening the constraint on when people need the need the energy
+    -   then, how can you get water form different parts of the reservoir to get diff temps
+-   minimized flood risk,
+-   regulation of stream sediment transport,
+-   improvement of aquatic habitat,
+-   improvement in flow regimes to support downstream riparian vegetation and biota (breeding herps)
+-   thinking about when timing needs to happen
+    -   think about different types of PV arrays (verticle vs tilt)
+    -   thinking about when we need to pump and not pump, release and not release
+
+Mechanism to achieve co-benefits:
+
+-   alteration of the magnitude and timing of pump-storage operations,
+-   increased reservoir storage,
+-   floating solar power,
+-   variable depth of pumped water extraction and injection,
+-   altered timing of reservoir releases
+
+The feasibility and likelihood of realizing potential benefits will be evaluated. Tradeoffs and synergies that exist between power storage and generation, water allocation, lake and stream temperature regulation, habitat creation/preservation, and other ecosystem services will be identified.
+
+## 03 Mar 2023
+
+-   Bryan, Josh, Steve
+-   Green Gen Storage Team
+    -   Nicholas Sher (public works)
+    -   Laura Johnson (permitting)
+    -   Diana (stakeholders)
+
+**PROJECT GOAL**: evaluate and mitigate the potential impacts and benefits of Mokelumne pumped hydro plant to the environment and stakeholders.
+
+-   evaluate alternative operations and configurations
+-   lit review on temp requirements of aquatic organisms
+-   find co-benefits
+
+General project notes from Green Gen team:
+
+-   energy for summer and fall - ***400 MW battery***
+-   in process of permitting
+-   through Pacific Gas and Electric (PG&E)
+-   20 study plans - FERC approval
+    -   special use authorization from the Forest Service (concern about recreation)
+    -   then collect data (summer 2023)
+-   Existing hydro already at Salt Springs
+    -   this project may get them to halt those operations
+-   River is stressed and dammed - 2 large dams
+    -   **WOULD THIS PROJECT INCREASE STREAM TEMPERATURES BY MIXING WATERS?**
+    -   fish and amphibians need cold water
+-   already violating temperature rules - more stringent regs are in pipeline
+    -   20 degrees C = max (from PNW regime)
+    -   California water temps not good for regime (many think these need to change)
+    -   intermittent snow pack by 2040s - bad for project regime
+    -   climate change = bad, will this project make it worse?
+-   Stantec is collecting data (lots of sampling in 2023)
+    -   intake
+    -   outflow and canal at Salt Springs
+    -   reservoir profiles
+    -   bathymetry maps
+-   ONLY CARE ABOUT TEMPS AT LOWER (LARGER) RESERVOIR
+-   10% of design is done - need to figure out bathymetry maps and where input goes
+    -   could be variable intake - probably stationary
+-   Tunneling could drain Cole creek
+-   lake level change = inches to 6 feet, but variable
+    -   vs current draw down (lowest in DEC) at lake via winter rights and energy needs
+-   20 studies to do (7 biological)
+
+What they need:
+
+-   is the PNW standard appropriate?
+-   CC impacts on watershed? 2030s, 2040s, etc
+-   "Holistic outlook"
+    -   impacts small, outcomes huge
+
+    -   this project will help mitigate CC impacts, but people are concerned about local impacts like traffic, fishing, etc
+
+    -   but we need energy storage
+-   Floating PV on top, but people are not on board
+-   Flume moralities - bears can drown...
+
+## 11 May 2023
+
+-   Steve and I visited to discuss overall project plan and timeline for lit review
+-   generally: learn, summarize, brief Steve
+
+Action items
+
+-   Font matter
+    -   what is it (PSH)?
+    -   knowledge gaps
+    -   demand and trends
+    -   learn the language
+-   Use above to identify topics for inclusion in lit review (which become work chunks)
+-   Impacts and Co-benefits
+    -   operational changes to achieve low impacts and benefits
+    -   entry / exist point
+    -   floatovoltaics
+
+## 14 July 2023
+
+-   discussed my preliminary note taking / lit review
+-   think about time scales of energy storage and when you need releases
+-   keep in mind legal issues - wordsmith and don't prescribe
+
+Action items
+
+-   identify current impacts on Mokelumne River / Sac River
+    -   already imparied system, not meeting TMDLs
+    -   can lit review help fix stuff?!?
+-   share Zotero lib with Steve
+-   share link to html files from git hub
+-   use Trello
+
+## 01 Aug 2023
+
+-   demand and generation trends for energy: hourly, daily, monthly, annually
+
+    -   diurnal and seasonal cycles
+
+-   what is service area?
+
+-   daily water moving doesn't affect downstream
+
+-   annually
+
+-   will they be using
+
+-   when does water demand occur? water right occur? can we delay water releases if its not needed in June per say? June is highed solar production - so reduce downstream releases in summer (with solar and pumped) then we dont need to do water releases for energy. only if that when farmers need water. or delay that till august because have enough energy in june, then befits for fisheries during highest stress periods.
+
+-   are there benefits for doing this? then we have a discussion about changing it.
+
+-   when is wind coming though? how much is solar vs wind?
+
+-   is ther better habitat in downstream reaches of salt springs or mokumnle? which stream needs more? you could move water to accommodate if one is very good habitat, if only it had this extrra thing.
+
+-   how much electricity is normally proiduced on the system by saving water and releaseing later VERSUS batter time. if we saved all water and released in fall (is that a little or small amount versus capapcity)
+
+    -   battery storage needed for 1 day is fairly large compared to overall storager
+    -   if you used all water, how long would it last
+
+-   contact GreenGen - let them know we are working on this.
+
+-   reduce impacts of traditional hydropower (esp. hydropeaking)?
+
+    -   shift water releases later in the season with conjuctive management between pumped storage hydropower and traditional hydropower
+    -   PSH and traditional hydropower might be able to work together to reduce the need for hydropeaking in traditional hydropower (which is bad)
+        -   affects water exahcnge with surroundings
+        -   etc.
+        -   HSP could smooth some of that out
+
+Action items
+
+1.  typical diurnal/seasonal/annual pumped hydro schedule
+2.  typical diurnal/seasonal/annual conventional hydro schedule
+3.  typical hydrographs for study area
+
+## 20 Aug 2023
+
+Met Brenda Pracheil at AFS 2023 in Grand Rapids. She is a Fisheries Biologist with the Pacific Northwest National Lab (but stationed in Knoxville TN at ORNL) and is working on PSH generally, specifically with off-channel PSH.
+
+Brenda told me about [PNNL's Energy Storage Webinar Series](https://www.pnnl.gov/events/energy-storage-pnnl-series), and they just did one on PSH.
+
+Mentioned the HydroWires 2020 report on comparing the environmental impacts of open- and closed-loop PSH [@saulsbury2020], and one on the FERC licensing process [@levine2021].
+
+The report her group are doing this year, in comparison to the 2020 report, will be more quantitative and look more like an EIS document. Looking to write papers from this report and collaborate.
+
+Brenda's talk at AFS was "Energy flexibility-environment tradeoff toolkit for hydropower environmental and operational flows.
+
+Action Items:
+
+-   follow up with Brenda in \~ 1-2 month
+-   can we use the tool on Mokelumne as a test case?
+
+## 23 Aug 2023 (GreenGen)
+
+Water Resources Tech Meeting #2 - updates to modeling study
+
+Schematic of the modeling study:
+
+![](images/greengen_model-shcematic.png)
+
+Upper Bear Reservoir Storage:
+
+-   typically fills (snowfall / rain) by April / May (late fill in dry years)
+-   released for power generation into Lower Bear, depending on year and need
+-   minimum in Oct, Nov
+
+![](images/greengen-res-storage-upper-bear.png)
+
+Lower Bear Reservoir Storage:
+
+-   relatively similar, but does not fill every year (drought years)
+-   releases for power generation and downstream use
+
+![](images/greengen-res-storage-lower-bear.png)
+
+Salt Springs Reservoir Storage:
+
+-   similar trends (80% of time it fills)
+-   releases for power generation and downstream water used
+
+![](images/greengen-res-storage-ssr.png)
+
+Gage Data (good times series)
+
+![](images/greengen-gage-data-br-cc.png)
+
+![](images/greengen-gage-data-nfmr.png)
+
+Inflow Calculations
+
+-   no gaged inflow data, so must use daily stage and outflow data (back calculate)
+-   doesn't do well during low flows (negative values and lots of noise)
+-   complicated mass-balance; but have options for dealing with it
+
+![](images/greengen-gage-data-ssr.png)
+
+Model Constraints and Next Steps
+
+![](images/greengen-model-constraints.png)
+
+![](images/greengen-hydro-model-next-steps.png)
+
+Question: Will PG&E review your modeling? Yes
+
+## 28 Sep 2023
+
+EIA: [Weather events have reduced our forecast of U.S. hydropower generation by 6% this year](https://www.eia.gov/todayinenergy/detail.php?id=60522&src=email#). About 50% of US hydro comes from the PNW, which despite good rain early has been in drought and is down \~20% generation. This is offset by California snow pack, where generation is up 99%.
+
+Working on investigating fish species found in watershed and different aquatic habitats.
+

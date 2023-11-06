@@ -1,0 +1,236 @@
+---
+title: "Mokelumne Pumped Storage Hydro Project"
+subtitle: "UW-GreenGen Collaboration"
+date: "19 October 2023"
+format: 
+  revealjs:
+    slide-number: true
+    scrollable: true
+---
+
+## The clean energy transition {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   energy landscape rapidly changing: shooting for net zero and 1.5 C warming
+-   Energy demand has doubled in past 25 years
+-   will double again in next 25 (electrification)
+-   global events are accelerating this transition
+-   economics and energy security now fully favor a fast transition to renewables
+-   tech is mature, but variable, so storage is key limiting factor
+:::
+
+::: {.column width="50%"}
+![](images/electricity-generation-by-fuel-2001-2023_long.png)
+:::
+:::
+
+## Energy storage systems {.smaller}
+
+All kinds of hair-brained ideas (sand, concrete, radioactive diamonds). And people are all hyped about Li-ion batteries. But pumped hydro is #1 worldwide, tried, true, and tested.
+
+-   PSH = low power, long duration
+-   li-ion = high power, short duration
+
+![](images/CNESA_gloabal-energy-storage.png){fig-align="center"}
+
+## Pumped Storage Hydropower {.smaller}
+
+-   life of \>50 years without degradation
+-   fast and flexible resource that can change output to meet grid conditions
+-   high level of dispatchability (come online in minutes vs days)
+-   regional energy security
+-   typical discharge duration of 8-10 hours
+
+Research has shown that national electricity grids powered by one hundred percent renewable energy could potentially be facilitated by energy storage facilities with as little as 5-hour discharge duration, even through northern hemisphere winters. So, pumped hydro, with typical discharge duration of 8-10 hours can be ideal.
+
+## Hydropower impacts and mitigation {.smaller}
+
+-   Minimizing and mitigating impacts of hydropower is a key challenge
+    -   impacts and mitigation highly influenced by operational mode
+    -   e.g. load-following, vs. peaking vs. run-of-river vs. pumped hydro
+-   Mitigations can come in different forms
+    -   built structures such as fish passage, fish safe turbines, boat ramps, trails
+    -   flow mitigations such as minimum flows, ramp rate restrictions
+    -   optimal operational schedules can be designed to minimize impacts AND maximize co-benefits
+
+## Goals for Mokelumne PSH project
+
+1.  evaluating the habitat and life history requirements of aquatic species
+2.  identify **co-benefits** that could arise from innovative pumped-storage hydropower designs and operations
+
+## General approach: lit synthesis
+
+![](images/zotero.png){fig-align="center"}
+
+## Goal #1 objectives
+
+-   review habitat & life history requirements of aquatic species
+-   identity potential ecological impacts to aquatic species from current operations and proposed pumped hydro operations (link with GreenGen modeling studies)
+-   compare historic and forecasted stream temperatures to thermal criteria set by resource agencies (e.g., NMFS, others) and assess whether these thermal criteria are achievable/realistic in a changing climate
+
+## Functional flows for California {.smaller}
+
+![](images/Yarnell-functional-flows.png){fig-align="center"}
+
+Yarnell et al. (2020) *River Research and Applications*
+
+## Functional flows and temperatures {.smaller}
+
+![](images/lapides-functionals.png){fig-align="center" width="800"}
+
+Lapides & Maitland, et al. (2022) *Journal of Hydrology*
+
+------------------------------------------------------------------------
+
+![](images/lapides-impacts.png){fig-align="center" width="800"}
+
+## Functional flows/temps for study area and aquatic species
+
+-   Salt Springs Reservoir
+-   NF Mokelumne (below and above SSR)
+-   Lower Bear Reservoir
+-   Cole Creek?
+
+------------------------------------------------------------------------
+
+```{r}
+#| label: tbl-fish-species
+#| echo: false
+#| warning: false
+#| message: false
+#| tbl-cap: "Fish species identified by GreenGen and BMM in study area."
+
+species <- readr::read_csv(here::here("data","species-list.csv"))
+fish <- species |> dplyr::filter(Class == "Fishes")
+nonfish <- species |> dplyr::filter(Class != "Fishes")|> dplyr::select(2:4)
+
+knitr::kable(fish[2:4]) |>
+  kableExtra::kable_styling(font_size = 14) |> 
+  kableExtra::column_spec(2, italic = TRUE)
+```
+
+## Fish of conservation concern {.smaller}
+
+Within the reservoirs and riverine features associated with implementation of the proposed Project, only two have potential to occur:
+
+-   **Sacramento hitch**
+-   **hardhead**
+-   ***Oncorhynchus mykiss irideus***, occurs as resident rainbow, not as steelhead.
+
+![](images/fish_sac-hitch.jpg){.absolute bottom="50" left="0" width="500"} 
+![](images/fish_hardhead.jpg){.absolute bottom="200" right="0" width="500"} 
+![](images/fish_steelhead.jpg){.absolute bottom="0" right="0" width="500"}
+
+------------------------------------------------------------------------
+
+```{r}
+#| label: tbl-non-fish-species
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-cap: "Amphibian and reptile species identified by GreenGen in study area."
+
+knitr::kable(nonfish) |> 
+  kableExtra::kable_styling(font_size = 24)|>
+  kableExtra::column_spec(2, italic = TRUE)
+```
+
+![](images/rana-boylii.jpg){.absolute bottom="0" left="0" width="500"} ![](images/rana-sierrae.jpeg){.absolute bottom="0" right="0" width="500"}
+
+## Goal #1 recap
+
+-   review habitat & life history requirements of aquatic species
+-   use a functional flows/temp approach to identity potential ecological impacts to aquatic species from current operations and proposed pumped hydro operations (and link with GreenGen modeling studies)
+-   compare historic and forecasted stream temperatures to thermal criteria set by resource agencies (e.g., NMFS, others) and assess whether these thermal criteria are achievable/realistic in a changing climate
+
+## Goal #2 objectives
+
+-   identify potential co-benefits
+-   identify mechanisms to achieve co-benefits
+-   evaluate feasibility
+
+## Potential co-benefits (big picture)
+
+-   reduced carbon emissions
+-   reduced air pollution (brighter skies = efficient PV)
+-   technological innovation (innovative operation schedules)
+-   energy-supply security (reduce need for imported energy)
+-   reduced capitol expenditures (reduce costs of generation)
+-   decreased water use (water wars are the future)
+
+## Potential co-benefits (local) {.smaller}
+
+Thinking about functional flows and temperatures...
+
+-   regulation of stream sediment transport
+-   temperature regulation (and offsets for climate warming?)
+    -   water form different parts of the reservoir to get diff temps?
+    -   reduced thermal impairment of downstream river reaches
+    -   maintenance of in-stream and in-reservoir thermal regimes to support fisheries
+-   enhanced stream flow during critical stages of life-cycles (functional flows/temps)
+
+## Potential co-benefits (con't) {.smaller}
+
+-   integration with other renewables
+    -   PV: floating solar, vertical vs tracking vs west facing
+    -   optimize operations for energy cost savings (e.g., Naval et al. 2023)
+-   does timing when people need water match when ecosystems need water?
+    -   loosening the constraint on when people the need the energy
+    -   PSH reduces need to hydropeaking
+    -   release when you need it, for energy, environment or biodiversity
+
+## Mechanisms to achieve co-benefits
+
+-   alteration of the magnitude and timing of pump-storage operations (optimize given energy, economic, environment, or ecological constraints)
+-   altered timing of reservoir releases
+-   increased reservoir storage
+    -   increased availability of water rights?
+-   variable depth of pumped water extraction and injection
+
+## Designing environmental flows to enable solar and wind integration {.smaller}
+
+-   solar and wind need quick generation ramp up/down
+-   environmental flows restricting hydropower response speed are common
+-   environmental flows most common during times with high grid stress
+    -   no requirement to consider grid reliability
+    -   potential pinch points for grid reliability and biota as more wind and solar are integrated
+-   different tools likely needed to understand sub-hourly impacts
+
+## Energy Flexibility-Environment Tradeoff Toolset {.smaller}
+
+-   NREL tool to minimizing and mitigating environmental impacts of hydropower
+-   assess habitat and generation trade offs for different scenarios
+
+![](images/nrel-model.png){fig-align="center"}
+
+## Energy Flexibility-Environment Tradeoff Toolset {.smaller}
+
+-   designed with FERC hydropower licensing in mind; beta testing now
+-   looking for collaborators to test and demo???
+
+![](images/nrel-model-scematic.png){fig-align="center"}
+
+## Optimal scheduling of pumped hydro {.smaller}
+
+Naval et al. 2023. Journal of Energy Storage
+
+Develop an optimal hourly management model of grid-connected photovoltaic and wind power plants integrated with reversible pump-turbine units to maximize the monthly operating profits of the energy system and meet electricity demand.
+
+![](images/naval-model.png){fig-align="center"}
+
+## Optimal scheduling of pumped hydro {.smaller}
+
+The combination of renewable energy and pumped hydro energy storage reduces energy dependence by decreasing energy costs by 27 % compared with a system without storage to satisfy the required electricity demand.
+
+![](images/naval-results.png){fig-align="center"}
+
+## Goals recap
+
+1.  evaluating the habitat and life history requirements of aquatic species
+2.  identify **co-benefits** that could arise from innovative pumped-storage hydropower designs and operations
+
+------------------------------------------------------------------------
+
+![](images/mokelumn-Lower_Bear_River_Reservoir_Spencerdrennan-from-Wikimedia-Commons.jpg){fig-align="center"}

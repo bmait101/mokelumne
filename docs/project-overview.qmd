@@ -1,0 +1,253 @@
+---
+title: "Mokelumne Pumped Storage Hydro Project"
+subtitle: "UW-GreenGen Collaboration"
+author: "Bryan M Maitland"
+format: 
+  revealjs:
+    slide-number: true
+    scrollable: true
+---
+
+## Goals
+
+-   Literature review evaluating the flow and temperature requirements of aquatic species
+-   Identify potential **ecosystem co-benefits** that could arise from innovative pumped-storage hydropower operations
+
+## Talk stucture
+
+1. Project background
+2. Aquatic habitats and biodiversity
+3. Environment-biodiversity-energy co-benefits
+
+# 1. Background
+
+## Mokelumne River System {.smaller}
+
+:::: {.columns}
+::: {.column width="40%"}
+-   moo-ka-la-mi
+-   "People of the Fish Net"
+-   River runs 95-miles (153 km) in the Sierra Nevada Mountains 
+:::
+::: {.column width="60%"}
+![Map of the Mokelumne & Cosumnes Rivers in Central California, USA](images/Mokerivernew.png)
+:::
+::::
+
+## Hydrology {.smaller}
+
+:::: {.columns}
+::: {.column width="40%"}
+The watershed features similar species composition, hydrologic regime, and topographic profiles to other western alpine watersheds in California. 
+
+These three watersheds are located on the western slope of the Sierra Nevada Mountain Range and are therefore primarily fed by snow melt runoff accumulated from higher elevations.
+:::
+::: {.column width="60%}
+![Functional flows and typical hydrograph for California rain-snowmelt systems. Form Yarnell et al. 2020](images/Yarnell-functional-flows.png){width=400}
+:::
+::::
+
+## Human modifications
+
+-   1920: Upper Mokelumne River Hydro project
+-   1929: Pardee dam
+-   1963: Camanche dam
+-   1964: Mokelumne River Fish Hatchery (below Camanche)
+-   Consumes River (other major tributary) is one of only a few Sierra rivers without large dams
+
+## MR Hydroelectric Project {.smaller}
+
+-   Upper MR heavily damned and plumbed for hydropower since 1925 by PG&E
+    -   7 storage reservoirs on 90 miles of stream (4 power houses) = 204 MW capacity
+    -   Salt Springs, Bear River (x2), Tiger Creek, several small reservoirs in headwaters
+    -   2 tunnels (Tiger Creek condiut, Electra tunnel) = 25 miles of piping around riverbed
+-   New 30-yr FERC licence in 2020 broke 28-year deadlock
+    -   comprehensive flows for all reaches
+    -   required mean daily temp of 20 degree C or less in 9 coldwater reaches
+    -   flow requirements for each month of year for minimum water levels
+    -   monthly adjustments to stream flows
+    -   mandated pulse flows in spring
+    -   ramping rates to limit up and downs
+    -   limits to short-term power generation releases in summer
+    -   no more using river as conduit for short term releases for maintenance
+
+
+## Mokelumne Water Battery Project {.smaller}
+
+By 2030, 60 percent of CA's energy must come from renewable resources, and by 2045, 100 percent. But wind and solar are not available all the time.
+
+The Project will reduce California's reliance on fossil fuels by meeting the state's energy demands with reliable renewable energy. 
+
+It takes advantage of two existing hydroelectric reservoirs in CA's Sierra foothills, so few environmental impacts. 
+
+Without pumped hydro, CA will have to rely on fossil fuels to integrate variable renewables (in 2018, CA curtailed \~ 460,000 MWh, enough to power 80,000 households).
+
+## Mokelumne Water Battery Project {.smaller}
+
+The PSH Project is located within the Cole Creek, Bear River, Lower Bear Reservoir, and Salt Springs Reservoir -- North Fork Mokelumne River watersheds. 
+
+The proposed Project will involve the Salt Springs Reservoir and Lower Bear Reservoirs, all of which are on the Mokelumne River. 
+
+Additionally, the proposed water conveyance tunnel alignments that will connect the Salt Springs and Bear Reservoirs, pass beneath Cole Creek, a tributary of the Mokelumne.
+
+![](images/mokelumne-map2.png){fig-align="center"}
+
+## Key features
+
+-   400 MW power capacity
+-   4,000 MWh of energy capacity
+-   2 reversible pump-turbines
+-   8-10 hours of energy storage
+-   will move approx. 3,000 acre-feet of water back and forth
+
+## Benefits
+
+-   Provide carbon-free electricity, reducing GHG emissions
+-   Meet the state's energy and emissions goals
+-   Create hundreds of construction jobs and 10 permanent jobs
+-   Provide local economic stimulus throughout project development and operation
+
+## Progress to date {.smaller}
+
+-   Jun 2008: FERC issues initial 3-yr preliminary permit to study designs
+-   Dec 2014: FERC refuses to extend PG&E permit to study up to 1,200-MW Mokelumne Pumped-Storage
+-   July 2016 - GreenGen App for another preliminary permit
+-   Dec 2017 - FERC-issued preliminary permit
+-   Spring 2022 - initial engineering report
+-   Fall 2021 - engineering/cultural/environmental team site visits
+-   April 2022 - Pre-Application Document (PAD)
+-   Sep 2022 - Proposed Study Plan (PSP)
+-   Nov 2022 - Amended PSP
+-   Jan 2023 - Filed Revised Study Plan (RSP) with FERC
+-   Feb 2023 - FERC issued Study Plan Determination (SPD)
+-   Spring 2023 - water temp and hydrology models begin
+-   Summer 2023 - field studies (difficult with snow conditions)
+
+## Environmental Impacts {.smaller}
+
+-   Designed to be an enhancement when constructed
+-   Already a stressed system (and CC will make it worse)
+-   Wild & Scenic River starts ½ mile downstream of Salt Springs but upstream of confluence of Mokelumne and Bear
+-   Model water temperature and downstream impacts from proposed operations and downstream effects
+-   Using Lower Bear (fewer impacts to cultural/bio resources and no new roads)
+-   No dam raises (no new inundation)
+    -   footprint is 53 acres, all FS land
+    -   90% of facilities are underground
+-   3,000 acre-feet of water back and forth (impacts on shore line)
+-   water rights: if they can store more water in Lower Bear, they may be able to operate project yearlong
+
+# 2. Aquatic habitats and biodiversity
+
+## 2a: Habitats
+![](images/mokelumne-map2.png){fig-align="center"}
+
+## Salt Springs Reservoir {.smaller}
+
+-   owned by Pacific Gas and Electric (PG&E)
+-   975 surface acre, 141,900 acre-foot storage capacity
+-   hydroelectric dam (332 feet, 101 m) built in 1931, filled in 1951
+-   hotspot for wild trout fishing in Sierra Nevadas, but now supports warmwater fishery
+-   Fish present in 2012 survey: 
+    -   Sacramento pikeminnow
+    -   rainbow trout
+    -   green sunfish
+    -   Lahontan redside
+    -   Sacramento sucker
+
+## NF Mokelumne River (above dam)
+
+-   Rainbow trout
+-   By July flows greatly diminish and the fish are under considerable stress
+
+## NF Mokelumne River (below dam)
+
+-   brown trout and rainbow trout, 7-11 inches.
+-   Flows on the river are heavily influenced by the dam upstream.
+
+## Bear Reservoirs {.smaller}
+
+-   Lower Bear River Reservoir is a 727 acre lake. 200 ft max depth, 100 ft average
+-   The lower lake is stocked with 13,000 rainbows and 7,200 Browns annually by DFG. 
+-   The Bear River Resort adds 1000 lbs of trophy sized rainbows, 3-10 lbs., in early June and another 1000 lbs. in September. 
+-   The upper lake is stocked with Kamloop Rainbow fingerlings.
+-   Lower Bear Reservoir gets most of the attention with all types of water activity including water skiing and sailing.
+
+## Cole Creek
+
+-   small, moderately fished creek with wild rainbows
+-   Most are in the 4-6 inch class.
+-   The creek is mostly pocket water with large boulders.
+-   Heavy runoff in early Spring and flows are quite thin by mid-July.
+
+# 2b: Fish
+
+Mokelumne River provides habitat for Pacific salmon and steelhead trout spawning runs. Historical migration upstream of Pardee Dam, before a natural waterfall prevented further progress. Comanche Dam has blocked access to several miles of the highest quality habitat. The Lower Mokelumne River (below Camache) is home to at least 35 species of fish.
+
+UC Davis CalFish database queries were done by GreenGen to identify native and non-native fish present currently and/or historically within these watersheds (@tbl-fish-species)
+
+---
+
+```{r}
+#| label: tbl-fish-species
+#| echo: false
+#| warning: false
+#| message: false
+#| tbl-cap: "Fish species identified by GreenGen and BMM in study area."
+
+species <- readr::read_csv(here::here("data","species-list.csv"))
+fish <- species |> dplyr::filter(Class == "Fishes")
+nonfish <- species |> dplyr::filter(Class != "Fishes")|> dplyr::select(2:4)
+
+knitr::kable(fish[2:4]) |>
+  kableExtra::kable_styling(font_size = 12) |> 
+  kableExtra::column_spec(2, italic = TRUE)
+```
+
+## Fish of conservation concern {.smaller}
+
+GreenGen ientified 6 special status species: Pacific Lamprey, Delta Smelt, Hardhead, Sacramento Hitch, Chinook salmon-central valley spring run, Steelhead.
+
+Within the reservoirs and riverine features associated with implementation of the proposed Project, only two have potential to occur: **Sacramento hitch, and hardhead.**
+
+***Oncorhynchus mykiss irideus***, occurs within Project watersheds as resident rainbow trout, but not as anadromous steelhead. Additional subspecies of rainbow trout are expected to occur from hatchery stocking operations. But...
+
+Pacific lamprey, Delta smelt, and Chinook salmon do not exist in the Mokelumne River watershed above Camanche Dam.
+
+Downstream of the immediate Project vicinity in the Lower Mokelumne River below Pardee and Camanche Reservoirs, primary species include Fall run Chinook salmon, and federally threatened California Central Valley steelhead.
+
+## Fish of conservation concern
+
+![Sacramento hitch](images/fish_sac-hitch.jpg){.absolute top=100 left=50 width="450"}
+![Hardhead](images/fish_hardhead.jpg){.absolute top=300 right=0 width="600"}
+![Steelhead, caught and released in the South Fork Mokelumne River, San Joaquin County, CA, 18 Oct 2013.](images/fish_steelhead.jpg){.absolute bottom=0 left=50 width="500"}
+
+# 2c: Herps
+
+A variety of amphibians and reptiles use the permanent and semi-permanent aquatic habitats in the watershed and proposed Project vicinity. 
+
+A total of five special-status amphibian species and one special status reptile species as categorized by USFWS under the ESA, CDFW, and USFS are located in the proposed Project area (@tbl-non-fish-species).
+
+---
+
+```{r}
+#| label: tbl-non-fish-species
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-cap: "Amphibian and reptile species identified by GreenGen in study area."
+
+knitr::kable(nonfish) |> 
+  kableExtra::kable_styling(font_size = 20)|>
+  kableExtra::column_spec(2, italic = TRUE)
+```
+
+# Next steps Goal #1 {.smaller}
+
+-   evaluating the flow and temperature requirements of aquatic species
+-   use historic and simulated future stream temperature records to apply a range of identified thermal niche models/ thermal tolerance metrics at locations downstream to determine the extent to which different strategies for describing individual species thermal niche agree in habitat outcomes
+-   compare historic and forecasted stream temperatures to thermal criteria set by resource agencies (NMFS) and assess whether these thermal criteria are achievable/realistic in a changing climate
+
+# 3. Environment-biodiversity-energy co-benefits
+
+

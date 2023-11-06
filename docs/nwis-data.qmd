@@ -1,0 +1,120 @@
+---
+title: "Mokelumne Stream Flows"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: set-up
+#| warning: false
+#| message: false
+#| echo: false
+
+library(tidyverse)
+library(dataRetrieval)
+```
+
+To pull NWIS data, we need the following information:
+
+-   The type of data (groundwater, unit, water quality, daily, etc..)
+-   USGS site number(s)
+-   USGS parameter code(s)
+-   Time frame (start and end date)
+
+Returned data also has several attributes attached to the data frame. Check with: names(attributes())
+
+| Data type | Name                          | Service                         |
+|--------------|-----------------------------|-----------------------------|
+| Unit      | Regular frequency (real-time) | uv                              |
+| Daily     | Aggregated to daily stats     | dv                              |
+| Discrete  | Non-regular time collections  | qw, gwlevel, rating, peak, meas |
+
+| PCode | Name        | Stat Code | Name   |
+|-------|-------------|-----------|--------|
+| 00060 | Discharge   | 0001      | Max    |
+| 00065 | Gage height | 0002      | Min    |
+| 00010 | Temp        | 0003      | Mean   |
+| 00400 | pH          | 0008      | Median |
+
+```{r}
+#| label: pull-data
+
+site_num <- c(
+  11315000,  # Cole Creek upper
+  11315030,  # Cole Creek below diversion dam
+  11314000,  # Tiger Creek below Salt Spring Dam
+  11314500,  # NF Mokelume River below Salt Spring Dam
+  11315900,  # Bear River below Bear River Dam
+  11316100,  # Bear River below Brar River diversion dam
+  11316670  # NK Mokelumne below Tiger Creek
+)
+site_num <- "11314500"
+p_code <- "00060"
+start_date <- "1900-01-01"
+end_date <- "2023-08-01"
+
+moke <- readNWISdv(
+  siteNumbers = site_num,
+  parameterCd = p_code,
+  startDate = start_date,
+  endDate = end_date
+  )
+
+moke <- renameNWISColumns(moke)
+names(moke)
+head(moke)
+
+# check attributes
+names(attributes(moke))
+attr(moke, "variableInfo")
+attr(moke, "siteInfo")
+
+# get attributes
+parameterInfo <- attr(moke, "variableInfo")
+siteInfo <- attr(moke, "siteInfo")
+
+# add station names
+moke <- moke |> 
+  left_join(siteInfo |> select(site_no, station_nm), by = "site_no") 
+```
+
+All stations over time
+
+```{r}
+moke |> 
+  ggplot(aes(Date, Flow)) + 
+  facet_wrap(vars(station_nm), scales = "free") + 
+  geom_line() + 
+  labs(
+    x = "", 
+    y = parameterInfo$variableDescription
+    )
+```
+
+North Fork Mokelumne
+
+```{r}
+moke |> 
+  filter(site_no %in% c(11314500, 11316670)) |> 
+  ggplot(aes(Date, Flow)) + 
+  facet_wrap(vars(station_nm), scales = "free") + 
+  geom_line() + 
+  labs(
+    x = "", 
+    y = parameterInfo$variableDescription
+    )
+```
+
+
+```{r}
+moke |> 
+  filter(site_no %in% c(11315000, 11315030)) |> 
+  ggplot(aes(Date, Flow)) + 
+  facet_wrap(vars(station_nm), scales = "free") + 
+  geom_line() + 
+  labs(
+    x = "", 
+    y = parameterInfo$variableDescription
+    )
+```
