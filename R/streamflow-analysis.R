@@ -209,3 +209,29 @@ mapshot(m3, file = here::here("out", "maps", "usgs-gages_local.png"))
 # # load outputs
 # load(here::here("out","data","fasstr_obj_lists.Rdata"))
 
+## Explore ==========
+
+## North Fork Mokelumne ----------
+
+df <- data_usgs_lst[[2]]
+
+plot_flow_data(df)
+plot_missing_dates(df)
+plot_data_screening(df)
+# mins increase markedly around 1975...
+plot_data_screening(df, start_year = 1970, end_year = 1995)
+# looks like shift occurs in 1986
+
+plot_annual_stats(df, water_year_start = 10, log_discharge = TRUE)
+plot_annual_stats2(df, water_year_start = 10)
+plot_annual_extremes(df, water_year_start = 10)
+plot_annual_means(df, water_year_start = 10)
+plot_annual_normal_days(df, water_year_start = 10)
+
+plot_flow_duration(df, water_year_start = 10)
+plot_flow_duration(df, water_year_start = 10, end_year = 1980)
+plot_flow_duration(df, water_year_start = 10, start_year = 1990)
+
+
+plot_daily_stats(df, water_year_start = 10, end_year = 1980)
+plot_daily_stats(df, water_year_start = 10, start_year = 1990)
