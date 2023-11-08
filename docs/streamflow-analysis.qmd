@@ -1,120 +1,430 @@
 ---
-title: "Mokelumne Stream Flows"
+title: "Mokelumne Stream Flow Analysis"
 format: html
 editor_options: 
   chunk_output_type: console
+execute:
+  echo: false
+  warning: false
 ---
 
 ```{r}
 #| label: set-up
-#| warning: false
-#| message: false
-#| echo: false
 
 library(tidyverse)
-library(dataRetrieval)
+library(dataRetrieval) 
+library(fasstr) 
+library(sf) 
+library(leaflet)
+library(mapview)
+library(patchwork)
 ```
 
-To pull NWIS data, we need the following information:
+## Summary
 
--   The type of data (groundwater, unit, water quality, daily, etc..)
--   USGS site number(s)
--   USGS parameter code(s)
--   Time frame (start and end date)
+This document pulls stream flow data from USGS stations in the Mokelumne PSH 
 
-Returned data also has several attributes attached to the data frame. Check with: names(attributes())
-
-| Data type | Name                          | Service                         |
-|--------------|-----------------------------|-----------------------------|
-| Unit      | Regular frequency (real-time) | uv                              |
-| Daily     | Aggregated to daily stats     | dv                              |
-| Discrete  | Non-regular time collections  | qw, gwlevel, rating, peak, meas |
-
-| PCode | Name        | Stat Code | Name   |
-|-------|-------------|-----------|--------|
-| 00060 | Discharge   | 0001      | Max    |
-| 00065 | Gage height | 0002      | Min    |
-| 00010 | Temp        | 0003      | Mean   |
-| 00400 | pH          | 0008      | Median |
+## Download data
 
 ```{r}
-#| label: pull-data
+#| label: download-nwis-data
+#| eval: false
 
-site_num <- c(
-  11315000,  # Cole Creek upper
-  11315030,  # Cole Creek below diversion dam
-  11314000,  # Tiger Creek below Salt Spring Dam
-  11314500,  # NF Mokelume River below Salt Spring Dam
-  11315900,  # Bear River below Bear River Dam
-  11316100,  # Bear River below Brar River diversion dam
-  11316670  # NK Mokelumne below Tiger Creek
-)
-site_num <- "11314500"
-p_code <- "00060"
-start_date <- "1900-01-01"
-end_date <- "2023-08-01"
-
-moke <- readNWISdv(
-  siteNumbers = site_num,
-  parameterCd = p_code,
-  startDate = start_date,
-  endDate = end_date
+# Create function to download NWIS data and convert to metric for use with fasstr
+readNWISdv_clean <- function(x){
+  # pull daily streamflow data for given site numbers
+  data <- readNWISdv(
+    siteNumbers = x,
+    parameterCd = "00060"  # discharge param code
   )
 
-moke <- renameNWISColumns(moke)
-names(moke)
-head(moke)
+  # tidy up
+  data <- data |> select(-agency_cd)
+  names(data)[names(data) == 'site_no'] <- 'STATION_NUMBER'
+  names(data)[names(data) == 'X_00060_00003'] <- 'Value'
+  names(data)[names(data) == 'X_00060_00003_cd'] <- 'Symbol'
 
-# check attributes
-names(attributes(moke))
-attr(moke, "variableInfo")
-attr(moke, "siteInfo")
+  # convert cfs to cms
+  data$Value <- data$Value * 0.028317
 
-# get attributes
-parameterInfo <- attr(moke, "variableInfo")
-siteInfo <- attr(moke, "siteInfo")
+  # get basin areas
+  basin_area <- readNWISsite(siteNumbers = x)
+  basin_area$Basin_Area_sqkm <- basin_area$drain_area_va * 2.58999
+  basin_area <- data.frame(STATION_NUMBER = basin_area$site_no,
+                           Basin_Area_sqkm = basin_area$Basin_Area_sqkm)
+  # merge basin area back to data
+  data <- merge(data, basin_area, by = "STATION_NUMBER")
 
-# add station names
-moke <- moke |> 
-  left_join(siteInfo |> select(site_no, station_nm), by = "site_no") 
+  return(data)
+}
+
+# List of sites
+site_numbers <- c(
+  "11314000",  # TIGER C PH COND BL SALT SPRINGS DAM CA
+  "11314500",  # NF MOKELUMNE R BL SALT SPRINGS DAM CA
+  "11315000",  # COLE C NR SALT SPRINGS DAM CA
+  "11315030",  # COLE C BL DIV DAM NR SALT SPRINGS DAM CA
+  "11315900",  # BEAR R BL LO BEAR R DAM CA
+  "11316100",  # BEAR R BL BEAR R DIV DAM CA
+  "11316670",  # NF MOKELUMNE R BL TIGER C RES NR WEST PT CA
+  # "11317000",  # MF MOKELUMNE R A WEST POINT CA
+  # "11318500",  # SF MOKELUMNE R NR WEST POINT CA
+  "11319500",  # MOKELUMNE R NR MOKELUMNE HILL CA (above Parde Res)
+  "11325500"  # MOKELUMNE R A WOODBRIDGE CA (below Camanche Res, near Lodi)
+)
+
+# download site metadata
+metadata_sites <-
+  readNWISsite(siteNumbers = site_numbers) |>
+  as_tibble()
+
+# download daily discharge data
+data_usgs <-
+  readNWISdv_clean(site_numbers)
+
+# check data download
+head(metadata_sites)
+head(data_usgs)
+
 ```
-
-All stations over time
 
 ```{r}
-moke |> 
-  ggplot(aes(Date, Flow)) + 
-  facet_wrap(vars(station_nm), scales = "free") + 
-  geom_line() + 
-  labs(
-    x = "", 
-    y = parameterInfo$variableDescription
-    )
-```
+#| label: preprocess-nwis-data
+#| eval: false
 
-North Fork Mokelumne
+# make a site number - site name xref
+xref <- metadata_sites |> select(site_no, station_nm)
+
+# Add names, water year and date variables
+data_usgs <- data_usgs |>
+  fill_missing_dates(water_year_start = 10) |>
+  add_date_variables()
+
+data_usgs <- data_usgs |>
+  left_join(xref, by = c("STATION_NUMBER" = "site_no")) |>
+  relocate(station_nm, .after = STATION_NUMBER)
+
+# Convert to list for each site
+data_usgs_lst <- data_usgs |>
+  group_by(STATION_NUMBER) |>
+  group_map(~.x, .keep = TRUE)
+
+# Name list elements
+names(data_usgs_lst) <- data_usgs |>
+  group_by(STATION_NUMBER) |>
+  group_map(~.y) |>
+  unlist()
+
+# Assign basin areas
+basin_areas <- c(
+  "11314000" = NA,
+  "11314500" = metadata_sites[2,"drain_area_va"]$drain_area_va,
+  "11315000" = metadata_sites[3,"drain_area_va"]$drain_area_va,
+  "11315030" = metadata_sites[4,"drain_area_va"]$drain_area_va,
+  "11315900" = metadata_sites[5,"drain_area_va"]$drain_area_va,
+  "11316100" = metadata_sites[6,"drain_area_va"]$drain_area_va,
+  "11316670" = metadata_sites[7,"drain_area_va"]$drain_area_va,
+  "11319500" = metadata_sites[8,"drain_area_va"]$drain_area_va,
+  "11325500" = metadata_sites[9,"drain_area_va"]$drain_area_va
+)
+
+# save data
+save(
+  data_usgs, data_usgs_lst, metadata_sites, xref, basin_areas,
+  file = here::here("out","data","usgs_flows.Rdata")
+  )
+
+```
 
 ```{r}
-moke |> 
-  filter(site_no %in% c(11314500, 11316670)) |> 
-  ggplot(aes(Date, Flow)) + 
-  facet_wrap(vars(station_nm), scales = "free") + 
-  geom_line() + 
-  labs(
-    x = "", 
-    y = parameterInfo$variableDescription
-    )
+#| label: load-nwis-data
+load(here::here("out","data","usgs_flows.Rdata"))
 ```
 
+## Plot site locations
 
 ```{r}
-moke |> 
-  filter(site_no %in% c(11315000, 11315030)) |> 
-  ggplot(aes(Date, Flow)) + 
-  facet_wrap(vars(station_nm), scales = "free") + 
-  geom_line() + 
-  labs(
-    x = "", 
-    y = parameterInfo$variableDescription
-    )
+
+# NWIS coords are in NAD83, a local datum (crs = 4269)
+# Leaflet needs WGS84 (crs = 4326)
+sf_sites <- st_as_sf(
+  metadata_sites, 
+  coords = c("dec_long_va", "dec_lat_va"), 
+  crs = 4326
+  )
+
+# Plot
+m1 <- sf_sites |> 
+  leaflet() |> 
+  addTiles() |> 
+  addMarkers(popup = ~ station_nm, label = ~ station_nm)
+
+m2 <- sf_sites |> 
+  filter(! site_no %in% c("11325500","11319500")) |> 
+  leaflet() |> 
+  addTiles() |> 
+  addMarkers(popup = ~ station_nm, label = ~ station_nm)
+
+m3 <- sf_sites |> 
+  filter(! site_no %in% c("11325500","11319500","11316670")) |> 
+  leaflet() |> 
+  addTiles(options = providerTileOptions(maxZoom = 13)) |> 
+  addMarkers(popup = ~ station_nm, label = ~ station_nm)
+
+# Save static images
+# mapshot(m1, file = here::here("out", "maps", "usgs-gages.png"))
+# mapshot(m2, file = here::here("out", "maps", "usgs-gages_upper.png"))
+# mapshot(m3, file = here::here("out", "maps", "usgs-gages_local.png"))
 ```
+
+## Fasstr analysis (not run)
+
+```{r}
+#| label: full-fasstr-analysis
+#| eval: false
+
+## Test ========
+i = 1
+plot_flow_data(data_usgs_lst[[i]], start_year = 2015, end_year = 2020)
+plot_data_screening(data_usgs_lst[[i]], start_year = 2015, end_year = 2020)
+plot_missing_dates(data_usgs_lst[[i]], start_year = 2015, end_year = 2020)
+tmp <- compute_full_analysis(
+  data_usgs_lst[[i]],
+  basin_area = basin_areas[i],
+  water_year_start = 10,
+  start_year = 2015,
+  end_year = 2020,
+  ignore_missing = TRUE
+)
+
+tmp$Daily$Daily_Summary_Stats_Plot
+
+## Full analyses ========
+
+fst_nfm_01 <- compute_full_analysis(
+  data_usgs_lst[["11314500"]],
+  basin_area = basin_areas["11314500"],
+  water_year_start = 10, ignore_missing = TRUE
+  )
+
+fst_nfm_02 <- compute_full_analysis(
+  data_usgs_lst[["11316670"]],
+  basin_area = basin_areas["11316670"],
+  water_year_start = 10, ignore_missing = TRUE
+)
+
+fst_moke_01 <- compute_full_analysis(
+  data_usgs_lst[["11319500"]],
+  basin_area = basin_areas["11319500"],
+  water_year_start = 10, ignore_missing = TRUE
+)
+
+fst_moke_02 <- compute_full_analysis(
+  data_usgs_lst[["11325500"]],
+  basin_area = basin_areas["11325500"],
+  water_year_start = 10, ignore_missing = TRUE
+)
+
+fst_br_01 <- compute_full_analysis(
+  data_usgs_lst[["11315900"]],
+  basin_area = basin_areas["11315900"],
+  water_year_start = 10, ignore_missing = TRUE
+)
+
+# # save outputs
+# save(
+#   fst_nfm_01, fst_nfm_02, fst_moke_01, fst_moke_02, fst_br_01,
+#   file = here::here("out","data","fasstr_obj_lists.Rdata")
+#   )
+# 
+# # load outputs
+# load(here::here("out","data","fasstr_obj_lists.Rdata"))
+```
+
+## Explore streamflow data
+
+### North Fork Mokelumne below SPR
+
+```{r}
+# subbset data for station
+df_11314500 <- data_usgs_lst[[2]]
+```
+
+#### Screen data (outliers, gaps, missing)
+
+##### Missing dates
+
+```{r}
+plot_missing_dates(df_11314500)
+```
+
+Data are complete for the whole period of record.
+
+
+#### Daily mean flow magnitudes
+
+```{r}
+plot_flow_data(
+  df_11314500,
+  water_year_start = 10
+  )
+```
+
+
+##### Annual summary statistics
+
+```{r}
+# calculate stats
+# df_nkm_spr_screen <- screen_flow_data(
+#   df_nkm_spr, 
+#   water_year_start = 10
+# )
+# plot them
+plot_data_screening(
+  df_nkm_spr, 
+  water_year_start = 10
+  )
+```
+
+The data series looks good, but there is a distinct up shift in annual minimum flows beginning around the mid 1980s. 
+
+Take a closer look at annual minimums:
+
+```{r}
+plot_data_screening(
+  df_11314500, 
+  water_year_start = 10,
+  include_stats = c("Minimum")
+) 
+```
+
+Following some high variability early in the records, annual minimums were relatively constant below 0.1 cms. There is a sustained increase in annual minimums from 1947 to a new high of 0.2 cms in 1952. It then drop a bit and remains constant until 1975, declines to a new low in 1978. 
+
+There is then substantial increase in annual minimums from 1979 to 1985, and an even bigger jump to a new high 1987 (0.6 cms). The new highs remain until the current year, 2023. 
+
+
+#### Summary stats
+
+##### Annual stats
+
+```{r}
+plot_annual_stats(
+  df_11314500, 
+  water_year_start = 10, 
+  log_discharge = TRUE
+)
+
+plot_annual_stats2(
+  df_11314500, 
+  water_year_start = 10
+)
+```
+
+#### Daily stats
+
+```{r}
+plot_daily_stats(
+  df_11314500, 
+  water_year_start = 10, 
+  inner_percentiles = c(40, 60),
+  outer_percentiles = c(10, 90)
+) [[1]] + 
+  ggtitle("North Fork Mokelumne Annual Hydrograph (1927-2023)") 
+
+ggsave(
+  here::here("out","plots","longterm_daily_stats_nfm-spr.png"), 
+  width = 6, height = 4, scale = 1.5
+)
+```
+
+Split into periods before and after the increase in annual minimums:
+
+```{r}
+p1 <- plot_daily_stats(
+  df_11314500, 
+  water_year_start = 10, 
+  end_year = 1986,
+  inner_percentiles = c(40, 60),
+  outer_percentiles = c(10, 90)
+) [[1]] + 
+  ggtitle("North Fork Mokelumne Annual Hydrograph (1927-1986)") 
+
+p2 <- plot_daily_stats(
+  df_11314500, 
+  water_year_start = 10, 
+  start_year = 1987,
+  inner_percentiles = c(40, 60),
+  outer_percentiles = c(10, 90)
+) [[1]] + 
+  ggtitle("North Fork Mokelumne Annual Hydrograph (1987-2023)") 
+
+p1 / p2 +
+  plot_layout(guides = 'collect')
+
+ggsave(
+  here::here("out","plots","longterm_daily_stats_nfm-spr_split.png"), 
+  width = 11, height = 12, scale = .75
+)
+```
+
+The hydrograph looks much more natural after 1986. 
+
+
+
+##### Long-term daily
+
+```{r}
+plot_longterm_daily_stats(
+  df_11314500, 
+  water_year_start = 10
+)
+
+plot_longterm_monthly_stats(
+  df_11314500, 
+  water_year_start = 10
+)
+```
+
+
+##### Long-term dialy
+
+
+
+##### Flow duration curves
+
+```{r}
+plot_flow_duration(
+  df_11314500, 
+  water_year_start = 10
+) [[1]] + 
+  ggtitle("North Fork Mokelumne flow duration curve (1927-2023)")
+```
+
+Split into periods before and after the increase in annual minimums:
+
+```{r}
+(plot_flow_duration(
+  df_11314500, 
+  water_year_start = 10, 
+  end_year = 1986
+) [[1]] + 
+  ggtitle("1927-1986")) + 
+  
+(plot_flow_duration(
+  df_11314500, 
+  water_year_start = 10, 
+  start_year = 1987
+) [[1]] + 
+  ggtitle("1987-2023")) + 
+  plot_layout(guides = 'collect') + 
+  plot_annotation(title = "North Fork Mokelumne flow duration curves")
+
+ggsave(
+  here::here("out","plots","longterm_stats_fdc_nfm-spr.png"), 
+  width = 12, height = 6, scale = 1
+)
+```
+
+
+
+
